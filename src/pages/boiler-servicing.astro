@@ -1,0 +1,829 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { Phone, Shield, CheckCircle, Wrench, Flame, Clock, AlertCircle, DollarSign, MessageCircle, Calendar, Zap, Droplets, Thermometer } from 'lucide-react';
+import  image1 from "../assets/image/Boiler-Swap-Upgrade.png"
+import  image2 from "../assets/image/Heating-System-Installation.png"
+import  image3 from "../assets/image/heaterHero.webp"
+// Dynamic data
+const serviceData = {
+  title: "Boiler Servicing",
+  location: "Your Location",
+  businessName: "Your Business Name",
+  diagnosticImage: "/images/services/boiler-diagnostic.jpg",
+  metaDescription: "Professional boiler servicing in [location]. Annual boiler checks by Gas Safe registered engineers to ensure safety and efficiency.",
+  phoneNumber: "YOUR-PHONE-NUMBER"
+};
+---
+
+<Layout title={`Boiler Servicing in ${serviceData.location} | ${serviceData.businessName}`} description={serviceData.metaDescription}>
+  <!-- Hero Section -->
+  <section class="relative py-16 md:py-24 bg-gradient-to-r from-blue-900 to-gray-900 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-20">
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="mb-4">
+            <span class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium border border-white/20">
+              <Shield className="w-4 h-4 mr-2" />
+              Gas Safe Registered
+            </span>
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Boiler Servicing in <span class="text-orange-400">{serviceData.location}</span>
+          </h1>
+          
+          <p class="text-xl text-gray-300 mb-8 max-w-2xl">
+            Annual boiler servicing to ensure safety, efficiency and prevent breakdowns. Gas Safe certified engineers.
+          </p>
+          
+          <div class="flex flex-wrap gap-4">
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+              <Phone className="w-5 h-5 mr-3" />
+              Call Now: {serviceData.phoneNumber}
+            </a>
+            <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/20">
+              Book Service Online
+            </a>
+          </div>
+          
+          <div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Annual Service</span>
+            </div>
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Warranty Protection</span>
+            </div>
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Same Day Booking</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="relative rounded-xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+   
+              <Image 
+                src={image1} 
+                alt="Boiler service technician performing maintenance" 
+                width={600}
+                height={400}
+                class="w-full h-auto"
+                loading="eager"
+                decoding="async"
+              />
+       
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-white text-gray-900 p-4 rounded-lg shadow-lg max-w-xs">
+            <div class="flex items-center mb-2">
+              <Calendar className="w-5 h-5 text-blue-500 mr-2" />
+              <span class="font-semibold">Annual Service Recommended</span>
+            </div>
+            <p class="text-sm">Keep your warranty valid and prevent breakdowns</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-12">
+        <!-- Main Content Column -->
+        <div class="lg:col-span-2">
+          <!-- Introduction -->
+          <div class="prose prose-lg max-w-none mb-12">
+            <p class="lead text-xl text-gray-700 mb-8">
+              If you're looking for boiler servicing in {serviceData.location}, {serviceData.businessName} carries out a proper service designed to keep your boiler running safely and consistently.
+            </p>
+            
+            <p>
+              Getting your boiler serviced regularly gives you peace of mind and helps prevent future breakdowns, especially before winter. Just like a car, regular boiler servicing is essential for safety, reliability, and efficiency—helping you avoid unexpected issues and costly repairs.
+            </p>
+            
+            <p>
+              If you've noticed hot water turning lukewarm, radiators taking longer to warm up, pressure dropping, new noises, the boiler cycling on and off, or heating feeling less reliable, we'll check the boiler first and explain what we find clearly. We don't do anything "extra" without clarity, so you know exactly what's been checked and why. The result is a boiler that runs more steadily, more cleanly, and with fewer surprises.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-6 rounded-r-lg">
+              <p class="font-semibold text-blue-800">
+                You should have your boiler serviced once a year; annual boiler service helps prevent breakdowns in cold winters. While it is not a legal requirement for homeowners to service their boilers annually, it is highly recommended for safety and efficiency. However, landlords are legally required to have all gas appliances, including boilers, serviced annually under the Gas Safety Regulations 1998.
+              </p>
+            </div>
+            
+            <p class="font-semibold text-blue-700">
+              Call {serviceData.businessName} to book boiler servicing in {serviceData.location}.
+            </p>
+            
+            <p class="mt-6">
+              A boiler service isn't just a box-tick. It's a structured set of safety and performance checks, plus careful inspection and cleaning of serviceable parts where appropriate, so your boiler can run as it should through day-to-day demand.
+            </p>
+          </div>
+
+          <!-- What Boiler Servicing Covers -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What Boiler Servicing Covers</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Boiler servicing with {serviceData.businessName} is focused on three things: safe operation, stable performance, and early detection of developing issues. A typical service involves:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              <div class="bg-blue-50 p-6 rounded-lg">
+                <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+                  <Shield className="w-5 h-5 text-blue-600 mr-2" />
+                  Safety & Inspection
+                </h3>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Visual inspection of the boiler and its immediate surroundings</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Checks that confirm the boiler is operating safely and consistently</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Inspection of the pilot light, flue terminal, and gas pressure</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="bg-green-50 p-6 rounded-lg">
+                <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+                  <Wrench className="w-5 h-5 text-green-600 mr-2" />
+                  Performance & Cleaning
+                </h3>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Inspection and cleaning of serviceable internal parts such as the burner, heat exchanger, and spark probe</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Checks of controls and normal operating response</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>A clear summary of what was checked, what condition things are in, and what to keep an eye on</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="bg-amber-50 border border-amber-200 rounded-lg p-6">
+              <p class="text-gray-700">
+                <span class="font-semibold">Important:</span> During the service, tests are carried out to ensure the boiler is working properly and safely. All work is involved and performed by a trained and qualified engineer, as your boiler must be serviced by an engineer with the right training and qualifications.
+              </p>
+            </div>
+          </div>
+
+          <!-- Image 1: Diagnostic Process -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+              {serviceData.diagnosticImage ? (
+                <Image 
+                  src={image2} 
+                  alt="Boiler diagnostic and inspection process" 
+                  width={800}
+                  height={450}
+                  class="w-full h-auto"
+                />
+              ) : (
+                <div class="w-full h-64 bg-gradient-to-r from-blue-50 to-gray-100 flex items-center justify-center">
+                  <Wrench className="w-32 h-32 text-gray-300" />
+                </div>
+              )}
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Thorough diagnostic checks during boiler servicing</p>
+          </div>
+
+          <!-- How We Carry Out Boiler Service -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">
+              How {serviceData.businessName} Carries Out a Boiler Service
+            </h2>
+            
+            <div class="space-y-8">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">1</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Quick Setup and Condition Review</h3>
+                  <p class="text-gray-700">
+                    We start by checking access, the boiler's general condition, and any obvious signs of strain or unusual behaviour.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">2</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Structured Safety and Operation Checks</h3>
+                  <p class="text-gray-700">
+                    We confirm the boiler behaves normally under demand and that key safety-related elements are functioning as expected.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">3</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Inspect and Clean Serviceable Parts</h3>
+                  <p class="text-gray-700">
+                    Some components are designed to be inspected and cleaned as part of routine servicing. What's included depends on your boiler model and access. Where accessible, the engineer will inspect and clean internal parts such as the burner, heat exchanger, and spark probe to ensure safe and efficient operation.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">4</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Verify Stable Performance</h3>
+                  <p class="text-gray-700">
+                    We check the boiler responds correctly, runs steadily, and returns to normal operation after the service steps are complete.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">5</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Clear Handover</h3>
+                  <p class="text-gray-700">
+                    You'll get a plain-English explanation of what was done, what we found, and what that means for you.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- What We Check During Servicing -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What We Check During Boiler Servicing</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Every boiler is different, but servicing generally includes checks across these areas (as applicable to your appliance and access):
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Visual inspection for signs of wear, corrosion, or damage</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Checking for leaks and inspecting temperature controls to ensure the boiler operates safely and efficiently</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Testing all safety devices and controls</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Cleaning and inspecting the main components (burner, heat exchanger, flue)</span>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Checking gas pressure and flow</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Ensuring the boiler is running efficiently</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-6 p-6 bg-green-50 rounded-lg border border-green-200">
+              <p class="text-gray-700">
+                <span class="font-semibold">Benefit:</span> Regular boiler servicing helps prevent costly repairs, can extend the lifespan of your boiler by several years, and ensures your system continues to operate efficiently.
+              </p>
+            </div>
+          </div>
+
+          <!-- Image 2: Service Work -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+
+                <Image 
+                  src={image3} 
+                  alt="Professional boiler service work in progress" 
+                  width={800}
+                  height={450}
+                  class="w-full h-auto"
+                />
+        
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Detailed service work on boiler components</p>
+          </div>
+
+          <!-- Detailed Check Categories -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Detailed Service Check Categories</h2>
+            
+            <div class="space-y-8">
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                  <Shield className="w-6 h-6 text-red-500 mr-3" />
+                  Safety-Focused Checks
+                </h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                    <span class="text-sm">Signs of abnormal operation or overheating</span>
+                  </div>
+                  <div class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                    <span class="text-sm">The condition of visible seals, connections, and casing</span>
+                  </div>
+                  <div class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                    <span class="text-sm">Flue/airflow observations where visible and relevant to safe running</span>
+                  </div>
+                  <div class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                    <span class="text-sm">Basic checks that support safe combustion and stable operation</span>
+                  </div>
+                  <div class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                    <span class="text-sm">Inspection for signs of carbon monoxide leaks and verification that the boiler complies with gas safety regulations</span>
+                  </div>
+                </div>
+                <div class="mt-4 p-4 bg-red-50 rounded-lg">
+                  <p class="text-sm text-gray-700">
+                    <span class="font-semibold">Legal Requirement:</span> For gas boilers, a Gas Safe registered engineer is required to carry out the service to ensure safety and legal compliance.
+                  </p>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                  <Zap className="w-6 h-6 text-amber-500 mr-3" />
+                  Performance and Cleanliness Checks
+                </h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                    <span class="text-sm">Boiler behaviour during a normal heating/hot water demand cycle</span>
+                  </div>
+                  <div class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                    <span class="text-sm">Signs of soot, debris, or contamination in serviceable areas</span>
+                  </div>
+                  <div class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                    <span class="text-sm">Inspection/cleaning of serviceable components designed for routine maintenance</span>
+                  </div>
+                </div>
+                <p class="mt-4 text-sm text-gray-600">
+                  The engineer will also check that the boiler is running efficiently as part of the performance checks, helping to maintain optimal operation and reduce energy costs.
+                </p>
+              </div>
+              
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                  <Thermometer className="w-6 h-6 text-blue-500 mr-3" />
+                  Controls and Usability Checks
+                </h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                    <span class="text-sm">Boiler response to heating/hot water demand</span>
+                  </div>
+                  <div class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                    <span class="text-sm">Basic review of how the boiler is being controlled (so it's not "fighting" your settings)</span>
+                  </div>
+                  <div class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                    <span class="text-sm">The engineer will inspect and verify that the temperature controls and control system are functioning correctly to ensure safe and efficient boiler operation.</span>
+                  </div>
+                  <div class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                    <span class="text-sm">Confirmation the boiler starts, runs, and shuts down in a normal pattern</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                  <Droplets className="w-6 h-6 text-purple-500 mr-3" />
+                  System Stability Checks
+                </h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                    <span class="text-sm">Pressure behaviour and obvious instability signs</span>
+                  </div>
+                  <div class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                    <span class="text-sm">Whether the boiler appears to be short-cycling or working harder than expected</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Boiler Types We Service -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Boiler Types We Service in {serviceData.location}</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+              <div class="bg-blue-50 p-6 rounded-lg">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                    <Flame className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-900">Combi Boilers</h3>
+                </div>
+                <p class="text-gray-700">
+                  Servicing checks focus on consistent hot water delivery and stable heating response, with attention to how the boiler behaves under typical daily use.
+                </p>
+              </div>
+              
+              <div class="bg-green-50 p-6 rounded-lg">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                    <Thermometer className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-900">System Boilers</h3>
+                </div>
+                <p class="text-gray-700">
+                  Servicing focuses on steady heating performance and consistent operation, checking that the boiler runs smoothly under demand.
+                </p>
+              </div>
+              
+              <div class="bg-purple-50 p-6 rounded-lg">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                    <Droplets className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-900">Conventional Boilers</h3>
+                </div>
+                <p class="text-gray-700">
+                  Servicing is tailored to the setup and operating pattern, with checks that support safe running and dependable heat delivery.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Signs Your Boiler Needs Service -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+              <AlertCircle className="w-8 h-8 text-orange-500 mr-3" />
+              Signs Your Boiler is Due a Service
+            </h2>
+            
+            <p class="text-gray-700 mb-6">
+              People often book a service because something feels "slightly off," such as:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-orange-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Hot water temperature fluctuating</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-orange-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Heating taking longer to warm up than it used to</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-orange-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>New or louder operating noises</span>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-orange-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Pressure dropping more often than normal</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-orange-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Boiler cycling on and off frequently</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-orange-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Heating feeling inconsistent from day to day</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-6 p-6 bg-blue-50 rounded-lg">
+              <p class="text-gray-700">
+                Even if none of these are happening, regular servicing helps confirm the boiler is running safely and predictably. <span class="font-semibold">Regular boiler servicing can help prevent future breakdowns and costly repairs by catching issues early before they become major problems.</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- How to Prepare & What You Get -->
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                How to Prepare for a Boiler Service
+              </h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Make sure the boiler area is clear and accessible</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>If it's in a cupboard, remove stored items around it</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Know where your main controls are (thermostat/programmer)</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>If you've noticed changes (noise, timing, temperature), make a quick note of when it happens</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                <Shield className="w-6 h-6 text-blue-500 mr-3" />
+                What You'll Get After the Service
+              </h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>A clear summary of what was checked</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>An explanation of anything that looks unusual (if applicable)</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Practical guidance on what to monitor next</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Confidence that the boiler has been assessed in a structured, responsible way</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-lg mb-12">
+            <p class="text-gray-700">
+              <span class="font-semibold">Important:</span> Regular annual boiler servicing is often required to maintain your manufacturer's warranty; failure to service your boiler can lead to safety concerns, reduced efficiency, and may void your warranty. Routine servicing also provides peace of mind, helps maintain your guarantee, and keeps your warranty valid.
+            </p>
+          </div>
+
+          <!-- FAQs -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+              <MessageCircle className="w-8 h-8 text-blue-600 mr-3" />
+              Boiler Servicing FAQs
+            </h2>
+            
+            <div class="space-y-6">
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">How often should a boiler be serviced?</h3>
+                <p class="text-gray-700">You should have your boiler serviced once a year. Most manufacturers require an annual service by a Gas Safe engineer to keep the warranty valid. Having your boiler serviced annually helps ensure safety, efficiency, and compliance with warranty requirements, as well as spotting problems early.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">How long does a boiler service take?</h3>
+                <p class="text-gray-700">It depends on the boiler type, access, and condition. A well-maintained, easily accessible boiler is typically quicker than a cramped, long-unserviced setup.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">What if you find something that needs attention?</h3>
+                <p class="text-gray-700">If we spot anything outside routine servicing, we'll explain it clearly, what it means, and what your options are—no surprises and no work without clarity. If repairs are needed, a qualified engineer will discuss your options and carry out the necessary work if you choose to proceed.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Does servicing help with efficiency?</h3>
+                <p class="text-gray-700">A clean, well-checked boiler tends to run more steadily. Servicing supports safe, consistent operation and can help reduce unnecessary strain from issues like cycling or poor setup. Regular servicing also helps your boiler run efficiently and is often required to maintain your boiler warranty.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-8">
+          <!-- Quick Contact Card -->
+          <div class="bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-xl p-6 shadow-lg">
+            <h3 class="text-2xl font-bold mb-4">Book Your Annual Service</h3>
+            <p class="mb-6">Keep your boiler safe, efficient and your warranty valid</p>
+            
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center w-full py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors mb-4">
+              <Phone className="w-5 h-5 mr-3" />
+              Call {serviceData.phoneNumber}
+            </a>
+            
+            <a href="/contact" class="inline-flex items-center justify-center w-full py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+              Book Online
+            </a>
+            
+            <div class="mt-6 pt-6 border-t border-white/20">
+              <div class="flex items-center">
+                <Calendar className="w-5 h-5 mr-3" />
+                <div>
+                  <p class="font-semibold">Annual Service Required</p>
+                  <p class="text-sm opacity-90">For warranty & safety compliance</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Details -->
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Service Details</h3>
+            
+            <div class="space-y-4">
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Service Type</p>
+                <p class="text-gray-600">Boiler Servicing</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Frequency</p>
+                <p class="text-gray-600">Annual Recommended</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Duration</p>
+                <p class="text-gray-600">45-90 Minutes</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Guarantee</p>
+                <p class="text-gray-600">Warranty Protection</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cost Information -->
+          <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+              <DollarSign className="w-5 h-5 text-amber-600 mr-2" />
+              Cost Information
+            </h3>
+            
+            <div class="space-y-3">
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Average UK Cost</span>
+                <span class="font-bold text-gray-900">£70 - £120</span>
+              </div>
+              
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">One-Off Service</span>
+                <span class="font-bold text-gray-900">£80 - £120</span>
+              </div>
+              
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Monthly Plan</span>
+                <span class="font-bold text-gray-900">From £6.98/month</span>
+              </div>
+              
+              <div class="mt-4 p-3 bg-white rounded-lg">
+                <p class="text-sm text-gray-600">
+                  <span class="font-semibold">Tip:</span> Get at least three quotes to ensure you pay a competitive price. In some cases, servicing may be free if your boiler is under warranty.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- What Affects Cost -->
+          <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">What Affects the Cost</h3>
+            
+            <div class="space-y-3">
+              <div class="flex items-start">
+                <AlertCircle className="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-sm text-gray-700">Boiler type and model complexity</span>
+              </div>
+              <div class="flex items-start">
+                <AlertCircle className="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-sm text-gray-700">Age and general condition of the appliance</span>
+              </div>
+              <div class="flex items-start">
+                <AlertCircle className="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-sm text-gray-700">Ease of access (tight cupboards, awkward positioning)</span>
+              </div>
+              <div class="flex items-start">
+                <AlertCircle className="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-sm text-gray-700">Whether regularly serviced or left for years</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Related Services -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Related Services</h3>
+            
+            <div class="space-y-3">
+              <a href="/services/central-heating-repairs" class="block p-3 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-blue-200">
+                    <Thermometer className="w-4 h-4 text-blue-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-blue-600">Central Heating Repairs</span>
+                </div>
+              </a>
+              
+              <a href="/services/boiler-repairs" class="block p-3 bg-orange-50 hover:bg-orange-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-orange-200">
+                    <Wrench className="w-4 h-4 text-orange-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-orange-600">Boiler Repairs</span>
+                </div>
+              </a>
+              
+              <a href="/services/gas-safety-certificates" class="block p-3 bg-green-50 hover:bg-green-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-green-200">
+                    <Shield className="w-4 h-4 text-green-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-green-600">Gas Safety Certificates</span>
+                </div>
+              </a>
+              
+              <a href="/services/boiler-installations" class="block p-3 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-purple-200">
+                    <Flame className="w-4 h-4 text-purple-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-purple-600">Boiler Installations</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-gradient-to-r from-gray-900 to-blue-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Book Your Annual Boiler Service Today
+      </h2>
+      
+      <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+        Protect your warranty, ensure safety, and maintain efficiency with our comprehensive boiler servicing. Don't wait for winter—book now.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <Phone className="w-6 h-6 mr-3" />
+          Book Service: {serviceData.phoneNumber}
+        </a>
+        
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg text-lg hover:bg-white/10 transition-all duration-300">
+          Get Free Quote
+        </a>
+      </div>
+      
+      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+        <div class="text-center">
+          <Shield className="w-8 h-8 text-green-400 mx-auto mb-2" />
+          <p class="text-sm">Gas Safe Certified</p>
+        </div>
+        <div class="text-center">
+          <Calendar className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+          <p class="text-sm">Annual Service</p>
+        </div>
+        <div class="text-center">
+          <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-2" />
+          <p class="text-sm">Warranty Protection</p>
+        </div>
+        <div class="text-center">
+          <DollarSign className="w-8 h-8 text-amber-400 mx-auto mb-2" />
+          <p class="text-sm">Competitive Pricing</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

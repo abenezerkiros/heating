@@ -1,0 +1,735 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { Phone, Shield, CheckCircle, Wrench, Flame, Clock, AlertCircle, DollarSign, MessageCircle, Calendar, Zap, Droplets, Thermometer } from 'lucide-react';
+import image1 from "../assets/image/Boiler-Swap-Upgrade.png"
+import image2 from "../assets/image/Heating-System-Installation.png"
+import image3 from "../assets/image/heaterHero.webp"
+
+// Dynamic data
+const serviceData = {
+  title: "Gas Pipework Installation",
+  location: "Your Location",
+  businessName: "Your Business Name",
+  metaDescription: "Professional gas pipework installation in [location]. Gas Safe registered engineers for safe gas pipe fitting.",
+  phoneNumber: "YOUR-PHONE-NUMBER"
+};
+---
+
+<Layout title={`Gas Pipework Installation in ${serviceData.location} | ${serviceData.businessName}`} description={serviceData.metaDescription}>
+  <!-- Hero Section -->
+  <section class="relative py-16 md:py-24 bg-gradient-to-r from-blue-900 to-gray-900 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-20">
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="mb-4">
+            <span class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium border border-white/20">
+              <Shield className="w-4 h-4 mr-2" />
+              Gas Safe Registered
+            </span>
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Gas Pipework Installation in <span class="text-orange-400">{serviceData.location}</span>
+          </h1>
+          
+          <p class="text-xl text-gray-300 mb-8 max-w-2xl">
+            Safe, professional gas pipework installation by Gas Safe registered engineers. Planned installations with comprehensive testing and certification.
+          </p>
+          
+          <div class="flex flex-wrap gap-4">
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+              <Phone className="w-5 h-5 mr-3" />
+              Call Now: {serviceData.phoneNumber}
+            </a>
+            <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/20">
+              Book Installation Online
+            </a>
+          </div>
+          
+          <div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Gas Safe Certified</span>
+            </div>
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Full Testing & Certification</span>
+            </div>
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Commercial & Industrial</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="relative rounded-xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+            <Image 
+              src={image1} 
+              alt="Gas pipework installation technician at work" 
+              width={600}
+              height={400}
+              class="w-full h-auto"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-white text-gray-900 p-4 rounded-lg shadow-lg max-w-xs">
+            <div class="flex items-center mb-2">
+              <Flame className="w-5 h-5 text-blue-500 mr-2" />
+              <span class="font-semibold">Compliance Focus</span>
+            </div>
+            <p class="text-sm">Industry standards & regulations</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-12">
+        <!-- Main Content Column -->
+        <div class="lg:col-span-2">
+          <!-- Introduction -->
+          <div class="prose prose-lg max-w-none mb-12">
+            <p class="lead text-xl text-gray-700 mb-8">
+              If you're searching for gas pipework installation in {serviceData.location}, {serviceData.businessName} provides a safe, planned installation from first checks through to final testing. All gas pipework installation work is carried out by Gas Safe Registered engineers, ensuring compliance with industry standards and regulations. Whether you need a new run installed, an existing route extended, a neater layout, improved access to isolation points, or pipework moved to suit a new layout, we'll help you understand what's possible before any work begins. We assess the route and constraints first, explain the safest option clearly, and only proceed once you're comfortable with the plan—so the finished pipework works properly, looks tidy, and is installed correctly from end to end.
+            </p>
+            
+            <p class="text-gray-700 mb-6">
+              {serviceData.businessName} serves a range of clients, including commercial and industrial clients, and is committed to maintaining the highest standards of efficiency and safety.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-6 rounded-r-lg">
+              <p class="font-semibold text-blue-800">
+                Book a gas pipework installation visit with {serviceData.businessName} in {serviceData.location}. All projects are completed by qualified professionals, with full documentation and certification provided to ensure compliance and peace of mind.
+              </p>
+            </div>
+          </div>
+
+          <!-- What Installation Includes -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What gas pipework installation includes</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Gas pipework installation is the professional fitting of new gas pipe runs between the supply point and the required connection point(s). With {serviceData.businessName}, the service typically includes:
+            </p>
+            
+            <div class="space-y-4 mb-6">
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>A site assessment to confirm routing options and practical constraints</span>
+              </div>
+              
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Planning the run for safety, access, and long-term reliability</span>
+              </div>
+              
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Installation carried out by a team of experienced engineers using proven methods and high-quality components</span>
+              </div>
+              
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Installing the new pipework using appropriate materials and fittings for the job</span>
+              </div>
+              
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Adding accessible isolation where required for safe operation and future maintenance access</span>
+              </div>
+              
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Commissioning, testing, and purging of the gas system to ensure safe and compliant operation</span>
+              </div>
+              
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Pressure testing and integrity checks to confirm the installation is sound</span>
+              </div>
+              
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Final checks so the installation is safe, stable, and ready for use</span>
+              </div>
+
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Full documentation and certification provided upon completion to ensure compliance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Common Reasons -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Common reasons people need new gas pipework in {serviceData.location}</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Gas pipework installation is usually needed when the current layout doesn't suit how the space is used, or when a new route is required. Typical scenarios include:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You need a new gas line to a different room or area</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You want pipework routed more neatly or discreetly</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>The existing route isn't practical due to access or layout constraints</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You're updating a space and the gas line needs a safer, more suitable route</span>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You need additional connection points from the supply (where permitted and appropriate)</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>New build properties require specialized gas pipework installation and connection to the gas grid</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Commercial premises and industrial clients may need new or upgraded gas pipework to meet business requirements and regulatory standards</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Replacement or decommissioning of old or damaged pipework, especially in such cases where safety or compliance is a concern</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-6 p-6 bg-red-50 rounded-lg border-l-4 border-red-500">
+              <p class="text-gray-700">
+                <span class="font-semibold">Safety Requirement:</span> A documented risk assessment is required for new gas installations to ensure safety and compliance.
+              </p>
+            </div>
+          </div>
+
+          <!-- Our Approach -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">How {serviceData.businessName} approaches gas pipework installation</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Every installation starts with decisions that affect safety and performance. We keep the process simple and transparent:
+            </p>
+            
+            <div class="space-y-8">
+              <!-- Step 1 -->
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-blue-600 font-bold">1</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">Assessment first</h3>
+                </div>
+                <p class="text-gray-700">
+                  We review the existing supply point, intended route, and where the new run needs to finish. We also check access constraints and how the pipework can be safely supported and protected. This assessment is carried out by qualified engineers and includes a documented risk assessment to minimize hazards.
+                </p>
+              </div>
+              
+              <!-- Step 2 -->
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-green-600 font-bold">2</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">Explain the options</h3>
+                </div>
+                <p class="text-gray-700">
+                  We talk you through the route choices (for example: shortest practical run vs. best access vs. neatest finish), what needs to be exposed, and what can stay undisturbed.
+                </p>
+              </div>
+              
+              <!-- Step 3 -->
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-orange-600 font-bold">3</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">Confirm the plan before work begins</h3>
+                </div>
+                <p class="text-gray-700">
+                  No surprises. You'll know what we're doing, where pipework will run, and what the finished result will look like.
+                </p>
+              </div>
+              
+              <!-- Step 4 -->
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-purple-600 font-bold">4</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">Install, test, and check</h3>
+                </div>
+                <p class="text-gray-700">
+                  We fit the new pipework, secure it correctly, and complete the required testing and final checks so you can be confident in the outcome. All work is carried out in compliance with health and safety legislation, with the primary responsibility resting with the employer.
+                </p>
+              </div>
+            </div>
+            
+            <div class="mt-6 p-6 bg-blue-50 rounded-lg">
+              <p class="text-gray-700">
+                <span class="font-semibold">Comprehensive Approach:</span> Compliance and risk management are integral to every gas pipework installation project we undertake.
+              </p>
+            </div>
+          </div>
+
+          <!-- Image 1: Installation Process -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+              <Image 
+                src={image2} 
+                alt="Gas pipework installation and routing" 
+                width={800}
+                height={450}
+                class="w-full h-auto"
+              />
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Professional gas pipework routing and installation</p>
+          </div>
+
+          <!-- Key Decisions -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Key decisions that affect the final result</h2>
+            
+            <div class="space-y-8">
+              <!-- Route Planning -->
+              <div class="bg-blue-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Route planning and access</h3>
+                <p class="text-gray-700 mb-4">
+                  A good route is safe, protected, and accessible for future checks. When planning gas pipework installation, it is important to consider whether the pipework will be routed above ground or underground. Buried pipework is at greater risk of physical damage and corrosion, so extra care and protective measures are needed. Service pipework should be regularly inspected and maintained to ensure safety and compliance; for buried pipework, inspection may require excavation to properly assess its condition. We aim to avoid awkward pinch points, vulnerable areas, and routes that make isolation difficult.
+                </p>
+              </div>
+              
+              <!-- Pipe Sizing -->
+              <div class="bg-green-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Pipe sizing and performance</h3>
+                <p class="text-gray-700 mb-4">
+                  Correct sizing matters for consistent performance. {serviceData.businessName} plans the run so it's suitable for the intended demand and distance, helping avoid avoidable issues later.
+                </p>
+                <p class="text-gray-700 mb-4">
+                  Steel pipes, particularly black iron pipes, are often used where high pressure is required, especially in industrial and commercial gas pipework installation. They are known for their strength and ability to withstand high pressures, but can be susceptible to corrosion, especially when buried.
+                </p>
+                <p class="text-gray-700">
+                  For industrial and commercial premises, the IGEM/UP/2 standard applies to installation pipework and sets a maximum operating pressure (MOP) of 60 bar, ensuring safety and compliance in these environments.
+                </p>
+              </div>
+              
+              <!-- Materials -->
+              <div class="bg-orange-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Materials and finish</h3>
+                <p class="text-gray-700 mb-4">
+                  The best material and finish depend on where the pipework will run (visible areas, protected voids, or exposed sections). We choose an approach that suits the environment and keeps the installation robust and tidy.
+                </p>
+                <p class="text-gray-700">
+                  When it comes to gas pipework installation, the main materials used are steel, stainless steel, copper, and polyethylene. Copper piping is a popular choice for many gas installations because it is durable, flexible, and resistant to corrosion. Steel and copper are both suitable for above-ground pipework, while polyethylene is preferred for buried installations due to its non-corroding properties, which help prevent leaks from corrosion. For certain applications, corrugated stainless steel tubing (CSST) offers flexibility and can be easily bent around obstacles, reducing the need for additional fittings and joints. While PVC and plastic pipes are lightweight and resistant to corrosion, they are generally not recommended for indoor gas installations due to their lower strength. Selecting the right material for each application ensures safety, compliance, and long-lasting performance.
+                </p>
+              </div>
+              
+              <!-- Isolation -->
+              <div class="bg-purple-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Isolation and usability</h3>
+                <p class="text-gray-700 mb-4">
+                  Safe isolation should be practical and reachable. We consider where isolation needs to be and how it will be accessed without hassle.
+                </p>
+                <p class="text-gray-700">
+                  Capping is a method used to safely secure and stop the flow of gas from unused pipes, and it should always be performed by a Gas Safe Registered professional. The typical cost for capping a gas pipe is around £500, depending on access and complexity.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- What to Expect -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What to expect on the day</h2>
+            
+            <p class="text-gray-700 mb-6">
+              To make the visit smooth, {serviceData.businessName} will typically:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Confirm access to the areas where pipework will run</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Protect nearby surfaces where work is taking place</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Keep you informed as the route is set out and the run is installed</span>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Complete testing and checks before finishing up</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Walk you through what's been done and what to do next</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-blue-50 rounded-lg">
+              <p class="text-gray-700">
+                All gas pipework installation is carried out by our professional team, maintaining the highest safety standards throughout the process. Full documentation and certification are provided upon completion to ensure compliance and peace of mind.
+              </p>
+            </div>
+          </div>
+
+          <!-- Minimal Disruption -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Minimal disruption, clean routing, and a tidy finish</h2>
+            
+            <div class="bg-green-50 p-6 rounded-lg">
+              <p class="text-gray-700 mb-4">
+                Gas pipework often needs careful routing through tight spaces, voids, corners, or along existing lines. Our priority is a clean, safe run with sensible access—without unnecessary disturbance. The installation process is designed to minimize the risk of physical damage and corrosion, especially for buried pipes. If any access points are required to complete the installation, we'll explain that clearly before proceeding. Should any walls, floors, or carpets be disturbed during the process, we will carry out repair work to restore the area to its original condition.
+              </p>
+            </div>
+          </div>
+
+          <!-- Quality Checks -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Quality and safety checks after installation</h2>
+            
+            <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+              <p class="text-gray-700 mb-4">
+                Before the job is considered complete, {serviceData.businessName} completes the appropriate testing and verification steps for the new run. Gas pipework must be regularly inspected by a competent person to prevent leaks and ensure safe operation, with the inspection schedule established by that person. Leaks can occur if pipework is damaged or corroded, especially for buried metallic pipes. To prevent leaks, buried metallic pipework should be replaced with non-corroding materials.
+              </p>
+              
+              <p class="text-gray-700">
+                The goal is straightforward: the pipework is installed correctly, tested properly, and left in a safe, usable condition.
+              </p>
+            </div>
+          </div>
+
+          <!-- Image 2: Testing -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+              <Image 
+                src={image3} 
+                alt="Gas pipework pressure testing and checks" 
+                width={800}
+                height={450}
+                class="w-full h-auto"
+              />
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Comprehensive pressure testing and safety checks</p>
+          </div>
+
+          <!-- Cost Factors -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What affects the cost of gas pipework installation</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Exact costs depend on the specifics of the run. Labour costs are a significant part of the overall expense, with gas installation hourly rates typically ranging from £30 to £40 depending on the job and location. The main factors affecting installation costs include:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Total length of new pipework required</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Distance from the property to the mains gas supply (a simple gas pipe connection within 23m of the mains supply should cost around £400, while a longer or more complex connection over 23m will cost approximately £1,250)</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Complexity of the project, such as tight access, multiple turns, or difficult voids</span>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Number of connection points required on the new run</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Whether sections are surface-run or need concealed routing (access-dependent)</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Any additional access management needed to complete the run safely and neatly</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-6 p-6 bg-amber-50 rounded-lg">
+              <p class="text-gray-700">
+                <span class="font-semibold">Cost Overview:</span> The average cost for gas pipework installation, excluding any digging or trenches, is around £1,000. The cost to install a gas central heating system can be around £4,600, excluding labour costs. Modern solutions like Flexigas CSST systems require fewer fittings and joints, which can reduce installation times and lower labour costs. New installations may also have additional requirements and costs, depending on regulatory compliance and safety standards.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQs -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+              <MessageCircle className="w-8 h-8 text-blue-600 mr-3" />
+              Gas pipework installation FAQs
+            </h2>
+            
+            <div class="space-y-6">
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Can you install gas pipework in tight or awkward spaces?</h3>
+                <p class="text-gray-700">Yes—where it's safe and practical. {serviceData.businessName} will assess access and routing constraints first, then propose the best approach for a safe, stable run. Flexible solutions like CSST (Corrugated Stainless Steel Tubing) and Flexigas can be used in tight or awkward spaces, as they can be easily bent around obstacles, reducing the need for additional fittings and joints and improving installation efficiency.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Will I need to clear the area?</h3>
+                <p class="text-gray-700">It helps to clear cupboards, under-stair spaces, or other access points along the intended route. If anything specific is needed, we'll tell you before the visit.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">How do you decide the route?</h3>
+                <p class="text-gray-700">We prioritise safety, protection, and access. As part of the route planning process, a documented risk assessment is conducted to ensure safety and compliance with regulations. Then we balance neatness and practicality based on the property layout and what you want the finished result to look like.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Do you test the new pipework after installation?</h3>
+                <p class="text-gray-700">Yes. Testing and final checks are an essential part of completing the installation properly. Commissioning, which includes thorough testing and purging of the gas system, is carried out to ensure the new pipework is safe, compliant, and ready for use.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Can you make the pipework look neat?</h3>
+                <p class="text-gray-700">Neat routing is part of good workmanship. We aim for straight runs, sensible clipping/support, and a practical finish suited to the location.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Final CTA Section -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Book gas pipework installation in {serviceData.location}</h2>
+            
+            <div class="bg-gradient-to-r from-blue-50 to-blue-100 border-l-4 border-blue-600 p-6 rounded-r-lg">
+              <p class="text-gray-800">
+                If you need gas pipework installation in {serviceData.location}, contact {serviceData.businessName} to arrange an assessment and a clear plan for the safest, most suitable route.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-8">
+          <!-- Quick Contact Card -->
+          <div class="bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-xl p-6 shadow-lg">
+            <h3 class="text-2xl font-bold mb-4">Professional Pipework Installation</h3>
+            <p class="mb-6">Gas Safe registered installation with full certification</p>
+            
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center w-full py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors mb-4">
+              <Phone className="w-5 h-5 mr-3" />
+              Call Now: {serviceData.phoneNumber}
+            </a>
+            
+            <a href="/contact" class="inline-flex items-center justify-center w-full py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+              Book Assessment
+            </a>
+            
+            <div class="mt-6 pt-6 border-t border-white/20">
+              <div class="flex items-center">
+                <Shield className="w-5 h-5 mr-3" />
+                <div>
+                  <p class="font-semibold">Full Certification</p>
+                  <p class="text-sm opacity-90">Documentation provided</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Details -->
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Service Details</h3>
+            
+            <div class="space-y-4">
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Service Type</p>
+                <p class="text-gray-600">Gas Pipework Installation</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Project Scope</p>
+                <p class="text-gray-600">Domestic & Commercial</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Engineer Qualification</p>
+                <p class="text-gray-600">Gas Safe Registered</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Certification</p>
+                <p class="text-gray-600">Full Documentation Provided</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cost Overview -->
+          <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+              <DollarSign className="w-5 h-5 text-amber-600 mr-2" />
+              Cost Overview
+            </h3>
+            
+            <div class="space-y-3">
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Average Installation</span>
+                <span class="font-bold text-gray-900">£1,000</span>
+              </div>
+              
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Connection (<23m)</span>
+                <span class="font-bold text-gray-900">£400</span>
+              </div>
+              
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Connection (>23m)</span>
+                <span class="font-bold text-gray-900">£1,250</span>
+              </div>
+              
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Pipe Capping</span>
+                <span class="font-bold text-gray-900">£500</span>
+              </div>
+              
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Labour Rate</span>
+                <span class="font-bold text-gray-900">£30-£40/hr</span>
+              </div>
+              
+              <div class="mt-4 p-3 bg-white rounded-lg">
+                <p class="text-sm text-gray-600">
+                  <span class="font-semibold">Detailed Quotes:</span> All costs quoted upfront. Prices vary based on specific requirements.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Commercial Focus -->
+          <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
+            <div class="flex items-center mb-4">
+              <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                <Wrench className="w-5 h-5 text-blue-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-900">Commercial & Industrial</h3>
+            </div>
+            <p class="text-sm text-gray-700">
+              We serve commercial premises and industrial clients with specialized gas pipework installation meeting all regulatory standards and business requirements.
+            </p>
+          </div>
+
+          <!-- Related Services -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Related Services</h3>
+            
+            <div class="space-y-3">
+              <a href="/services/gas-appliance-installation" class="block p-3 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-blue-200">
+                    <Flame className="w-4 h-4 text-blue-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-blue-600">Gas Appliance Installation</span>
+                </div>
+              </a>
+              
+              <a href="/services/gas-safety-certificates" class="block p-3 bg-orange-50 hover:bg-orange-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-orange-200">
+                    <Shield className="w-4 h-4 text-orange-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-orange-600">Gas Safety Certificates</span>
+                </div>
+              </a>
+              
+              <a href="/services/gas-leak-detection" class="block p-3 bg-green-50 hover:bg-green-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-green-200">
+                    <AlertCircle className="w-4 h-4 text-green-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-green-600">Gas Leak Detection</span>
+                </div>
+              </a>
+              
+              <a href="/services/commercial-gas-services" class="block p-3 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-purple-200">
+                    <Zap className="w-4 h-4 text-purple-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-purple-600">Commercial Gas Services</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-gradient-to-r from-gray-900 to-blue-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Professional Gas Pipework Installation
+      </h2>
+      
+      <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+        Ensure safe, compliant gas pipework installation with our Gas Safe registered engineers. Full testing and certification provided.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <Phone className="w-6 h-6 mr-3" />
+          Call for Quote: {serviceData.phoneNumber}
+        </a>
+        
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg text-lg hover:bg-white/10 transition-all duration-300">
+          Book Assessment
+        </a>
+      </div>
+      
+      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+        <div class="text-center">
+          <Shield className="w-8 h-8 text-green-400 mx-auto mb-2" />
+          <p class="text-sm">Gas Safe Registered</p>
+        </div>
+        <div class="text-center">
+          <CheckCircle className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+          <p class="text-sm">Full Certification</p>
+        </div>
+        <div class="text-center">
+          <Wrench className="w-8 h-8 text-amber-400 mx-auto mb-2" />
+          <p class="text-sm">Commercial & Industrial</p>
+        </div>
+        <div class="text-center">
+          <Flame className="w-8 h-8 text-orange-400 mx-auto mb-2" />
+          <p class="text-sm">Pressure Testing</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

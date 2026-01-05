@@ -1,0 +1,778 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { Phone, Shield, CheckCircle, Wrench, Flame, Clock, AlertCircle, DollarSign, MessageCircle, Calendar, Zap, Droplets, Thermometer } from 'lucide-react';
+import image1 from "../assets/image/Boiler-Swap-Upgrade.png"
+import image2 from "../assets/image/Heating-System-Installation.png"
+import image3 from "../assets/image/heaterHero.webp"
+
+// Dynamic data
+const serviceData = {
+  title: "Gas Fire Installation",
+  location: "Your Location",
+  businessName: "Your Business Name",
+  metaDescription: "Professional gas fire installation in [location]. Gas Safe registered engineers for safe fireplace fitting.",
+  phoneNumber: "YOUR-PHONE-NUMBER"
+};
+---
+
+<Layout title={`Gas Fire Installation in ${serviceData.location} | ${serviceData.businessName}`} description={serviceData.metaDescription}>
+  <!-- Hero Section -->
+  <section class="relative py-16 md:py-24 bg-gradient-to-r from-blue-900 to-gray-900 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-20">
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="mb-4">
+            <span class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium border border-white/20">
+              <Shield className="w-4 h-4 mr-2" />
+              Gas Safe Registered
+            </span>
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Gas Fire Installation in <span class="text-orange-400">{serviceData.location}</span>
+          </h1>
+          
+          <p class="text-xl text-gray-300 mb-8 max-w-2xl">
+            Safe, professional gas fire installation by Gas Safe registered engineers. Ensure your fireplace operates safely and provides steady, reliable heat.
+          </p>
+          
+          <div class="flex flex-wrap gap-4">
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+              <Phone className="w-5 h-5 mr-3" />
+              Call Now: {serviceData.phoneNumber}
+            </a>
+            <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/20">
+              Book Installation Online
+            </a>
+          </div>
+          
+          <div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Gas Safe Certified</span>
+            </div>
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Safe & Secure Fitting</span>
+            </div>
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Operational Checks</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="relative rounded-xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+            <Image 
+              src={image1} 
+              alt="Gas fire installation technician at work" 
+              width={600}
+              height={400}
+              class="w-full h-auto"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-white text-gray-900 p-4 rounded-lg shadow-lg max-w-xs">
+            <div class="flex items-center mb-2">
+              <Flame className="w-5 h-5 text-blue-500 mr-2" />
+              <span class="font-semibold">Safety First</span>
+            </div>
+            <p class="text-sm">Legal requirement: Gas Safe engineer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-12">
+        <!-- Main Content Column -->
+        <div class="lg:col-span-2">
+          <!-- Introduction -->
+          <div class="prose prose-lg max-w-none mb-12">
+            <p class="lead text-xl text-gray-700 mb-8">
+              If you're searching for gas fire installation in {serviceData.location}, you likely want a safe, correct fit that suits the room, doesn't smell of gas, lights reliably, and provides steady heat without nuisance shut-offs. Whether you're dealing with an existing fireplace opening, an awkward surround, uncertain ventilation, or you're unsure which fire type is compatible, {serviceData.businessName} starts with an assessment, offers advice to help you make informed decisions, explains what's possible, and only installs once everything is clear. The result is a properly installed gas fire that operates safely and performs consistently.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-6 rounded-r-lg">
+              <p class="font-semibold text-blue-800">
+                Book your gas fire installation in {serviceData.location} with {serviceData.businessName}.
+              </p>
+            </div>
+            
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+              Gas fire installation service in {serviceData.location}
+            </h2>
+
+            <p>
+              Gas fire installation is a safety-critical job that depends on suitability, correct fitting, and proper checks once installed. {serviceData.businessName} provides gas fire installation in {serviceData.location} for customers who want the fire installed correctly and verified before regular use.
+            </p>
+            
+            <p>
+              It is a legal requirement to use a Gas Safe registered engineer for gas fire installation to ensure safety and compliance with current regulations.
+            </p>
+
+            <p>
+              This page is about installing a gas fire only — not repairs, servicing, or other gas appliance work.
+            </p>
+          </div>
+
+          <!-- What Installation Includes -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What gas fire installation includes</h2>
+            
+            <p class="text-gray-700 mb-6">
+              A complete gas fire installation typically includes:
+            </p>
+            
+            <div class="space-y-4 mb-6">
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Checking the room setup and intended installation position</span>
+              </div>
+              
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Confirming the gas fire is suitable for the space and intended use</span>
+              </div>
+              
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Confirming how to connect the gas fire to the gas supply, flue, and access requirements</span>
+              </div>
+              
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Installing the gas fire securely and correctly in position</span>
+              </div>
+              
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Performing operational checks to confirm safe, stable operation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Common Installation Scenarios -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Common gas fire installation scenarios</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Gas fire installations in {serviceData.location} commonly involve:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Replacing an older gas fire with a new model (installation only)</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Installing into an existing fireplace opening</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Installing where the surround or opening needs careful alignment</span>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Situations where access to the connection point is tight or awkward</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Uncertainty about whether the chosen fire suits the room and setup</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 p-6 bg-gray-50 rounded-lg border-l-4 border-gray-500">
+              <p class="text-gray-700">
+                <span class="font-semibold">Installation Variables:</span> The installation process can differ depending on the age and existing infrastructure of the house, as these factors may affect access and connection points.
+              </p>
+            </div>
+          </div>
+
+          <!-- Key Installation Checks -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Key installation checks before any work begins</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Before installing, {serviceData.businessName} checks the constraints that determine whether the installation can be completed safely and correctly:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Space and fit: whether the fire physically fits and can be secured properly</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Ventilation and airflow needs: whether the room conditions support safe operation, including air quality management and the possible need for a vent to ensure proper air exchange and combustion</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>External wall/flue requirements: whether a flue or vent needs to pass through an external wall for safe venting and compliance with installation standards</span>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Access: whether safe access exists for connection and future shut-off access</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Positioning: whether the fire can be aligned neatly without forcing the setup</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Stability: whether the final installation can be left secure and stable</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-blue-50 rounded-lg">
+              <p class="text-gray-700">
+                <span class="font-semibold">Prevention Focus:</span> These checks help prevent forced fittings, poor alignment, and unreliable operation later.
+              </p>
+            </div>
+          </div>
+
+          <!-- Image 1: Installation Process -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+              <Image 
+                src={image2} 
+                alt="Gas fire installation and fitting" 
+                width={800}
+                height={450}
+                class="w-full h-auto"
+              />
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Professional gas fire installation in existing fireplace</p>
+          </div>
+
+          <!-- Choosing the Right Gas Fire -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Choosing the right gas fire for the space</h2>
+            
+            <p class="text-gray-700 mb-6">
+              A gas fire needs to match the reality of the room — not just the look. Installation suitability is influenced by:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Room size and how the space is used day to day</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Placement constraints around the fireplace opening or wall space</span>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Whether the fire can be fitted without compromising safe clearances</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Whether the chosen unit is compatible with the available supply arrangement</span>
+                </div>
+              </div>
+            </div>
+            
+            <p class="text-gray-700 mb-6">
+              Many homeowners are now choosing a modern gas fire for its efficiency, safety, and convenience compared to traditional fireplaces or wood burners. Some customers may be converting from open fires to gas fires, which involves different installation requirements and enhanced safety considerations. The visual appeal of realistic flames in various gas fire styles can dramatically enhance the atmosphere of your room, offering both warmth and a striking focal point. Additionally, using wood for the surround or mantel can complement both modern and classic interior designs, adding a touch of natural elegance.
+            </p>
+            
+            <div class="p-6 bg-green-50 rounded-lg">
+              <p class="text-gray-700">
+                <span class="font-semibold">Pre-installation Verification:</span> If something doesn't make sense for the installation, it's identified before fitting begins.
+              </p>
+            </div>
+          </div>
+
+          <!-- Installation Process -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Gas fire installation process step by step</h2>
+            
+            <div class="space-y-8">
+              <!-- Step 1 -->
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-blue-600 font-bold">1</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">Site and appliance assessment</h3>
+                </div>
+                <p class="text-gray-700">
+                  The intended installation point, fit, and constraints are checked so the job is planned correctly. This assessment also enables the installer to provide estimated costs for the gas fire installation, tailored to your specific site and requirements.
+                </p>
+              </div>
+              
+              <!-- Step 2 -->
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-green-600 font-bold">2</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">Clear explanation before action</h3>
+                </div>
+                <p class="text-gray-700">
+                  You're told what will be done, what the installer needs access to, and what checks will be carried out. You can expect the installation process to take a few hours, depending on the complexity, and there may be additional work required if adjustments to your existing gas supply or ventilation are needed.
+                </p>
+              </div>
+              
+              <!-- Step 3 -->
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-orange-600 font-bold">3</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">Installation and secure fitting</h3>
+                </div>
+                <p class="text-gray-700">
+                  The gas fire is installed in position and secured correctly so it sits properly and remains stable.
+                </p>
+              </div>
+              
+              <!-- Step 4 -->
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-purple-600 font-bold">4</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">Connection and operational verification</h3>
+                </div>
+                <p class="text-gray-700">
+                  The fire is checked in operating conditions to confirm it lights, runs, and behaves consistently. The installer also verifies that the gas fire can operate as intended, including testing any features that require electricity or battery operation.
+                </p>
+              </div>
+              
+              <!-- Step 5 -->
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-red-600 font-bold">5</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">Final safety and stability checks</h3>
+                </div>
+                <p class="text-gray-700">
+                  Final checks confirm the installation is stable, usable, and ready for normal operation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Removing Existing Fire -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Removing an existing gas fire</h2>
+            
+            <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+              <p class="text-gray-700 mb-4">
+                Before installing a new gas fire, it's essential to safely remove the existing gas fire. This process should always be handled by a Gas Safe registered engineer, as they have the expertise and equipment to disconnect the old gas fire without risk to your property or safety. Attempting to remove a gas fire yourself can be dangerous and may lead to gas leaks or damage to the gas supply.
+              </p>
+              
+              <p class="text-gray-700">
+                The costs involved in removing an existing gas fire typically range from £180 to £250, depending on the type of fire and the complexity of the job. Factoring in these costs when planning your new fire installation helps ensure a smooth, efficient process from start to finish. By relying on a gas safe registered professional, you can be confident the removal is carried out efficiently and in full compliance with safety standards, paving the way for your new gas fire installation.
+              </p>
+            </div>
+          </div>
+
+          <!-- After-Installation Checks -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">After-installation checks that matter</h2>
+            
+            <p class="text-gray-700 mb-6">
+              A gas fire isn't "installed" just because it turns on once. {serviceData.businessName} confirms:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>The fire lights reliably and runs steadily</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>There are no signs of leakage at connection points</span>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>The unit sits securely and remains stable in place</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Operation is consistent under normal use conditions</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Maintenance and Servicing -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Maintenance and servicing for your gas fire</h2>
+            
+            <div class="bg-blue-50 p-6 rounded-lg">
+              <p class="text-gray-700 mb-4">
+                To keep your gas fire running efficiently and safely, regular maintenance and servicing are essential. An annual inspection by a Gas Safe registered engineer ensures your gas supply, flue system, and ventilation are all in good working order. This not only helps prevent potential safety issues but also extends the lifespan of your fire and maintains its performance.
+              </p>
+              
+              <p class="text-gray-700">
+                Servicing your gas fire typically costs between £85 and £150, depending on the type of fire and the engineer's rates. Prioritizing regular maintenance means you can enjoy the warmth and comfort of your gas fire with peace of mind, knowing it's operating safely and efficiently all year round.
+              </p>
+            </div>
+          </div>
+
+          <!-- Image 2: Finished Installation -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+              <Image 
+                src={image3} 
+                alt="Beautifully installed modern gas fire" 
+                width={800}
+                height={450}
+                class="w-full h-auto"
+              />
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Modern gas fire installation with realistic flames</p>
+          </div>
+
+          <!-- Common Concerns -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Common concerns customers have about gas fire installation</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Customers often want reassurance around:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>"Will it fit neatly in the opening or surround?"</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>"Will it light consistently?"</span>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>"Will it cut out or behave erratically once installed?"</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>"Is the setup safe to use daily?"</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-6 p-6 bg-green-50 rounded-lg">
+              <p class="text-gray-700">
+                <span class="font-semibold">Clarity Over Guesswork:</span> The installation approach is designed to answer these questions through checks and clear explanation — not guesswork. Customers can expect to pay for the gas fire installation itself, as well as any additional services or features required, and clear quotes are always provided upfront to ensure there are no surprises.
+              </p>
+            </div>
+          </div>
+
+          <!-- Additional Costs -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Additional costs to consider</h2>
+            
+            <div class="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-lg">
+              <p class="text-gray-700 mb-4">
+                When planning for a new gas fire installation, it's important to consider all the additional costs that may arise beyond the basic installation fee. These can include the removal of your existing gas fire, repairs or upgrades to the chimney or flue, and the installation of a new hearth or surround to match your chosen style. If you're installing a gas fire for the first time, you may also need to budget for a new gas supply line or modifications to your central heating system. All these factors can affect the total price of your fire installation.
+              </p>
+              
+              <p class="text-gray-700">
+                A Gas Safe registered engineer can provide a detailed quote that covers all the necessary work, helping you plan your budget and avoid unexpected expenses. By understanding the full range of costs involved, you can ensure your new gas fire is installed safely, efficiently, and in line with your expectations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Finding Qualified Engineer -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Finding a qualified engineer for your installation</h2>
+            
+            <div class="bg-blue-50 p-6 rounded-lg">
+              <p class="text-gray-700 mb-4">
+                Choosing the right professional for your gas fire installation is a top priority. Always look for a Gas Safe registered engineer with proven experience in fire installation. A qualified engineer will provide a comprehensive quote, clearly outlining all costs and the work to be carried out. Check local reviews and ratings to find a trusted installer in your area, and always verify their Gas Safe registration and credentials before booking.
+              </p>
+              
+              <p class="text-gray-700">
+                By hiring a gas safe registered engineer, you ensure the job is carried out efficiently, safely, and in full compliance with all legal requirements. This not only protects your property and family but also guarantees your new gas fire will deliver reliable warmth and performance.
+              </p>
+            </div>
+          </div>
+
+          <!-- Gas Safe Qualifications -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Gas Safe registered engineer qualifications</h2>
+            
+            <div class="bg-green-50 p-6 rounded-lg">
+              <p class="text-gray-700">
+                A Gas Safe registered engineer is specially trained and certified to work on gas fires and other gas appliances. To achieve this status, engineers must complete rigorous training and pass industry-standard exams, demonstrating their competence in safe gas fire installation, maintenance, and repair. Only Gas Safe registered engineers are legally permitted to carry out gas fire installations, ensuring every job is completed safely and with minimal disruption to your home. When you choose a Gas Safe registered professional, you can trust that your new fire will be installed safely, efficiently, and in full compliance with all safety regulations. This means you can enjoy the warmth and all the benefits of your gas fire, knowing the work has been carried out to the highest standards.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQs -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+              <MessageCircle className="w-8 h-8 text-blue-600 mr-3" />
+              Gas fire installation FAQs
+            </h2>
+            
+            <div class="space-y-6">
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Do I need an existing fireplace opening for a gas fire?</h3>
+                <p class="text-gray-700">Many gas fireplace installations use an existing opening, but a gas fireplace can also be installed without one, depending on the specific model and installation requirements. Suitability is confirmed during the initial assessment.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">What if the fire doesn't fit the opening properly?</h3>
+                <p class="text-gray-700">Fit and alignment are checked first. If it can't be installed securely and correctly, that's identified before any installation work proceeds.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Will you check the fire after installing it?</h3>
+                <p class="text-gray-700">Yes. The installation includes operational checks to confirm stable, safe performance before completion.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Can a gas fire be installed if access is tight?</h3>
+                <p class="text-gray-700">Access constraints are assessed at the start. The fire must be installable without forcing the connection or compromising safe positioning. In some cases, especially where a new flue is required, work may need to be carried out on the roof to ensure proper venting and compliance with regulations.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Final CTA Section -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Book gas fire installation in {serviceData.location}</h2>
+            
+            <div class="bg-gradient-to-r from-blue-50 to-blue-100 border-l-4 border-blue-600 p-6 rounded-r-lg">
+              <p class="text-gray-800 mb-4">
+                For gas fire installation in {serviceData.location} focused on correct fit, safe operation checks, and a stable finished result, contact {serviceData.businessName}. Arrange your installation and get a gas fire fitted properly, with clarity from the first assessment to final checks.
+              </p>
+              
+              <p class="text-gray-800 font-semibold">
+                Book your gas fire installation before the colder months arrive to ensure your home is prepared for the winter season and ready for increased heating demand.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-8">
+          <!-- Quick Contact Card -->
+          <div class="bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-xl p-6 shadow-lg">
+            <h3 class="text-2xl font-bold mb-4">Safe Fire Installation</h3>
+            <p class="mb-6">Gas Safe registered installation with full safety checks</p>
+            
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center w-full py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors mb-4">
+              <Phone className="w-5 h-5 mr-3" />
+              Call Now: {serviceData.phoneNumber}
+            </a>
+            
+            <a href="/contact" class="inline-flex items-center justify-center w-full py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+              Book Installation
+            </a>
+            
+            <div class="mt-6 pt-6 border-t border-white/20">
+              <div class="flex items-center">
+                <Shield className="w-5 h-5 mr-3" />
+                <div>
+                  <p class="font-semibold">Legal Requirement</p>
+                  <p class="text-sm opacity-90">Gas Safe registered only</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Details -->
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Service Details</h3>
+            
+            <div class="space-y-4">
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Service Type</p>
+                <p class="text-gray-600">Gas Fire Installation</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Installation Time</p>
+                <p class="text-gray-600">2-4 Hours Typically</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Engineer Qualification</p>
+                <p class="text-gray-600">Gas Safe Registered</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Safety Checks</p>
+                <p class="text-gray-600">Full Operational Testing</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pricing Breakdown -->
+          <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+              <DollarSign className="w-5 h-5 text-amber-600 mr-2" />
+              Cost Overview
+            </h3>
+            
+            <div class="space-y-3">
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Basic Installation</span>
+                <span class="font-bold text-gray-900">From £200</span>
+              </div>
+              
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Fire Removal</span>
+                <span class="font-bold text-gray-900">£180-£250</span>
+              </div>
+              
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Flue Work</span>
+                <span class="font-bold text-gray-900">Additional</span>
+              </div>
+              
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Annual Service</span>
+                <span class="font-bold text-gray-900">£85-£150</span>
+              </div>
+              
+              <div class="mt-4 p-3 bg-white rounded-lg">
+                <p class="text-sm text-gray-600">
+                  <span class="font-semibold">Detailed Quotes:</span> All work quoted upfront with no hidden costs. Prices vary based on specific requirements.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Safety Legal Requirement -->
+          <div class="bg-red-50 rounded-xl p-6 border border-red-200">
+            <div class="flex items-center mb-4">
+              <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                <Shield className="w-5 h-5 text-red-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-900">Legal Requirement</h3>
+            </div>
+            <p class="text-sm text-gray-700">
+              It is illegal for anyone who is not Gas Safe registered to install a gas fire. Always verify credentials before allowing work to begin.
+            </p>
+          </div>
+
+          <!-- Related Services -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Related Services</h3>
+            
+            <div class="space-y-3">
+              <a href="/services/gas-fire-repairs" class="block p-3 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-blue-200">
+                    <Wrench className="w-4 h-4 text-blue-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-blue-600">Gas Fire Repairs</span>
+                </div>
+              </a>
+              
+              <a href="/services/gas-fire-servicing" class="block p-3 bg-orange-50 hover:bg-orange-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-orange-200">
+                    <Flame className="w-4 h-4 text-orange-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-orange-600">Gas Fire Servicing</span>
+                </div>
+              </a>
+              
+              <a href="/services/gas-safety-certificates" class="block p-3 bg-green-50 hover:bg-green-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-green-200">
+                    <Shield className="w-4 h-4 text-green-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-green-600">Gas Safety Certificates</span>
+                </div>
+              </a>
+              
+              <a href="/services/chimney-sweeping" class="block p-3 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-purple-200">
+                    <CheckCircle className="w-4 h-4 text-purple-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-purple-600">Chimney Sweeping</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-gradient-to-r from-gray-900 to-blue-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Install Your Gas Fire Safely Before Winter
+      </h2>
+      
+      <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+        Don't wait for the cold weather. Our Gas Safe registered engineers provide professional installation with comprehensive safety checks.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <Phone className="w-6 h-6 mr-3" />
+          Book Now: {serviceData.phoneNumber}
+        </a>
+        
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg text-lg hover:bg-white/10 transition-all duration-300">
+          Get Detailed Quote
+        </a>
+      </div>
+      
+      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+        <div class="text-center">
+          <Shield className="w-8 h-8 text-green-400 mx-auto mb-2" />
+          <p class="text-sm">Gas Safe Registered</p>
+        </div>
+        <div class="text-center">
+          <CheckCircle className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+          <p class="text-sm">Legal Requirement</p>
+        </div>
+        <div class="text-center">
+          <Clock className="w-8 h-8 text-amber-400 mx-auto mb-2" />
+          <p class="text-sm">2-4 Hour Installation</p>
+        </div>
+        <div class="text-center">
+          <Flame className="w-8 h-8 text-orange-400 mx-auto mb-2" />
+          <p class="text-sm">Full Safety Testing</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

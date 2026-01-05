@@ -1,0 +1,951 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { Phone, Shield, CheckCircle, Wrench, Flame, Clock, AlertCircle, DollarSign, MessageCircle, Calendar, Zap, Droplets, Thermometer } from 'lucide-react';
+import image1 from "../assets/image/Boiler-Swap-Upgrade.png"
+import image2 from "../assets/image/Heating-System-Installation.png"
+import image3 from "../assets/image/heaterHero.webp"
+
+// Dynamic data
+const serviceData = {
+  title: "Hot Water Cylinder Installation",
+  location: "Your Location",
+  businessName: "Your Business Name",
+  metaDescription: "Professional hot water cylinder installation in [location]. Unvented and vented cylinder installations by G3-qualified engineers.",
+  phoneNumber: "YOUR-PHONE-NUMBER"
+};
+---
+
+<Layout title={`Hot Water Cylinder Installation in ${serviceData.location} | ${serviceData.businessName}`} description={serviceData.metaDescription}>
+  <!-- Hero Section -->
+  <section class="relative py-16 md:py-24 bg-gradient-to-r from-blue-900 to-gray-900 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-20">
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="mb-4">
+            <span class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium border border-white/20">
+              <Shield className="w-4 h-4 mr-2" />
+              G3 Certified
+            </span>
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Hot Water Cylinder Installation in <span class="text-orange-400">{serviceData.location}</span>
+          </h1>
+          
+          <p class="text-xl text-gray-300 mb-8 max-w-2xl">
+            Professional installation of unvented and vented hot water cylinders. Correct sizing for your household demand.
+          </p>
+          
+          <div class="flex flex-wrap gap-4">
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+              <Phone className="w-5 h-5 mr-3" />
+              Call Now: {serviceData.phoneNumber}
+            </a>
+            <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/20">
+              Book Installation
+            </a>
+          </div>
+          
+          <div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">G3 Certified</span>
+            </div>
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Correct Sizing</span>
+            </div>
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Full Commissioning</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="relative rounded-xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+            <Image 
+              src={image1} 
+              alt="Hot water cylinder installation technician at work" 
+              width={600}
+              height={400}
+              class="w-full h-auto"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-white text-gray-900 p-4 rounded-lg shadow-lg max-w-xs">
+            <div class="flex items-center mb-2">
+              <Droplets className="w-5 h-5 text-blue-500 mr-2" />
+              <span class="font-semibold">Building Regulations Compliant</span>
+            </div>
+            <p class="text-sm">All installations meet UK safety standards</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-12">
+        <!-- Main Content Column -->
+        <div class="lg:col-span-2">
+          <!-- Introduction -->
+          <div class="prose prose-lg max-w-none mb-12">
+            <p class="lead text-xl text-gray-700 mb-8">
+              If you're looking for hot water cylinder installation in {serviceData.location}, you probably want one simple outcome: steady hot water that matches your daily demand without leaks, pressure problems, or constant reheating.
+            </p>
+            
+            <p>
+              Unvented hot water cylinders are a popular choice in UK homes due to their benefits such as improved water pressure and space-saving design. {serviceData.businessName} installs hot water cylinders by assessing your current setup first, explaining the best-fit option, and only starting work once the plan is clear.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-6 rounded-r-lg">
+              <p class="font-semibold text-blue-800">
+                When we're done, your cylinder is correctly sized, safely connected, and commissioned so it performs reliably day after day.
+              </p>
+            </div>
+            
+            <p class="font-semibold text-blue-700">
+              Arrange your hot water cylinder installation with {serviceData.businessName} in {serviceData.location}. All installations are carried out in compliance with relevant building regulations for safety and peace of mind.
+            </p>
+          </div>
+
+          <!-- What Installation Covers -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What "Hot Water Cylinder Installation" Really Covers</h2>
+            
+            <p class="text-gray-700 mb-6">
+              A proper cylinder installation is a complete end-to-end job, not just swapping a tank. It typically includes:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              <div class="bg-blue-50 p-6 rounded-lg">
+                <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-2" />
+                  Planning & Preparation
+                </h3>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span class="text-sm">Confirming cylinder type and capacity for your household demand</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span class="text-sm">Checking the existing connections, valves, discharge routes, and mounting/base</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span class="text-sm">Isolating, draining, and removing the old cylinder (where applicable)</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="bg-green-50 p-6 rounded-lg">
+                <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+                  <Wrench className="w-5 h-5 text-green-600 mr-2" />
+                  Installation & Commissioning
+                </h3>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span class="text-sm">Preparing and adapting pipework, including any necessary plumbing modifications</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span class="text-sm">Installing the cylinder, controls, and safety components in the correct configuration</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span class="text-sm">Filling, venting, pressure checking, and commissioning the system</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="p-6 bg-gray-50 rounded-lg border border-gray-200">
+                <h4 class="font-semibold text-gray-900 mb-2">Verification & Handover</h4>
+                <ul class="space-y-1 text-sm text-gray-600">
+                  <li class="flex items-start">
+                    <CheckCircle className="w-3 h-3 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Verifying performance: temperature control, recovery, stability</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-3 h-3 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Handover: what's been installed, how it operates</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="p-6 bg-blue-50 rounded-lg border border-blue-200">
+                <h4 class="font-semibold text-gray-900 mb-2">System Integration</h4>
+                <p class="text-sm text-gray-600">
+                  Integrating them into the overall hot water system, ensuring the cylinder is supplied with water from the appropriate source.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 1: Installation Process -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+              <Image 
+                src={image2} 
+                alt="Hot water cylinder installation in progress" 
+                width={800}
+                height={450}
+                class="w-full h-auto"
+              />
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Professional hot water cylinder installation work</p>
+          </div>
+
+          <!-- Choosing the Right Cylinder -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Choosing the Right Cylinder Type for Your Property</h2>
+            
+            <p class="text-gray-700 mb-6">
+              There are two types of hot water cylinders: vented and unvented. The main difference between a vented and unvented cylinder is how they receive and deliver water.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+              <div class="bg-blue-50 p-6 rounded-lg">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                    <Zap className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-900">Unvented Cylinders</h3>
+                </div>
+                <p class="text-gray-700 mb-4">
+                  Connects directly to the mains water supply, eliminating the need for a header tank or cold water tank, and providing higher pressure and a more reliable flow.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Direct mains connection</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Higher water pressure</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Space-saving design</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Modern home preferred choice</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="bg-green-50 p-6 rounded-lg">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                    <Droplets className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-900">Vented Cylinders</h3>
+                </div>
+                <p class="text-gray-700 mb-4">
+                  Rely on gravity, using a header tank or cold water tank—usually located in the loft—to feed water into the cylinder, which can limit water pressure.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Gravity-fed system</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Cold water tank in loft</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Traditional setup</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Often found in older homes</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-lg">
+              <p class="text-gray-700">
+                <span class="font-semibold">Property Consideration:</span> Properties with multiple bathrooms or a large central heating system may benefit from a system boiler paired with an unvented cylinder, while smaller homes may find a combi boiler more suitable due to its compact, all-in-one function. Installation begins with matching the cylinder choice to the property's constraints.
+              </p>
+            </div>
+          </div>
+
+          <!-- Key Factors -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Key Factors That Decide What's Compatible</h2>
+            
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <AlertCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                <div>
+                  <h3 class="font-bold text-gray-900 mb-1">Water Pressure and Flow Characteristics</h3>
+                  <p class="text-gray-700 text-sm">Including the quality of the mains supply and water supply, as well as the sizing and routing of pipes to ensure optimal pressure and flow for the hot water cylinder.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <AlertCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                <div>
+                  <h3 class="font-bold text-gray-900 mb-1">Existing Hot Water and Heating Configuration</h3>
+                  <p class="text-gray-700 text-sm">And how the cylinder integrates with it, including whether the system connects to the mains cold water supply or relies on traditional cold water sources.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <AlertCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                <div>
+                  <h3 class="font-bold text-gray-900 mb-1">Space and Access</h3>
+                  <p class="text-gray-700 text-sm">Cupboard size, airing cupboard restrictions, loft access constraints, door clearances.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <AlertCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                <div>
+                  <h3 class="font-bold text-gray-900 mb-1">Discharge Route Feasibility</h3>
+                  <p class="text-gray-700 text-sm">Safe routing for relief discharge where required.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <AlertCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                <div>
+                  <h3 class="font-bold text-gray-900 mb-1">Household Demand Patterns</h3>
+                  <p class="text-gray-700 text-sm">Peak times, simultaneous showers, filling baths, busy mornings.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sizing the Cylinder -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Sizing the Cylinder Properly (What "Correct Size" Means)</h2>
+            
+            <p class="text-gray-700 mb-6">
+              The right size isn't "bigger is better." Correct sizing means:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You don't run out of hot water at peak times, even when multiple baths, showers, and bathrooms are in use</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Recovery doesn't feel slow</span>
+                </div>
+              </div>
+              
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You're not heating and storing more than you actually use, ensuring enough hot water is stored to cover busy periods</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>The cylinder fits the available space without compromises that create maintenance problems</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+              <p class="text-gray-700">
+                <span class="font-semibold">Professional Assessment:</span> {serviceData.businessName} bases sizing on your real usage and property layout—not a generic rule of thumb.
+              </p>
+            </div>
+          </div>
+
+          <!-- Image 2: Complex Installation -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+              <Image 
+                src={image3} 
+                alt="Complex hot water cylinder installation scenario" 
+                width={800}
+                height={450}
+                class="w-full h-auto"
+              />
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Handling complex installation scenarios with precision</p>
+          </div>
+
+          <!-- Complex Installations -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">When Installation Becomes More Complex</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Some installations are straightforward replacements. Others require deeper planning because something about the property or previous setup introduces risk.
+            </p>
+            
+            <div class="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-6">
+              <p class="text-gray-700">
+                <span class="font-semibold">Cost Consideration:</span> The choice of cylinder model and installation costs can vary depending on the complexity of the property and the previous system in place.
+              </p>
+            </div>
+            
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Typical Complications We Plan For</h3>
+            
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Restricted cylinder location (tight cupboards, difficult access, awkward pipe runs)</span>
+              </div>
+              
+              <div class="flex items-start">
+                <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Old or mismatched pipework that doesn't align cleanly with modern cylinders, or the need to replace outdated water tanks or vessels</span>
+              </div>
+              
+              <div class="flex items-start">
+                <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Signs of past overheating, corrosion, or recurring leaks around the cylinder area, which can increase the risk of water becoming contaminated in old systems</span>
+              </div>
+              
+              <div class="flex items-start">
+                <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Inconsistent pressure symptoms that need identifying before fitting the new cylinder</span>
+              </div>
+              
+              <div class="flex items-start">
+                <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Previous "patch fixes" that created unreliable layouts, stresses, or poor drainage</span>
+              </div>
+            </div>
+            
+            <div class="mt-6 p-6 bg-green-50 rounded-lg">
+              <p class="text-gray-700">
+                <span class="font-semibold">Our Approach:</span> The aim is not just to "make it fit," but to install it in a way that's serviceable, stable, and built for long-term use.
+              </p>
+            </div>
+          </div>
+
+          <!-- Installation Process -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Installation Process Step-by-Step</h2>
+            
+            <div class="space-y-8">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">1</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Site Assessment and Setup Confirmation</h3>
+                  <p class="text-gray-700">
+                    We check the existing cylinder position, current connections, and practical installation route. This is where we confirm what will and won't work before any changes are made.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">2</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Isolation and Safe Drain-Down</h3>
+                  <p class="text-gray-700">
+                    The system is isolated and drained properly to avoid mess, pressure issues, and airlocks later.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">3</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Removal of Existing Cylinder (If Replacing)</h3>
+                  <p class="text-gray-700">
+                    Old cylinder removal is handled carefully to avoid damage to surrounding pipework and fittings—especially in tight cupboards.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">4</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Base, Positioning, and Alignment</h3>
+                  <p class="text-gray-700">
+                    The new cylinder must sit correctly and be supported properly. Misalignment is one of the most common causes of future stress leaks and awkward maintenance access.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">5</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Pipework Connection and Configuration</h3>
+                  <p class="text-gray-700">
+                    Connections are made cleanly and logically, with attention to:
+                  </p>
+                  <ul class="mt-2 space-y-1 text-gray-600">
+                    <li class="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Minimising unnecessary bends and strain points</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Keeping access for future servicing</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Ensuring correct routing for safe operation and reliable performance</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">6</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Safety Component Installation and Discharge Routing Check</h3>
+                  <p class="text-gray-700">
+                    A cylinder installation must include correct safety control configuration. Part of commissioning is confirming the discharge arrangement operates safely and predictably.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">7</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Fill, Vent, and Pressure Checks</h3>
+                  <p class="text-gray-700">
+                    We refill carefully, vent air where needed, and carry out pressure checks to confirm stability before the system is run normally.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">8</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Commissioning and Performance Verification</h3>
+                  <p class="text-gray-700">
+                    The system is brought up to normal operating conditions and checked for:
+                  </p>
+                  <div class="mt-2 grid md:grid-cols-2 gap-2 text-sm text-gray-600">
+                    <div class="flex items-start">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Stable hot water delivery</span>
+                    </div>
+                    <div class="flex items-start">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Correct temperature control response</span>
+                    </div>
+                    <div class="flex items-start">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>No leaks at joints or valves</span>
+                    </div>
+                    <div class="flex items-start">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Clean, predictable recovery behaviour</span>
+                    </div>
+                    <div class="flex items-start">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Safe operation of protection devices under test conditions</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">9</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Handover and Practical Guidance</h3>
+                  <p class="text-gray-700">
+                    You'll get a clear walkthrough of what's been installed, what normal operation looks like, and what signals to monitor (without technical overload).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Expected Outcomes -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Real-World Outcomes You Should Expect After Installation</h2>
+            
+            <p class="text-gray-700 mb-6">
+              A correctly installed cylinder should deliver:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Consistent hot water at the outlets you rely on most, with improved performance at the tap due to higher pressure</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Predictable recovery after peak usage</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Stable pressure behaviour in day-to-day use</span>
+                </div>
+              </div>
+              
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Reduced annoyance issues like fluctuating temperature and "hot then cold" performance</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>A system that can be maintained without dismantling half the cupboard</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>A more energy efficient solution compared to older setups</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quality Checks -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Installation Quality Checks That Prevent Future Failures</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Quality isn't just "no leak on day one." The checks that matter are the ones that reduce repeat callouts.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg mb-6">
+              <p class="text-gray-700">
+                <span class="font-semibold">Our Focus:</span> During installation, {serviceData.businessName} focuses on:
+              </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <Shield className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Stress-free pipe alignment (reduces joint fatigue and weeping)</span>
+                </div>
+                <div class="flex items-start">
+                  <Shield className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Service access preserved (reduces future labour and disruption)</span>
+                </div>
+              </div>
+              
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <Shield className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Correct safety component behaviour (prevents pressure-related issues)</span>
+                </div>
+                <div class="flex items-start">
+                  <Shield className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Stable operation after reheat cycles (catches issues that only show after warming up)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cost Drivers -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What Drives Installation Cost (Without Quoting Prices)</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Hot water cylinder installation cost is driven by the work involved, not just the cylinder itself. Installation will typically cost within a wide range, depending on the cylinder model, features, and the method used to heat water.
+            </p>
+            
+            <div class="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-6">
+              <p class="text-gray-700">
+                <span class="font-semibold">Heating Method Impact:</span> The way you heat water—whether by gas boiler, electricity, solar panels, or heat pump—can significantly affect the overall cost.
+              </p>
+            </div>
+            
+            <h3 class="text-xl font-bold text-gray-900 mb-4">The Biggest Drivers Are:</h3>
+            
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <DollarSign className="w-5 h-5 text-amber-600 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Cylinder type and capacity, including whether you choose a system heated by gas (via a boiler), electricity, or renewable energy sources like solar panels or a heat pump</span>
+              </div>
+              
+              <div class="flex items-start">
+                <DollarSign className="w-5 h-5 text-amber-600 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Access difficulty and location constraints</span>
+              </div>
+              
+              <div class="flex items-start">
+                <DollarSign className="w-5 h-5 text-amber-600 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Complexity of existing pipework and whether it needs adaptation</span>
+              </div>
+              
+              <div class="flex items-start">
+                <DollarSign className="w-5 h-5 text-amber-600 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Whether removal/disposal of the old unit is required</span>
+              </div>
+              
+              <div class="flex items-start">
+                <DollarSign className="w-5 h-5 text-amber-600 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Commissioning complexity and time required to verify stable operation</span>
+              </div>
+            </div>
+            
+            <div class="mt-6 p-6 bg-blue-50 rounded-lg">
+              <p class="text-gray-700">
+                <span class="font-semibold">Transparency Promise:</span> You should always expect clear explanation of what increases or reduces the work—before the job begins.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQs -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+              <MessageCircle className="w-8 h-8 text-blue-600 mr-3" />
+              FAQs: Hot Water Cylinder Installation {serviceData.location}
+            </h2>
+            
+            <div class="space-y-6">
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">How do I know my cylinder needs replacing rather than continuing with repairs?</h3>
+                <p class="text-gray-700">If you're dealing with recurring leaks, repeated performance drops, or a cylinder that can't keep up with demand anymore, replacement often becomes the more reliable long-term fix.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">How long does a typical installation take?</h3>
+                <p class="text-gray-700">Many installations are completed within a single visit, but access constraints or complex legacy setups can extend the job.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Will I need changes to my existing setup?</h3>
+                <p class="text-gray-700">Sometimes yes—especially if the old cylinder installation was improvised or outdated. Any required adjustments are identified before installation starts.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Will hot water performance feel different straight away?</h3>
+                <p class="text-gray-700">Yes. Once commissioned, you should notice more consistent delivery and more predictable recovery—assuming the cylinder is correctly matched to your demand.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Do you remove and dispose of the old cylinder?</h3>
+                <p class="text-gray-700">Yes, removal and disposal can be included as part of the installation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-8">
+          <!-- Quick Contact Card -->
+          <div class="bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-xl p-6 shadow-lg">
+            <h3 class="text-2xl font-bold mb-4">Book Your Installation</h3>
+            <p class="mb-6">Professional installation with correct sizing and full commissioning</p>
+            
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center w-full py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors mb-4">
+              <Phone className="w-5 h-5 mr-3" />
+              Call {serviceData.phoneNumber}
+            </a>
+            
+            <a href="/contact" class="inline-flex items-center justify-center w-full py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+              Book Online
+            </a>
+            
+            <div class="mt-6 pt-6 border-t border-white/20">
+              <div class="flex items-center">
+                <Shield className="w-5 h-5 mr-3" />
+                <div>
+                  <p class="font-semibold">Building Regulations</p>
+                  <p class="text-sm opacity-90">Full compliance guaranteed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Details -->
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Service Details</h3>
+            
+            <div class="space-y-4">
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Service Type</p>
+                <p class="text-gray-600">Hot Water Cylinder Installation</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Cylinder Types</p>
+                <p class="text-gray-600">Unvented & Vented</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Certification</p>
+                <p class="text-gray-600">G3 for Unvented</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Included</p>
+                <p class="text-gray-600">Full Commissioning</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- What Affects Cost -->
+          <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+              <DollarSign className="w-5 h-5 text-amber-600 mr-2" />
+              What Affects Installation Cost
+            </h3>
+            
+            <div class="space-y-3">
+              <div class="flex items-start">
+                <AlertCircle className="w-4 h-4 text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-sm text-gray-700">Cylinder type and capacity</span>
+              </div>
+              <div class="flex items-start">
+                <AlertCircle className="w-4 h-4 text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-sm text-gray-700">Access difficulty and location</span>
+              </div>
+              <div class="flex items-start">
+                <AlertCircle className="w-4 h-4 text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-sm text-gray-700">Complexity of existing pipework</span>
+              </div>
+              <div class="flex items-start">
+                <AlertCircle className="w-4 h-4 text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-sm text-gray-700">Heating method (gas, electric, solar, heat pump)</span>
+              </div>
+              <div class="flex items-start">
+                <AlertCircle className="w-4 h-4 text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-sm text-gray-700">Old unit removal and disposal</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Related Services -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Related Services</h3>
+            
+            <div class="space-y-3">
+              <a href="/services/hot-water-cylinder-repairs" class="block p-3 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-blue-200">
+                    <Wrench className="w-4 h-4 text-blue-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-blue-600">Hot Water Cylinder Repairs</span>
+                </div>
+              </a>
+              
+              <a href="/services/immersion-heater-repairs" class="block p-3 bg-green-50 hover:bg-green-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-green-200">
+                    <Zap className="w-4 h-4 text-green-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-green-600">Immersion Heater Repairs</span>
+                </div>
+              </a>
+              
+              <a href="/services/boiler-installations" class="block p-3 bg-orange-50 hover:bg-orange-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-orange-200">
+                    <Flame className="w-4 h-4 text-orange-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-orange-600">Boiler Installations</span>
+                </div>
+              </a>
+              
+              <a href="/services/central-heating-installation" class="block p-3 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-purple-200">
+                    <Thermometer className="w-4 h-4 text-purple-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-purple-600">Central Heating Installation</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Heating Methods -->
+          <div class="bg-green-50 rounded-xl p-6 border border-green-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Heating Methods</h3>
+            
+            <div class="space-y-3">
+              <div class="flex items-center">
+                <Flame className="w-4 h-4 text-orange-500 mr-3" />
+                <span class="text-sm text-gray-700">Gas Boiler</span>
+              </div>
+              <div class="flex items-center">
+                <Zap className="w-4 h-4 text-yellow-500 mr-3" />
+                <span class="text-sm text-gray-700">Electricity</span>
+              </div>
+              <div class="flex items-center">
+                <Droplets className="w-4 h-4 text-blue-500 mr-3" />
+                <span class="text-sm text-gray-700">Solar Panels</span>
+              </div>
+              <div class="flex items-center">
+                <Thermometer className="w-4 h-4 text-green-500 mr-3" />
+                <span class="text-sm text-gray-700">Heat Pump</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-gradient-to-r from-gray-900 to-blue-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Get Steady Hot Water That Matches Your Demand
+      </h2>
+      
+      <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+        Professional installation with correct sizing, full commissioning, and compliance with all building regulations.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <Phone className="w-6 h-6 mr-3" />
+          Book Installation: {serviceData.phoneNumber}
+        </a>
+        
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg text-lg hover:bg-white/10 transition-all duration-300">
+          Get Free Consultation
+        </a>
+      </div>
+      
+      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+        <div class="text-center">
+          <Shield className="w-8 h-8 text-green-400 mx-auto mb-2" />
+          <p class="text-sm">G3 Certified</p>
+        </div>
+        <div class="text-center">
+          <Droplets className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+          <p class="text-sm">Correct Sizing</p>
+        </div>
+        <div class="text-center">
+          <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-2" />
+          <p class="text-sm">Full Commissioning</p>
+        </div>
+        <div class="text-center">
+          <Wrench className="w-8 h-8 text-amber-400 mx-auto mb-2" />
+          <p class="text-sm">Old Unit Removal</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

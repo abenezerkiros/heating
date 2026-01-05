@@ -1,0 +1,754 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { Phone, Shield, CheckCircle, Wrench, Flame, Clock, AlertCircle, DollarSign, MessageCircle, Calendar, Zap, Droplets, Thermometer, FileCheck } from 'lucide-react';
+import image1 from "../assets/image/Boiler-Swap-Upgrade.png"
+import image2 from "../assets/image/Heating-System-Installation.png"
+import image3 from "../assets/image/heaterHero.webp"
+
+// Dynamic data
+const serviceData = {
+  title: "Gas Safety Certificate",
+  location: "Your Location",
+  businessName: "Your Business Name",
+  metaDescription: "Professional Gas Safety Certificate (CP12) inspections in [location]. Gas Safe registered engineers for legal compliance and safety.",
+  phoneNumber: "YOUR-PHONE-NUMBER"
+};
+---
+
+<Layout title={`Gas Safety Certificate in ${serviceData.location} | ${serviceData.businessName}`} description={serviceData.metaDescription}>
+  <!-- Hero Section -->
+  <section class="relative py-16 md:py-24 bg-gradient-to-r from-blue-900 to-gray-900 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-20">
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="mb-4">
+            <span class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium border border-white/20">
+              <Shield className="w-4 h-4 mr-2" />
+              Gas Safe Registered
+            </span>
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Gas Safety Certificate in <span class="text-orange-400">{serviceData.location}</span>
+          </h1>
+          
+          <p class="text-xl text-gray-300 mb-8 max-w-2xl">
+            CP12 Gas Safety Certificates by Gas Safe registered engineers. Legal compliance and peace of mind for landlords.
+          </p>
+          
+          <div class="flex flex-wrap gap-4">
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+              <Phone className="w-5 h-5 mr-3" />
+              Call Now: {serviceData.phoneNumber}
+            </a>
+            <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/20">
+              Book Inspection Online
+            </a>
+          </div>
+          
+          <div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Gas Safe Registered</span>
+            </div>
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Legal Compliance</span>
+            </div>
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Same Day Service</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="relative rounded-xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+            <Image 
+              src={image1} 
+              alt="Gas safety inspection technician at work" 
+              width={600}
+              height={400}
+              class="w-full h-auto"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-white text-gray-900 p-4 rounded-lg shadow-lg max-w-xs">
+            <div class="flex items-center mb-2">
+              <FileCheck className="w-5 h-5 text-green-500 mr-2" />
+              <span class="font-semibold">CP12 Certificate</span>
+            </div>
+            <p class="text-sm">12-month validity for legal compliance</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-12">
+        <!-- Main Content Column -->
+        <div class="lg:col-span-2">
+          <!-- Introduction -->
+          <div class="prose prose-lg max-w-none mb-12">
+            <p class="lead text-xl text-gray-700 mb-8">
+              If you're searching for a Gas Safety Certificate in {serviceData.location}, this is your ultimate guide to understanding the process, requirements, and peace of mind that comes with full compliance.
+            </p>
+            
+            <p>
+              You're likely dealing with deadlines, compliance worries, tenant move-ins, appliance concerns, unclear responsibilities, or uncertainty about whether your gas system is actually safe. At {serviceData.businessName}, we carry out a full gas safety inspection with proper checks before any certification, explain exactly what we find, and never proceed without clarity.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-6 rounded-r-lg">
+              <p class="font-semibold text-blue-800">
+                All inspections are performed by engineers listed on the Gas Safe Register, ensuring your safety and legal compliance. The result is a clear, valid certificate that confirms your gas appliances are safe, compliant, and ready for use.
+              </p>
+            </div>
+            
+            <p class="font-semibold text-blue-700">
+              Book your Gas Safety Certificate in {serviceData.location} today with {serviceData.businessName}.
+            </p>
+          </div>
+
+          <!-- What Certificate Covers -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What a Gas Safety Certificate Covers</h2>
+            
+            <p class="text-gray-700 mb-6">
+              A Gas Safety Certificate confirms that all the gas appliances and installations within a property have been checked and meet required safety standards at the time of inspection. The certificate applies to residential properties where gas is present and documents the condition of key components.
+            </p>
+            
+            <div class="bg-gray-50 border-l-4 border-gray-500 p-6 rounded-r-lg mb-6">
+              <p class="text-gray-700">
+                <span class="font-semibold">Important Note:</span> The inspection focuses on safety, not performance upgrades or alterations.
+              </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="p-6 bg-blue-50 rounded-lg">
+                <h3 class="font-bold text-gray-900 mb-3">Gas Safety Record</h3>
+                <p class="text-gray-700">
+                  A gas safety record is the official document provided after the inspection, detailing the results and compliance status.
+                </p>
+              </div>
+              
+              <div class="p-6 bg-green-50 rounded-lg">
+                <h3 class="font-bold text-gray-900 mb-3">Validity Period</h3>
+                <p class="text-gray-700">
+                  A gas safety certificate lasts for 12 months from the date of issue, after which a new inspection is required to maintain compliance.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 1: Inspection Process -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+              <Image 
+                src={image2} 
+                alt="Gas safety inspection process in progress" 
+                width={800}
+                height={450}
+                class="w-full h-auto"
+              />
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Thorough gas safety inspection and testing</p>
+          </div>
+
+          <!-- Who Needs Certificate -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Who Needs a Gas Safety Certificate</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Gas Safety Certificates are commonly required for landlords, property managers, and housing providers.
+            </p>
+            
+            <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg mb-6">
+              <p class="text-gray-700">
+                <span class="font-semibold">Legal Requirement:</span> A landlord gas safety certificate is a legal requirement for landlords to ensure compliance with gas safety regulations and to protect tenants' safety.
+              </p>
+            </div>
+            
+            <p class="text-gray-700 mb-6">
+              They are also requested during property handovers or when compliance records must be updated.
+            </p>
+            
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Situations Where a Certificate Is Needed:</h3>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Annual safety checks for rented properties</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>New tenancy start dates (copies of the certificate must also be provided to existing tenants)</span>
+                </div>
+              </div>
+              
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Compliance record updates</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Verification after changes in occupancy</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-6 p-6 bg-blue-50 rounded-lg">
+              <p class="text-gray-700">
+                <span class="font-semibold">Property Transactions:</span> Additionally, potential buyers may request to see a gas safety certificate during property transactions to confirm the property's safety and compliance.
+              </p>
+            </div>
+          </div>
+
+          <!-- What Is Checked -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What Is Checked During the Inspection</h2>
+            
+            <p class="text-gray-700 mb-6">
+              The inspection follows a structured process to confirm that gas appliances and related systems are operating safely.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Gas appliances connected to the supply, ensuring they are working properly and working correctly</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Gas pipework condition and integrity, including inspection of installation pipework for safety and compliance</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Gas fittings are checked for maintenance and compliance with regulations</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Ventilation adequacy, confirming ventilation routes are working properly and working correctly</span>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Appliance flue operation</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Safety devices, such as fire hazard controls and ventilation systems, are checked to ensure they are working correctly</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Signs of leaks or unsafe operation</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>A test is performed on carbon monoxide alarms to ensure they are functioning</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-green-50 rounded-lg border-l-4 border-green-500">
+              <p class="text-gray-700">
+                <span class="font-semibold">Comprehensive Testing:</span> Each item is visually inspected and tested where required to identify safety risks.
+              </p>
+            </div>
+          </div>
+
+          <!-- Inspection Process -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">The Inspection Process Step by Step</h2>
+            
+            <div class="space-y-8">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">1</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Initial Assessment</h3>
+                  <p class="text-gray-700">
+                    The visit begins with identifying all gas appliances and access points within the property. This ensures nothing is missed during the inspection.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">2</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Safety Testing</h3>
+                  <p class="text-gray-700">
+                    Each appliance is checked for safe operation, correct installation, and proper ventilation. Where required, appliances may also be serviced during the inspection, following the manufacturer's instructions to ensure safety and compliance. Pipework and connections are examined for visible faults or risks.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">3</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Findings Explained</h3>
+                  <p class="text-gray-700">
+                    Any issues identified are clearly explained in plain language. You'll understand what passed, what didn't, and why.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">4</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Certification</h3>
+                  <p class="text-gray-700">
+                    Once checks are complete, the Gas Safety Certificate is issued based on the inspection results. After each successful inspection, a new certificate is provided, confirming compliance and starting a fresh validity period.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 2: Carbon Monoxide Alarms -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+              <Image 
+                src={image3} 
+                alt="Carbon monoxide alarm testing and installation" 
+                width={800}
+                height={450}
+                class="w-full h-auto"
+              />
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Carbon monoxide alarm testing and safety checks</p>
+          </div>
+
+          <!-- Carbon Monoxide Alarms -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Carbon Monoxide Alarms and Gas Safety</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Carbon monoxide alarms are a vital component of gas safety in any rental property. As a landlord, you have a legal responsibility to protect your tenants from the dangers of carbon monoxide—a colourless, odourless gas that can be produced by faulty gas appliances or blocked flues.
+            </p>
+            
+            <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg mb-6">
+              <p class="text-gray-700">
+                <span class="font-semibold">Legal Requirement:</span> Under the Smoke and Carbon Monoxide Alarm (Amendment) Regulations 2022, it is a legal requirement to install a working carbon monoxide alarm in every room used as living accommodation that contains a fuel-burning appliance, such as a gas fire or wood-burning stove.
+              </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              <div class="p-6 bg-blue-50 rounded-lg">
+                <h3 class="font-bold text-gray-900 mb-3">Regulation Purpose</h3>
+                <p class="text-gray-700">
+                  These regulations are designed to keep your property and tenants safe from the risk of fire and carbon monoxide poisoning.
+                </p>
+              </div>
+              
+              <div class="p-6 bg-green-50 rounded-lg">
+                <h3 class="font-bold text-gray-900 mb-3">Dual Importance</h3>
+                <p class="text-gray-700">
+                  Ensuring that carbon monoxide alarms are correctly installed and regularly tested is just as important as having a valid gas safety certificate.
+                </p>
+              </div>
+            </div>
+            
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <Shield className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Not only does this help you stay compliant with current regulations, but it also demonstrates your commitment to maintaining a safe environment for your tenants.</span>
+              </div>
+              
+              <div class="flex items-start">
+                <Shield className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Remember, carbon monoxide alarms should be checked at the start of each new tenancy and during your annual gas safety check.</span>
+              </div>
+              
+              <div class="flex items-start">
+                <Shield className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>By making carbon monoxide alarms a standard part of your gas safety responsibilities, you help safeguard your property, meet your legal duty, and provide peace of mind for everyone living in your rental property.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Validity and Record Keeping -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Validity and Record Keeping</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="space-y-6">
+                <div class="p-6 bg-blue-50 rounded-lg">
+                  <h3 class="font-bold text-gray-900 mb-3">Certificate Validity</h3>
+                  <p class="text-gray-700 mb-4">
+                    A Gas Safety Certificate is valid for 12 months from the date of inspection, and the expiry date of the certificate is critical for compliance and must be closely monitored.
+                  </p>
+                  <div class="p-4 bg-blue-100 rounded-lg">
+                    <p class="text-sm text-gray-700">
+                      <span class="font-semibold">Important Note:</span> Renewing the certificate before the original expiry date does not alter the renewal cycle; the original expiry date remains unchanged.
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="p-6 bg-green-50 rounded-lg">
+                  <h3 class="font-bold text-gray-900 mb-3">Record Retention</h3>
+                  <p class="text-gray-700">
+                    Records of gas safety checks must be kept for at least two years to comply with regulations.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="p-6 bg-amber-50 rounded-lg">
+                <h3 class="font-bold text-gray-900 mb-3">Landlord Responsibilities</h3>
+                <p class="text-gray-700 mb-4">
+                  For rented properties, landlords must be able to provide the current gas safety certificate to tenants before move-in, during annual checks, and to authorities upon request.
+                </p>
+                <div class="p-4 bg-amber-100 rounded-lg">
+                  <p class="text-sm text-gray-700">
+                    <span class="font-semibold">Documentation:</span> Copies are typically provided to relevant occupants and kept on file for compliance purposes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Common Delays -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Common Reasons Certificates Are Delayed</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Delays often happen due to:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Inaccessible appliances</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Incomplete property access</span>
+                </div>
+              </div>
+              
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Pre-existing safety issues</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Unclear appliance ownership</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-6 grid md:grid-cols-2 gap-6">
+              <div class="p-6 bg-blue-50 rounded-lg">
+                <p class="text-gray-700">
+                  <span class="font-semibold">Agent Coordination:</span> Letting agents are often responsible for coordinating inspections and ensuring access to all appliances, helping landlords meet their legal obligations.
+                </p>
+              </div>
+              <div class="p-6 bg-green-50 rounded-lg">
+                <p class="text-gray-700">
+                  <span class="font-semibold">Access Preparation:</span> Ensuring clear access to all gas appliances helps avoid repeat visits.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Why Inspections Matter -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Why Safety Inspections Matter</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Gas systems that are not checked regularly can develop faults that aren't obvious.
+            </p>
+            
+            <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg mb-6">
+              <p class="text-gray-700">
+                Regular inspections are essential to keep properties safe for tenants, as they help ensure all gas appliances, including the boiler, are maintained in a safe condition.
+              </p>
+            </div>
+            
+            <div class="space-y-4 mb-6">
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Inspections also help detect gas leaks, which can pose serious health risks such as carbon monoxide poisoning.</span>
+              </div>
+              
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>The boiler is a key appliance checked during these inspections, and an annual boiler service is an important part of maintaining overall gas safety.</span>
+              </div>
+              
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Inspections are designed to identify risks early and confirm safe operation.</span>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-blue-50 rounded-lg">
+              <p class="text-gray-700">
+                <span class="font-semibold">Legal Protection:</span> A valid certificate shows that reasonable steps have been taken to ensure safety at the property.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQs -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+              <MessageCircle className="w-8 h-8 text-blue-600 mr-3" />
+              Gas Safety Certificate FAQs
+            </h2>
+            
+            <div class="space-y-6">
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">How long does the inspection take?</h3>
+                <p class="text-gray-700">Most inspections are completed within a single visit, depending on the number of appliances.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Do appliances need to be new?</h3>
+                <p class="text-gray-700">No. Appliances are assessed based on safety, not age.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">What happens if something fails?</h3>
+                <p class="text-gray-700">Any failure is documented and explained so next steps are clear.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Is the certificate issued on the same day?</h3>
+                <p class="text-gray-700">In most cases, the certificate is provided after the inspection is completed.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-8">
+          <!-- Quick Contact Card -->
+          <div class="bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-xl p-6 shadow-lg">
+            <h3 class="text-2xl font-bold mb-4">Book Your CP12 Certificate</h3>
+            <p class="mb-6">Gas Safe registered engineers for legal compliance</p>
+            
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center w-full py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors mb-4">
+              <Phone className="w-5 h-5 mr-3" />
+              Call {serviceData.phoneNumber}
+            </a>
+            
+            <a href="/contact" class="inline-flex items-center justify-center w-full py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+              Book Online
+            </a>
+            
+            <div class="mt-6 pt-6 border-t border-white/20">
+              <div class="flex items-center">
+                <FileCheck className="w-5 h-5 mr-3" />
+                <div>
+                  <p class="font-semibold">12 Month Validity</p>
+                  <p class="text-sm opacity-90">Legal compliance guaranteed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Details -->
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Service Details</h3>
+            
+            <div class="space-y-4">
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Service Type</p>
+                <p class="text-gray-600">Gas Safety Certificate (CP12)</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Validity Period</p>
+                <p class="text-gray-600">12 Months</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Engineer Qualification</p>
+                <p class="text-gray-600">Gas Safe Registered</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Certificate Issued</p>
+                <p class="text-gray-600">Same Day</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Legal Requirements -->
+          <div class="bg-red-50 rounded-xl p-6 border border-red-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+              <Shield className="w-5 h-5 text-red-600 mr-2" />
+              Legal Requirements
+            </h3>
+            
+            <div class="space-y-3">
+              <div class="flex items-start">
+                <AlertCircle className="w-4 h-4 text-red-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-sm text-gray-700">Mandatory for all rental properties</span>
+              </div>
+              <div class="flex items-start">
+                <AlertCircle className="w-4 h-4 text-red-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-sm text-gray-700">Annual inspection required</span>
+              </div>
+              <div class="flex items-start">
+                <AlertCircle className="w-4 h-4 text-red-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-sm text-gray-700">Must be provided to tenants</span>
+              </div>
+              <div class="flex items-start">
+                <AlertCircle className="w-4 h-4 text-red-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-sm text-gray-700">2-year record retention</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- What's Included -->
+          <div class="bg-green-50 rounded-xl p-6 border border-green-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">What's Included</h3>
+            
+            <div class="space-y-3">
+              <div class="flex items-center">
+                <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
+                <span class="text-sm text-gray-700">All gas appliances checked</span>
+              </div>
+              <div class="flex items-center">
+                <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
+                <span class="text-sm text-gray-700">Pipework inspection</span>
+              </div>
+              <div class="flex items-center">
+                <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
+                <span class="text-sm text-gray-700">Ventilation checks</span>
+              </div>
+              <div class="flex items-center">
+                <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
+                <span class="text-sm text-gray-700">Flue operation testing</span>
+              </div>
+              <div class="flex items-center">
+                <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
+                <span class="text-sm text-gray-700">Carbon monoxide alarm test</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Related Services -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Related Services</h3>
+            
+            <div class="space-y-3">
+              <a href="/services/boiler-servicing" class="block p-3 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-blue-200">
+                    <Flame className="w-4 h-4 text-blue-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-blue-600">Boiler Servicing</span>
+                </div>
+              </a>
+              
+              <a href="/services/boiler-installations" class="block p-3 bg-orange-50 hover:bg-orange-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-orange-200">
+                    <Wrench className="w-4 h-4 text-orange-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-orange-600">Boiler Installations</span>
+                </div>
+              </a>
+              
+              <a href="/services/central-heating-repairs" class="block p-3 bg-green-50 hover:bg-green-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-green-200">
+                    <Thermometer className="w-4 h-4 text-green-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-green-600">Central Heating Repairs</span>
+                </div>
+              </a>
+              
+              <a href="/services/gas-appliance-installation" class="block p-3 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-purple-200">
+                    <Shield className="w-4 h-4 text-purple-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-purple-600">Gas Appliance Installation</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Landlord Support -->
+          <div class="bg-amber-50 rounded-xl p-6 border border-amber-200">
+            <div class="flex items-center mb-4">
+              <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center mr-4">
+                <FileCheck className="w-5 h-5 text-amber-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-900">Landlord Support</h3>
+            </div>
+            <p class="text-sm text-gray-700">
+              We provide comprehensive support for landlords including certificate management, tenant communications, and compliance documentation to help you meet all legal requirements.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-gradient-to-r from-gray-900 to-blue-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Ensure Legal Compliance & Tenant Safety
+      </h2>
+      
+      <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+        Don't risk non-compliance or safety issues. Our Gas Safe registered engineers are ready to provide your CP12 certificate with comprehensive safety checks.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <Phone className="w-6 h-6 mr-3" />
+          Book Certificate: {serviceData.phoneNumber}
+        </a>
+        
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg text-lg hover:bg-white/10 transition-all duration-300">
+          Request Inspection
+        </a>
+      </div>
+      
+      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+        <div class="text-center">
+          <Shield className="w-8 h-8 text-green-400 mx-auto mb-2" />
+          <p class="text-sm">Gas Safe Registered</p>
+        </div>
+        <div class="text-center">
+          <FileCheck className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+          <p class="text-sm">CP12 Certificate</p>
+        </div>
+        <div class="text-center">
+          <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-2" />
+          <p class="text-sm">Same Day Issue</p>
+        </div>
+        <div class="text-center">
+          <Calendar className="w-8 h-8 text-amber-400 mx-auto mb-2" />
+          <p class="text-sm">12 Month Validity</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

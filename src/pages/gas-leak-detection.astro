@@ -1,0 +1,670 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { Phone, Shield, CheckCircle, Wrench, Flame, Clock, AlertCircle, DollarSign, MessageCircle, Calendar, Zap, Droplets, Thermometer } from 'lucide-react';
+import image1 from "../assets/image/Boiler-Swap-Upgrade.png"
+import image2 from "../assets/image/Heating-System-Installation.png"
+import image3 from "../assets/image/heaterHero.webp"
+
+// Dynamic data
+const serviceData = {
+  title: "Gas Leak Detection",
+  location: "Your Location",
+  businessName: "Your Business Name",
+  metaDescription: "Professional gas leak detection in [location]. Gas Safe registered engineers for emergency leak finding.",
+  phoneNumber: "YOUR-PHONE-NUMBER"
+};
+---
+
+<Layout title={`Gas Leak Detection in ${serviceData.location} | ${serviceData.businessName}`} description={serviceData.metaDescription}>
+  <!-- Hero Section -->
+  <section class="relative py-16 md:py-24 bg-gradient-to-r from-blue-900 to-gray-900 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-20">
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="mb-4">
+            <span class="inline-flex items-center px-4 py-2 rounded-full bg-red-500 text-white text-sm font-bold border border-red-600">
+              <AlertCircle className="w-4 h-4 mr-2" />
+              EMERGENCY SERVICE
+            </span>
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Gas Leak Detection in <span class="text-red-400">{serviceData.location}</span>
+          </h1>
+          
+          <p class="text-xl text-gray-300 mb-8 max-w-2xl">
+            Emergency gas leak detection by Gas Safe registered engineers. If you smell gas, call now for immediate professional help.
+          </p>
+          
+          <div class="flex flex-wrap gap-4">
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+              <Phone className="w-5 h-5 mr-3" />
+              EMERGENCY: {serviceData.phoneNumber}
+            </a>
+            <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/20">
+              Schedule Detection
+            </a>
+          </div>
+          
+          <div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="flex items-center">
+              <AlertCircle className="w-5 h-5 text-red-400 mr-2" />
+              <span class="text-sm">24/7 Emergency</span>
+            </div>
+            <div class="flex items-center">
+              <Shield className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Gas Safe Registered</span>
+            </div>
+            <div class="flex items-center">
+              <Clock className="w-5 h-5 text-amber-400 mr-2" />
+              <span class="text-sm">Fast Response</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="relative rounded-xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+            <Image 
+              src={image1} 
+              alt="Gas leak detection technician at work" 
+              width={600}
+              height={400}
+              class="w-full h-auto"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-red-500 text-white p-4 rounded-lg shadow-lg max-w-xs">
+            <div class="flex items-center mb-2">
+              <AlertCircle className="w-5 h-5 text-white mr-2" />
+              <span class="font-bold">Immediate Response</span>
+            </div>
+            <p class="text-sm">If you smell gas, call immediately</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-12">
+        <!-- Main Content Column -->
+        <div class="lg:col-span-2">
+          <!-- Introduction -->
+          <div class="prose prose-lg max-w-none mb-12">
+            <p class="lead text-xl text-gray-700 mb-8">
+              If you're searching for gas leak detection in {serviceData.location}, you likely need clarity fast — you can smell gas, you've noticed hissing near an appliance or pipe, your gas supply is behaving unusually, or you're worried there may be a leak you can't locate. {serviceData.businessName} approaches gas leak detection by confirming the risk level first, methodically testing to pinpoint the source, explaining what's been found in plain language, and only taking action once you understand what's happening. The result is a confirmed leak status and a clearly identified source so the issue can be resolved at the cause.
+            </p>
+            
+            <div class="bg-red-50 border-l-4 border-red-500 p-6 my-6 rounded-r-lg">
+              <p class="font-bold text-red-800 text-lg">
+                Book gas leak detection in {serviceData.location} with {serviceData.businessName}.
+              </p>
+            </div>
+            
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+              Gas leak detection service in {serviceData.location}
+            </h2>
+
+            <p>
+              Gas leak detection is a safety-critical diagnostic service focused on finding whether gas is escaping and, if so, where it's coming from. {serviceData.businessName} provides gas leak detection in {serviceData.location} for homes where there's concern about a possible leak, uncertainty about safety, or a need to identify the exact source of gas loss.
+            </p>
+            
+            <p>
+              Gas leak detection has applications in residential, commercial, and industrial environments, supporting safety inspections, maintenance procedures, and compliance with regulations.
+            </p>
+
+            <p>
+              This page is about gas leak detection only — not appliance installation, servicing, or other work.
+            </p>
+          </div>
+
+          <!-- When Detection is Needed -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">When gas leak detection is needed</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Gas leak detection in {serviceData.location} is commonly requested when:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You can smell gas in a room, cupboard, or near the meter area</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>The smell appears only at certain times (intermittent)</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You hear hissing near pipework or an appliance connection</span>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>A gas alarm has activated</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You suspect a leak but can't pinpoint where it's coming from</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>The issue appeared after moving an appliance or changing the room layout</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Causes of Gas Leaks -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Causes of gas leaks</h2>
+            
+            <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+              <p class="text-gray-700 mb-4">
+                Gas leaks are a serious safety hazard that require immediate attention, as they can lead to potentially fatal incidents such as explosions, fires, or exposure to toxic gases. Understanding the causes of gas leaks is essential for prevention and quick response.
+              </p>
+              
+              <p class="text-gray-700 mb-4">
+                The most common causes of gas leaks include poor gas installations, where improper fitting or substandard materials can create weak points in the system. Over time, pipes and fittings may become damaged or corroded, especially in older properties or areas with aging infrastructure. Accidental damage during renovations, construction, or even routine maintenance can also compromise gas lines, leading to leaks that may not be immediately visible.
+              </p>
+              
+              <p class="text-gray-700 mb-4">
+                Faulty or worn-out fittings, especially at connection points for appliances like boilers or cookers, are frequent sources of leaks. In some cases, leaks can develop in hard-to-reach areas such as cellars, behind walls, or within enclosures, making them difficult to detect without the right equipment.
+              </p>
+              
+              <p class="text-gray-700 mb-4">
+                Gas leaks can involve a range of substances, including combustible gases like natural gas, propane, and methane, as well as toxic gases such as carbon monoxide and refrigerant gases. Each type of gas presents unique risks—carbon monoxide, for example, is both odorless and highly toxic, while natural gas and LPG are highly flammable.
+              </p>
+              
+              <p class="text-gray-700 mb-4">
+                To identify and locate leaks, professionals rely on gas leak detectors and handheld gas detectors, which are designed to detect even small quantities of gas in the air. Leak detection fluids are another essential tool; when applied to suspected areas, they produce visible bubbles if gas is escaping, helping to pinpoint the exact source. Many modern gas detectors feature both audible and visual alarms, providing an immediate alert if dangerous levels of gas are detected.
+              </p>
+              
+              <p class="text-gray-700 mb-4">
+                Using non-flammable and non-corrosive leak detection fluids is important to ensure safety during the detection process, especially when working with LPG or refrigerant gases. Popular models of gas leak detectors are capable of detecting a wide range of gases—including hydrogen, oxygen, and nitrogen—and can measure concentrations down to parts per million (ppm), ensuring precise and reliable results.
+              </p>
+              
+              <p class="text-gray-700 mb-4">
+                Regular maintenance of gas installations and prompt attention to any signs of a leak are essential steps in reducing risk. Investing in high-quality gas detectors and leak detection fluids, and ensuring they are suitable for the specific application and environment, can make all the difference in keeping your property safe.
+              </p>
+              
+              <p class="text-gray-700 font-semibold">
+                If you suspect a gas leak or want to ensure your gas installations are secure, it's vital to act quickly. Contact a reliable service provider for expert advice, thorough testing, and professional gas leak detection. Taking proactive measures now can help you avoid dangerous situations and maintain a safe, healthy environment for everyone in your home or business.
+              </p>
+            </div>
+          </div>
+
+          <!-- What Detection Includes -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What gas leak detection includes</h2>
+            
+            <p class="text-gray-700 mb-6">
+              A proper gas leak detection visit typically includes:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Confirming your observations and where/when symptoms occur</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Checking likely leak zones (connections, accessible joints, appliance points)</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Testing to confirm whether gas is escaping and isolating the source area using a leak detector</span>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Narrowing the leak location systematically rather than guessing</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Explaining findings clearly so you know what was detected and where</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 1: Detection Process -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+              <Image 
+                src={image2} 
+                alt="Professional gas leak detection in progress" 
+                width={800}
+                height={450}
+                class="w-full h-auto"
+              />
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Advanced gas leak detection with professional equipment</p>
+          </div>
+
+          <!-- How Detection is Carried Out -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">How gas leak detection is carried out</h2>
+            
+            <div class="bg-blue-50 p-6 rounded-lg mb-6">
+              <p class="text-gray-700 mb-4">
+                Gas leaks can be constant or intermittent, so gas detection needs a structured approach. The choice of detection method may depend on the type of gas, the environment, and the required sensitivity. Gas leak detection services are used across multiple sectors, including utilities, manufacturing, and oil & gas. The process can be applied to a range of gases, such as acetylene, as well as other common gases. Some detection methods, like sprays or fluids, are simple to use and provide quick visual confirmation by applying them directly to various surfaces to identify leaks. All detection equipment and procedures are thoroughly tested to ensure reliability and compliance with safety standards.
+              </p>
+              
+              <p class="text-gray-700">
+                Certain gas detection methods are ideal for specific scenarios, such as industrial or residential settings, ensuring optimal performance for each application.
+              </p>
+            </div>
+            
+            <div class="space-y-8">
+              <!-- Step 1 -->
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-red-600 font-bold">1</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">Initial risk assessment and symptom mapping</h3>
+                </div>
+                <p class="text-gray-700">
+                  {serviceData.businessName} confirms where the smell or alert occurs, whether it's stronger in specific rooms or cupboards, and whether it changes with appliance use or time of day.
+                </p>
+              </div>
+              
+              <!-- Step 2 -->
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-orange-600 font-bold">2</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">Zone-based testing</h3>
+                </div>
+                <p class="text-gray-700">
+                  Detection is performed by working through the system in logical zones to identify whether the issue is local to one area, whether it is linked to a specific connection point, and whether it appears under certain conditions (for example, when appliances are in use).
+                </p>
+              </div>
+              
+              <!-- Step 3 -->
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-green-600 font-bold">3</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">Pinpointing and confirmation</h3>
+                </div>
+                <p class="text-gray-700">
+                  Once the suspected area is identified, the leak location is narrowed further until the source can be clearly confirmed.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Common Leak Locations -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Common leak locations (what we check first)</h2>
+            
+            <div class="bg-red-50 p-6 rounded-lg">
+              <p class="text-gray-700 mb-4">
+                Gas leaks most often originate from areas where there are joins, connections, or points of movement. Gas leak detection commonly focuses on:
+              </p>
+              
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-3">
+                  <div class="flex items-start">
+                    <AlertCircle className="w-4 h-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Appliance connection points</span>
+                  </div>
+                  <div class="flex items-start">
+                    <AlertCircle className="w-4 h-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Accessible joints and fittings</span>
+                  </div>
+                </div>
+                
+                <div class="space-y-3">
+                  <div class="flex items-start">
+                    <AlertCircle className="w-4 h-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Areas where pipework changes direction</span>
+                  </div>
+                  <div class="flex items-start">
+                    <AlertCircle className="w-4 h-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Spaces where gas smell accumulates (cabinets, enclosures, meter areas)</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mt-4 p-4 bg-white rounded-lg">
+                <p class="text-gray-700 text-sm">
+                  <span class="font-semibold">Objective:</span> The objective is to confirm the true source — not just the area where the smell is noticed.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Intermittent Gas Smells -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Intermittent gas smells: why detection needs care</h2>
+            
+            <div class="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-lg">
+              <p class="text-gray-700 mb-4">
+                Some gas concerns are not constant. You may only notice the smell:
+              </p>
+              
+              <div class="grid md:grid-cols-2 gap-4 mb-4">
+                <div class="space-y-2">
+                  <div class="flex items-start">
+                    <AlertCircle className="w-4 h-4 text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>After an appliance has been used</span>
+                  </div>
+                  <div class="flex items-start">
+                    <AlertCircle className="w-4 h-4 text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>At certain times of day</span>
+                  </div>
+                </div>
+                
+                <div class="space-y-2">
+                  <div class="flex items-start">
+                    <AlertCircle className="w-4 h-4 text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>When doors/windows are closed</span>
+                  </div>
+                  <div class="flex items-start">
+                    <AlertCircle className="w-4 h-4 text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>In one room but not another</span>
+                  </div>
+                </div>
+              </div>
+              
+              <p class="text-gray-700">
+                Gas leak detection must account for these patterns, which is why symptom mapping and methodical testing matter.
+              </p>
+            </div>
+          </div>
+
+          <!-- What You'll Get -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What you'll get from a detection visit</h2>
+            
+            <div class="bg-green-50 p-6 rounded-lg">
+              <p class="text-gray-700 mb-4">
+                At the end of the detection work, you should have:
+              </p>
+              
+              <div class="space-y-4 mb-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>A clear confirmation of whether a leak is present</span>
+                </div>
+                
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>The most precise location possible for the source of the leak</span>
+                </div>
+                
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>A plain-language explanation of what was found and what it means</span>
+                </div>
+              </div>
+              
+              <p class="text-gray-700 font-semibold">
+                Our service ensures you are fully prepared to take any necessary next steps for safety and compliance.
+              </p>
+            </div>
+          </div>
+
+          <!-- Image 2: Results -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+              <Image 
+                src={image3} 
+                alt="Gas leak detection results and reporting" 
+                width={800}
+                height={450}
+                class="w-full h-auto"
+              />
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Clear reporting and explanation of findings</p>
+          </div>
+
+          <!-- FAQs -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+              <MessageCircle className="w-8 h-8 text-blue-600 mr-3" />
+              Gas leak detection FAQs
+            </h2>
+            
+            <div class="space-y-6">
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">I can smell gas but I can't find the source — can you still detect it?</h3>
+                <p class="text-gray-700">Yes. Gas leak detection is specifically designed for situations where the smell is present but the source isn't obvious.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">What if the smell comes and goes?</h3>
+                <p class="text-gray-700">Intermittent issues are common. Detection includes identifying patterns and testing in a way that helps pinpoint leaks that aren't constant.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Will you tell me exactly where the leak is?</h3>
+                <p class="text-gray-700">The goal is to locate the source as precisely as possible and confirm it clearly, not just guess at an area.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Do I need to do anything before the visit?</h3>
+                <p class="text-gray-700">If you can, note where the smell is strongest and when you notice it most. That information helps speed up pinpointing.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Final CTA Section -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Book gas leak detection in {serviceData.location}</h2>
+            
+            <div class="bg-gradient-to-r from-red-50 to-red-100 border-l-4 border-red-600 p-6 rounded-r-lg">
+              <p class="text-gray-800">
+                For gas leak detection in {serviceData.location} focused on clear answers, careful testing, and pinpointing the source without guesswork, contact {serviceData.businessName}. Arrange a detection visit and get certainty on what's happening and where it's coming from.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-8">
+          <!-- Emergency Contact Card -->
+          <div class="bg-gradient-to-br from-red-600 to-red-800 text-white rounded-xl p-6 shadow-lg">
+            <div class="flex items-center mb-4">
+              <AlertCircle className="w-6 h-6 text-white mr-3" />
+              <h3 class="text-2xl font-bold">EMERGENCY</h3>
+            </div>
+            <p class="mb-6">If you smell gas, call immediately. Do not wait.</p>
+            
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center w-full py-4 bg-white text-red-600 font-bold rounded-lg hover:bg-gray-100 transition-colors mb-4">
+              <Phone className="w-5 h-5 mr-3" />
+              EMERGENCY: {serviceData.phoneNumber}
+            </a>
+            
+            <a href="/contact" class="inline-flex items-center justify-center w-full py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+              Schedule Detection
+            </a>
+            
+            <div class="mt-6 pt-6 border-t border-white/20">
+              <div class="flex items-center">
+                <Clock className="w-5 h-5 mr-3" />
+                <div>
+                  <p class="font-semibold">24/7 Response</p>
+                  <p class="text-sm opacity-90">Emergency service available</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Details -->
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Service Details</h3>
+            
+            <div class="space-y-4">
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Service Type</p>
+                <p class="text-gray-600">Gas Leak Detection</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Response Time</p>
+                <p class="text-gray-600">Emergency & Scheduled</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Engineer Qualification</p>
+                <p class="text-gray-600">Gas Safe Registered</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Detection Equipment</p>
+                <p class="text-gray-600">Advanced Gas Detectors</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Safety Warning -->
+          <div class="bg-red-50 rounded-xl p-6 border border-red-200">
+            <div class="flex items-center mb-4">
+              <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                <AlertCircle className="w-5 h-5 text-red-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-900">Gas Safety Warning</h3>
+            </div>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">•</span>
+                <span>If you smell gas, evacuate immediately</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">•</span>
+                <span>Do not use electrical switches</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">•</span>
+                <span>Do not use naked flames</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">•</span>
+                <span>Call from outside the property</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- What We Detect -->
+          <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
+            <h3 class="text-lg font-bold text-gray-900 mb-4">Gases We Detect</h3>
+            <div class="grid grid-cols-2 gap-2 text-sm">
+              <div class="bg-white p-2 rounded">Natural Gas</div>
+              <div class="bg-white p-2 rounded">Propane</div>
+              <div class="bg-white p-2 rounded">Methane</div>
+              <div class="bg-white p-2 rounded">Carbon Monoxide</div>
+              <div class="bg-white p-2 rounded">LPG</div>
+              <div class="bg-white p-2 rounded">Refrigerant Gases</div>
+            </div>
+          </div>
+
+          <!-- Related Services -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Related Services</h3>
+            
+            <div class="space-y-3">
+              <a href="/services/gas-leak-repair" class="block p-3 bg-red-50 hover:bg-red-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-red-200">
+                    <Wrench className="w-4 h-4 text-red-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-red-600">Gas Leak Repair</span>
+                </div>
+              </a>
+              
+              <a href="/services/gas-safety-certificates" class="block p-3 bg-orange-50 hover:bg-orange-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-orange-200">
+                    <Shield className="w-4 h-4 text-orange-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-orange-600">Gas Safety Certificates</span>
+                </div>
+              </a>
+              
+              <a href="/services/gas-appliance-servicing" class="block p-3 bg-green-50 hover:bg-green-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-green-200">
+                    <CheckCircle className="w-4 h-4 text-green-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-green-600">Gas Appliance Servicing</span>
+                </div>
+              </a>
+              
+              <a href="/services/carbon-monoxide-testing" class="block p-3 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-purple-200">
+                    <AlertCircle className="w-4 h-4 text-purple-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-purple-600">Carbon Monoxide Testing</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-gradient-to-r from-gray-900 to-red-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Don't Risk It — Detect Gas Leaks Immediately
+      </h2>
+      
+      <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+        Gas leaks are dangerous and require immediate professional attention. Our Gas Safe registered engineers are available 24/7 for emergency detection.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <Phone className="w-6 h-6 mr-3" />
+          24/7 EMERGENCY: {serviceData.phoneNumber}
+        </a>
+        
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg text-lg hover:bg-white/10 transition-all duration-300">
+          Schedule Non-Emergency
+        </a>
+      </div>
+      
+      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+        <div class="text-center">
+          <AlertCircle className="w-8 h-8 text-red-400 mx-auto mb-2" />
+          <p class="text-sm">24/7 Emergency</p>
+        </div>
+        <div class="text-center">
+          <Shield className="w-8 h-8 text-green-400 mx-auto mb-2" />
+          <p class="text-sm">Gas Safe Registered</p>
+        </div>
+        <div class="text-center">
+          <Clock className="w-8 h-8 text-amber-400 mx-auto mb-2" />
+          <p class="text-sm">Fast Response</p>
+        </div>
+        <div class="text-center">
+          <CheckCircle className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+          <p class="text-sm">Precise Detection</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

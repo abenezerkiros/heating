@@ -1,0 +1,757 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { Phone, Shield, CheckCircle, Wrench, Flame, Clock, AlertCircle, DollarSign, MessageCircle, Calendar, Zap, Droplets, Thermometer } from 'lucide-react';
+import image1 from "../assets/image/Boiler-Swap-Upgrade.png"
+import image2 from "../assets/image/Heating-System-Installation.png"
+import image3 from "../assets/image/heaterHero.webp"
+
+// Dynamic data
+const serviceData = {
+  title: "Immersion Heater Repairs",
+  location: "Your Location",
+  businessName: "Your Business Name",
+  metaDescription: "Professional immersion heater repairs in [location]. Expert diagnosis and repair of immersion heater faults by qualified technicians.",
+  phoneNumber: "YOUR-PHONE-NUMBER"
+};
+---
+
+<Layout title={`Immersion Heater Repairs in ${serviceData.location} | ${serviceData.businessName}`} description={serviceData.metaDescription}>
+  <!-- Hero Section -->
+  <section class="relative py-16 md:py-24 bg-gradient-to-r from-blue-900 to-gray-900 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-20">
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="mb-4">
+            <span class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium border border-white/20">
+              <Zap className="w-4 h-4 mr-2" />
+              Electrical Safety Certified
+            </span>
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Immersion Heater Repairs in <span class="text-orange-400">{serviceData.location}</span>
+          </h1>
+          
+          <p class="text-xl text-gray-300 mb-8 max-w-2xl">
+            Expert diagnosis and repair of immersion heater faults. Restore safe, reliable hot water to your home.
+          </p>
+          
+          <div class="flex flex-wrap gap-4">
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+              <Phone className="w-5 h-5 mr-3" />
+              Call Now: {serviceData.phoneNumber}
+            </a>
+            <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/20">
+              Book Repair Online
+            </a>
+          </div>
+          
+          <div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Same Day Service</span>
+            </div>
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Qualified Electricians</span>
+            </div>
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">12 Month Guarantee</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="relative rounded-xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+            <Image 
+              src={image1} 
+              alt="Immersion heater repair technician at work" 
+              width={600}
+              height={400}
+              class="w-full h-auto"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-white text-gray-900 p-4 rounded-lg shadow-lg max-w-xs">
+            <div class="flex items-center mb-2">
+              <Zap className="w-5 h-5 text-blue-500 mr-2" />
+              <span class="font-semibold">Electrical Safety First</span>
+            </div>
+            <p class="text-sm">All repairs performed by qualified technicians</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-12">
+        <!-- Main Content Column -->
+        <div class="lg:col-span-2">
+          <!-- Introduction -->
+          <div class="prose prose-lg max-w-none mb-12">
+            <p class="lead text-xl text-gray-700 mb-8">
+              If you're searching for immersion heater repairs in {serviceData.location}, you're likely dealing with no hot water, inconsistent heating, tripping electrics, leaks around the tank, or a heater that simply won't switch on.
+            </p>
+            
+            <p>
+              At {serviceData.businessName}, we focus on diagnosing the exact fault before any repair work begins, clearly explaining what's wrong and what needs fixing. Our approach ensures the problem is resolved at the source, restoring safe, reliable hot water without guesswork.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-6 rounded-r-lg">
+              <p class="font-semibold text-blue-800">
+                We adhere to high standards in all our repair work, ensuring quality, safety, and professionalism every time.
+              </p>
+            </div>
+            
+            <p class="font-semibold text-blue-700">
+              Book an immersion heater repair with {serviceData.businessName} in {serviceData.location} and get your hot water working properly again.
+            </p>
+            
+            <p class="mt-6">
+              Whether your immersion heater stopped working suddenly or you have other urgent plumbing needs, rest assured that we have you covered—including emergency situations.
+            </p>
+          </div>
+
+          <!-- What Repair Involves -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What Immersion Heater Repair Actually Involves</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Immersion heater repair is not a single action — it is a diagnostic-led service. Many faults present the same symptom (no hot water), but the underlying causes can be very different. Effective repair depends on identifying which component has failed and why.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              <div class="bg-blue-50 p-6 rounded-lg">
+                <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-2" />
+                  Diagnostic Approach
+                </h3>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Accurate diagnosis and repair not only resolve the immediate issue but also improve the efficiency of your heating system</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Our immersion heater repair service includes fault isolation across the full system, not just the visible heater element</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="bg-green-50 p-6 rounded-lg">
+                <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+                  <Shield className="w-5 h-5 text-green-600 mr-2" />
+                  Quality Assurance
+                </h3>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Helping to reduce energy consumption and prevent future problems</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Each repair job is completed to ensure long-term reliability and optimal performance</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 1: Diagnostic Process -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+              <Image 
+                src={image2} 
+                alt="Immersion heater diagnostic testing process" 
+                width={800}
+                height={450}
+                class="w-full h-auto"
+              />
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Thorough diagnostic checks on immersion heater systems</p>
+          </div>
+
+          <!-- High-Prominence Faults -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">High-Prominence Immersion Heater Faults We Repair</h2>
+            
+            <div class="space-y-6">
+              <div class="border-l-4 border-red-500 pl-4 py-3 bg-red-50 rounded-r-lg">
+                <h3 class="font-bold text-gray-900 text-lg mb-2">Failed Heating Elements</h3>
+                <p class="text-gray-700">
+                  Burnt-out or scaled elements are one of the most common causes of no hot water. Replacing the heating element is often required when it is burnt-out or heavily scaled, as these issues prevent efficient operation. We assess electrical continuity, resistance levels, and physical condition before replacement.
+                </p>
+              </div>
+              
+              <div class="border-l-4 border-orange-500 pl-4 py-3 bg-orange-50 rounded-r-lg">
+                <h3 class="font-bold text-gray-900 text-lg mb-2">Faulty Thermostats</h3>
+                <p class="text-gray-700">
+                  A defective thermostat can prevent heating entirely or cause overheating and cut-outs. We test temperature control accuracy and safety shut-off behaviour.
+                </p>
+              </div>
+              
+              <div class="border-l-4 border-blue-500 pl-4 py-3 bg-blue-50 rounded-r-lg">
+                <h3 class="font-bold text-gray-900 text-lg mb-2">Electrical Supply and Tripping Issues</h3>
+                <p class="text-gray-700">
+                  Repeated tripping of MCBs or RCDs often points to insulation breakdown, moisture ingress, or internal shorts. Tripping may involve the circuit breaker or consumer unit, and a qualified electrician may be needed to diagnose and repair complex electrical faults. We trace faults safely without energising unsafe components.
+                </p>
+              </div>
+              
+              <div class="border-l-4 border-green-500 pl-4 py-3 bg-green-50 rounded-r-lg">
+                <h3 class="font-bold text-gray-900 text-lg mb-2">Leaks Around the Immersion Boss</h3>
+                <p class="text-gray-700">
+                  Leaks may be caused by degraded seals, incorrect installation depth, or corrosion. Leaks can also originate from connected pipes or fittings, which should be checked as part of the repair process. These are assessed carefully to avoid tank damage.
+                </p>
+              </div>
+              
+              <div class="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 rounded-r-lg">
+                <h3 class="font-bold text-gray-900 text-lg mb-2">Overheating and Cut-Out Problems</h3>
+                <p class="text-gray-700">
+                  If your immersion heater overheats or constantly trips its safety cut-out, we identify whether the issue is control-related, element-related, or wiring-related. Persistent cut-out problems may leave you with only cold water until repairs are made.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Our Repair Process -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Our Immersion Heater Repair Process</h2>
+            
+            <div class="space-y-8">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">1</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Safe Isolation and Initial Checks</h3>
+                  <p class="text-gray-700">
+                    We begin by isolating the electrical supply and checking the heater's configuration, wiring condition, and visible components.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">2</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Component-Level Diagnosis</h3>
+                  <p class="text-gray-700">
+                    Each component is tested individually — element, thermostat, wiring terminals, and safety devices — to pinpoint the failure accurately. The condition of the existing immersion heater is carefully evaluated during diagnosis to ensure the most effective repair or maintenance approach.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">3</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Fault Explanation Before Repair</h3>
+                  <p class="text-gray-700">
+                    We explain the exact cause of the problem in plain language so you understand what has failed and what the repair will achieve.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">4</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Targeted Repair</h3>
+                  <p class="text-gray-700">
+                    Only the faulty components are repaired or replaced. No unnecessary work, no bundled extras. Our technicians carry all necessary parts to complete immersion heater repairs efficiently.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">5</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Functional and Safety Testing</h3>
+                  <p class="text-gray-700">
+                    Once repaired, the immersion heater is tested for correct heat-up time, temperature regulation, and electrical safety. All repairs are backed by a guarantee for your peace of mind.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 2: Repair Work -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+              <Image 
+                src={image3} 
+                alt="Professional immersion heater repair work in progress" 
+                width={800}
+                height={450}
+                class="w-full h-auto"
+              />
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Detailed repair work on immersion heater components</p>
+          </div>
+
+          <!-- Immersion Heater Types -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Immersion Heater Types We Repair</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="bg-blue-50 p-6 rounded-lg">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                    <Zap className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-900">Standard Immersion Heaters</h3>
+                </div>
+                <p class="text-gray-700 mb-4">
+                  Single-element systems commonly used for off-peak or backup hot water.
+                </p>
+                <div class="p-4 bg-blue-100 rounded-lg">
+                  <p class="text-sm text-gray-700">
+                    <span class="font-semibold">Timer Feature:</span> Many standard immersion heaters are equipped with a timer, allowing users to schedule heating during off peak hours to take advantage of lower electricity rates and save on energy costs.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="bg-green-50 p-6 rounded-lg">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                    <Zap className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-900">Dual-Element Immersion Heaters</h3>
+                </div>
+                <p class="text-gray-700 mb-4">
+                  Systems with separate day and night elements, often misdiagnosed when only one element has failed.
+                </p>
+                <div class="p-4 bg-green-100 rounded-lg">
+                  <p class="text-sm text-gray-700">
+                    <span class="font-semibold">Dual Configuration:</span> These are sometimes referred to as systems with two immersion heaters—one (the primary) for regular daily heating and the other (the boost immersion heater) for additional demand, each positioned at different levels within the tank for optimal efficiency.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8 bg-gray-50 p-6 rounded-lg border border-gray-200">
+              <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+                <Droplets className="w-5 h-5 text-gray-600 mr-3" />
+                Copper and Stainless Steel Cylinders
+              </h3>
+              <p class="text-gray-700">
+                We account for cylinder material, age, and condition during repairs to avoid damage and leaks. Proper repair and maintenance of the water cylinder is essential for system longevity.
+              </p>
+            </div>
+          </div>
+
+          <!-- Real-World Scenarios -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Real-World Repair Scenarios We Handle</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Hot water works intermittently, then stops completely</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Heater only works on one setting</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Fuse or breaker trips when heater is switched on</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Water heats but quickly goes cold</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Constant resetting of the thermal cut-out</span>
+                </div>
+              </div>
+              
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Slow heat-up times despite long run periods</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Immersion heater stopped working, leaving no hot water available</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Issues with water heating efficiency or performance, such as limescale buildup in the hot water cylinder</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Water heater faults affecting hot water supply or the ability to heat water properly</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Hot water cylinder problems impacting heating and insulation</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Situations where the immersion heater fails to heat water as expected</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quality and Outcome Checks -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Quality and Outcome Checks</h2>
+            
+            <p class="text-gray-700 mb-6">
+              After every immersion heater repair, we verify:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <Shield className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Stable electrical draw within safe limits</span>
+                </div>
+                <div class="flex items-start">
+                  <Shield className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Correct thermostat cycling</span>
+                </div>
+              </div>
+              
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <Shield className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>No leaks or pressure issues</span>
+                </div>
+                <div class="flex items-start">
+                  <Shield className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Consistent hot water recovery</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="p-6 bg-blue-50 rounded-lg">
+                <p class="text-gray-700">
+                  <span class="font-semibold">Completion Standard:</span> The repair is only considered complete when the system operates normally under real-use conditions.
+                </p>
+              </div>
+              <div class="p-6 bg-green-50 rounded-lg">
+                <p class="text-gray-700">
+                  <span class="font-semibold">Homeowner Confidence:</span> These checks are designed to give homeowners confidence in the reliability of their repaired system.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- What Affects Complexity -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What Affects Immersion Heater Repair Complexity</h2>
+            
+            <div class="space-y-4 mb-6">
+              <div class="flex items-start">
+                <AlertCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Age of the heater and cylinder</span>
+              </div>
+              
+              <div class="flex items-start">
+                <AlertCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Severity of scale or corrosion</span>
+              </div>
+              
+              <div class="flex items-start">
+                <AlertCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Electrical access and wiring condition</span>
+              </div>
+              
+              <div class="flex items-start">
+                <AlertCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Previous repair attempts</span>
+              </div>
+              
+              <div class="flex items-start">
+                <AlertCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Single vs dual element configuration</span>
+              </div>
+            </div>
+            
+            <div class="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-lg">
+              <p class="text-gray-700">
+                <span class="font-semibold">Professional Assessment:</span> These factors determine repair scope, not guesswork. Immersion heaters used on a daily basis may require more frequent maintenance or repairs due to increased wear.
+              </p>
+            </div>
+          </div>
+
+          <!-- Maintenance Section -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Immersion Heater Maintenance</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Regular maintenance is essential to keep your immersion heater running efficiently and to ensure a steady supply of hot water for your home. By scheduling routine checks with immersion heater specialists, you can catch minor issues before they become major problems.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              <div class="bg-blue-50 p-6 rounded-lg">
+                <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-2" />
+                  Key Maintenance Tasks
+                </h3>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Inspecting the heating element for signs of wear or limescale buildup</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Testing the thermostat to confirm it's regulating temperature accurately</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="bg-green-50 p-6 rounded-lg">
+                <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+                  <DollarSign className="w-5 h-5 text-green-600 mr-2" />
+                  Energy Efficiency Benefits
+                </h3>
+                <p class="text-gray-700">
+                  A well-maintained immersion heater not only heats water more effectively but also uses less electricity, helping to keep your energy costs under control. Addressing common problems early—such as a faulty thermostat or a deteriorating element—can prevent unexpected breakdowns and extend the lifespan of your heater.
+                </p>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-amber-50 rounded-lg border-l-4 border-amber-500">
+              <p class="text-gray-700">
+                <span class="font-semibold">Annual Service Recommendation:</span> For the best results, consider having your immersion heater serviced annually by a qualified professional. This proactive approach ensures your heating system remains reliable, safe, and cost-efficient, giving you peace of mind and consistent hot water throughout the year.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQs -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+              <MessageCircle className="w-8 h-8 text-blue-600 mr-3" />
+              Immersion Heater Repair FAQs
+            </h2>
+            
+            <div class="space-y-6">
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Can an immersion heater be repaired without draining the tank?</h3>
+                <p class="text-gray-700">In many cases, yes. Some repairs can be carried out without full draining, depending on the fault location. For complex immersion heater repairs or if you are unsure, it is best to consult a qualified plumber to ensure the job is done safely and correctly.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Why does my immersion heater keep tripping?</h3>
+                <p class="text-gray-700">This is usually caused by insulation failure, moisture ingress, or a failing element — not the switch itself. If the problem continues after replacing the immersion heater element, contact a qualified electrician to inspect for electrical faults or wiring issues.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Is it safe to keep resetting the cut-out?</h3>
+                <p class="text-gray-700">No. Repeated cut-outs indicate an unresolved fault that should be repaired properly. If your immersion heater continues to trip, it is recommended to have a professional plumber investigate the issue to ensure safe and effective repairs.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Do immersion heaters fail suddenly or gradually?</h3>
+                <p class="text-gray-700">Both. Some fail instantly, others degrade over time with symptoms like slow heating or inconsistent temperatures. In cases of gradual failure, you may notice that only warm, not hot, water is available.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-8">
+          <!-- Quick Contact Card -->
+          <div class="bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-xl p-6 shadow-lg">
+            <h3 class="text-2xl font-bold mb-4">Need Immersion Heater Repairs?</h3>
+            <p class="mb-6">Same-day service for emergency hot water repairs</p>
+            
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center w-full py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors mb-4">
+              <Phone className="w-5 h-5 mr-3" />
+              Call {serviceData.phoneNumber}
+            </a>
+            
+            <a href="/contact" class="inline-flex items-center justify-center w-full py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+              Book Online
+            </a>
+            
+            <div class="mt-6 pt-6 border-t border-white/20">
+              <div class="flex items-center">
+                <Zap className="w-5 h-5 mr-3" />
+                <div>
+                  <p class="font-semibold">Qualified Electricians</p>
+                  <p class="text-sm opacity-90">All electrical work certified</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Details -->
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Service Details</h3>
+            
+            <div class="space-y-4">
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Service Type</p>
+                <p class="text-gray-600">Immersion Heater Repairs</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Response Time</p>
+                <p class="text-gray-600">Same Day Available</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Technician Qualification</p>
+                <p class="text-gray-600">Qualified Electricians</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Guarantee</p>
+                <p class="text-gray-600">12 Months on Work & Parts</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Related Services -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Related Services</h3>
+            
+            <div class="space-y-3">
+              <a href="/services/hot-water-cylinder-repairs" class="block p-3 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-blue-200">
+                    <Droplets className="w-4 h-4 text-blue-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-blue-600">Hot Water Cylinder Repairs</span>
+                </div>
+              </a>
+              
+              <a href="/services/hot-water-cylinder-installation" class="block p-3 bg-green-50 hover:bg-green-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-green-200">
+                    <Wrench className="w-4 h-4 text-green-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-green-600">Hot Water Cylinder Installation</span>
+                </div>
+              </a>
+              
+              <a href="/services/boiler-repairs" class="block p-3 bg-orange-50 hover:bg-orange-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-orange-200">
+                    <Flame className="w-4 h-4 text-orange-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-orange-600">Boiler Repairs</span>
+                </div>
+              </a>
+              
+              <a href="/services/central-heating-repairs" class="block p-3 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-purple-200">
+                    <Thermometer className="w-4 h-4 text-purple-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-purple-600">Central Heating Repairs</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Comprehensive Heating Services -->
+          <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Comprehensive Heating Services</h3>
+            
+            <p class="text-sm text-gray-700 mb-4">
+              In addition to immersion heater repairs, we also offer comprehensive heating services, including boiler and gas system repairs, all carried out by qualified gas engineers and heating engineers.
+            </p>
+            
+            <div class="space-y-2">
+              <div class="flex items-center">
+                <Flame className="w-4 h-4 text-orange-500 mr-3" />
+                <span class="text-sm text-gray-700">Boiler Repairs</span>
+              </div>
+              <div class="flex items-center">
+                <Shield className="w-4 h-4 text-green-500 mr-3" />
+                <span class="text-sm text-gray-700">Gas Safety Certificates</span>
+              </div>
+              <div class="flex items-center">
+                <Thermometer className="w-4 h-4 text-blue-500 mr-3" />
+                <span class="text-sm text-gray-700">Central Heating Repairs</span>
+              </div>
+              <div class="flex items-center">
+                <Wrench className="w-4 h-4 text-gray-500 mr-3" />
+                <span class="text-sm text-gray-700">All plumbing emergencies</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Customer Recommendation -->
+          <div class="bg-green-50 rounded-xl p-6 border border-green-200">
+            <div class="flex items-center mb-4">
+              <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                <CheckCircle className="w-5 h-5 text-green-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-900">Highly Recommended</h3>
+            </div>
+            <p class="text-sm text-gray-700">
+              Our service is highly recommended by satisfied customers. Get the issue fixed properly — book your repair today in {serviceData.location}.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-gradient-to-r from-gray-900 to-blue-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Restore Your Hot Water Today
+      </h2>
+      
+      <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+        Don't suffer with cold showers or unreliable hot water. Our qualified electricians are ready to diagnose and repair your immersion heater quickly and professionally.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <Phone className="w-6 h-6 mr-3" />
+          Emergency Call: {serviceData.phoneNumber}
+        </a>
+        
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg text-lg hover:bg-white/10 transition-all duration-300">
+          Book Repair Now
+        </a>
+      </div>
+      
+      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+        <div class="text-center">
+          <Zap className="w-8 h-8 text-green-400 mx-auto mb-2" />
+          <p class="text-sm">Qualified Electricians</p>
+        </div>
+        <div class="text-center">
+          <Clock className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+          <p class="text-sm">Same Day Service</p>
+        </div>
+        <div class="text-center">
+          <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-2" />
+          <p class="text-sm">12 Month Guarantee</p>
+        </div>
+        <div class="text-center">
+          <Shield className="w-8 h-8 text-amber-400 mx-auto mb-2" />
+          <p class="text-sm">Electrical Safety Certified</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

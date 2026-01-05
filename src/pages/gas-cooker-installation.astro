@@ -1,0 +1,719 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { Phone, Shield, CheckCircle, Wrench, Flame, Clock, AlertCircle, DollarSign, MessageCircle, Calendar, Zap, Droplets, Thermometer } from 'lucide-react';
+import image1 from "../assets/image/Boiler-Swap-Upgrade.png"
+import image2 from "../assets/image/Heating-System-Installation.png"
+import image3 from "../assets/image/heaterHero.webp"
+
+// Dynamic data
+const serviceData = {
+  title: "Gas Cooker Installation",
+  location: "Your Location",
+  businessName: "Your Business Name",
+  metaDescription: "Professional gas cooker installation in [location]. Gas Safe registered engineers for safe cooker connection.",
+  phoneNumber: "YOUR-PHONE-NUMBER"
+};
+---
+
+<Layout title={`Gas Cooker Installation in ${serviceData.location} | ${serviceData.businessName}`} description={serviceData.metaDescription}>
+  <!-- Hero Section -->
+  <section class="relative py-16 md:py-24 bg-gradient-to-r from-blue-900 to-gray-900 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-20">
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="mb-4">
+            <span class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium border border-white/20">
+              <Shield className="w-4 h-4 mr-2" />
+              Gas Safe Registered
+            </span>
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Gas Cooker Installation in <span class="text-orange-400">{serviceData.location}</span>
+          </h1>
+          
+          <p class="text-xl text-gray-300 mb-8 max-w-2xl">
+            Safe, professional gas cooker installation by Gas Safe registered engineers. Ensure your cooker is connected properly and operates safely.
+          </p>
+          
+          <div class="flex flex-wrap gap-4">
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+              <Phone className="w-5 h-5 mr-3" />
+              Call Now: {serviceData.phoneNumber}
+            </a>
+            <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/20">
+              Book Installation Online
+            </a>
+          </div>
+          
+          <div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Gas Safe Certified</span>
+            </div>
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Same Day Service</span>
+            </div>
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Safety Certificate</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="relative rounded-xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+            <Image 
+              src={image1} 
+              alt="Gas cooker installation technician at work" 
+              width={600}
+              height={400}
+              class="w-full h-auto"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-white text-gray-900 p-4 rounded-lg shadow-lg max-w-xs">
+            <div class="flex items-center mb-2">
+              <Flame className="w-5 h-5 text-blue-500 mr-2" />
+              <span class="font-semibold">Safety First</span>
+            </div>
+            <p class="text-sm">All installations include leak testing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-12">
+        <!-- Main Content Column -->
+        <div class="lg:col-span-2">
+          <!-- Introduction -->
+          <div class="prose prose-lg max-w-none mb-12">
+            <p class="lead text-xl text-gray-700 mb-8">
+              If you're searching for gas cooker installation in {serviceData.location}, you likely need a safe, correct connection, you're unsure if the bayonet hose setup is right, the cooker doesn't sit level, the gas supply point isn't lining up, or you're worried about leaks, smells, or a cooker that won't light consistently. Gas cooker installation is typically carried out in the kitchen, where proper setup is essential to ensure both safety and functionality. {serviceData.businessName} installs gas cookers by checking the setup first, explaining what needs doing in plain language, and only proceeding once everything is clear. The result is a properly connected, stable cooker that operates safely and as intended.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-6 rounded-r-lg">
+              <p class="font-semibold text-blue-800">
+                Book your gas cooker installation in {serviceData.location} with {serviceData.businessName}.
+              </p>
+            </div>
+            
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+              Gas cooker installation service in {serviceData.location}
+            </h2>
+
+            <p>
+              Gas cooker installation is a safety-critical job that requires correct connection, correct positioning, and checks that confirm safe operation. {serviceData.businessName} provides gas cooker installation in {serviceData.location}, carried out by qualified professionals to ensure safety and compliance for customers who want the cooker connected properly and verified before use.
+            </p>
+            
+            <p>
+              This page focuses only on installing a gas cooker — not repairs, servicing, or any other work.
+            </p>
+          </div>
+
+          <!-- What Installation Includes -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What gas cooker installation includes</h2>
+            
+            <p class="text-gray-700 mb-6">
+              A complete gas cooker installation typically includes:
+            </p>
+            
+            <div class="space-y-4 mb-6">
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Confirming the appliance (cooker) is suitable for the available gas supply</span>
+              </div>
+              
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Checking the installation space, stability, and access to the connection point</span>
+              </div>
+              
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Connecting the cooker to the gas supply using the correct connection method for the setup</span>
+              </div>
+              
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Ensuring the installation is carried out in compliance with all relevant safety and gas regulations</span>
+              </div>
+              
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Verifying safe operation once connected</span>
+              </div>
+
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Confirming the cooker is stable and positioned correctly for safe everyday use</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Common Installation Situations -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Common installation situations we handle</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Gas cooker installation in {serviceData.location} is often needed when:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>A new gas cooker has been delivered and needs connecting</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>An existing cooker has been disconnected and needs reconnecting</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>The cooker has been moved and the connection point no longer aligns</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>The cooker does not sit level or securely once placed</span>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You're unsure whether the hose and connector arrangement is correct for your setup</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You are replacing an old or worn-out cooker with a new model to improve efficiency, safety, or functionality</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You are upgrading to a newer or more advanced gas cooker and need to ensure compatibility with your current electrical and gas connections</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pre-installation Checks -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Pre-installation checks before any connection is made</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Before installing, {serviceData.businessName} checks the key constraints that affect safety and compatibility:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>The type of gas supply available at the property</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>The condition and suitability of the connection point</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Whether the connection route allows safe positioning of the cooker</span>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Whether there is adequate access to shut-off and connection points</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Whether the cooker can be installed without strain on the connection</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>The hot zone above the cooker is checked to ensure it is free from flammable materials such as wood, wallpaper, and wiring</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-gray-50 rounded-lg border-l-4 border-gray-500">
+              <p class="text-gray-700">
+                <span class="font-semibold">Prevention First:</span> These checks prevent forced fittings, poor alignment, and unsafe setups.
+              </p>
+            </div>
+          </div>
+
+          <!-- Image 1: Installation Process -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+              <Image 
+                src={image2} 
+                alt="Gas cooker installation and safety checks" 
+                width={800}
+                height={450}
+                class="w-full h-auto"
+              />
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Professional gas cooker installation and connection</p>
+          </div>
+
+          <!-- Installation Decision Points -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Installation decision points that affect the job</h2>
+            
+            <div class="space-y-8">
+              <!-- Cooker Fit -->
+              <div class="bg-blue-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Cooker fit and positioning</h3>
+                <p class="text-gray-700 mb-4">
+                  A cooker must be installed so it sits securely and can be used safely. The installation considers:
+                </p>
+                
+                <div class="space-y-3">
+                  <div class="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                    <span>Whether the cooker fits the space without pressure on the sides</span>
+                  </div>
+                  <div class="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                    <span>Whether the cooker can be levelled and stabilised</span>
+                  </div>
+                  <div class="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                    <span>Whether doors and drawers open freely without snagging</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Shut-off Access -->
+              <div class="bg-green-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Access to the gas shut-off</h3>
+                <p class="text-gray-700 mb-4">
+                  A proper installation requires that shut-off access is practical. The installation is planned so the shut-off can be reached when needed, without moving the cooker in a risky way.
+                </p>
+              </div>
+              
+              <!-- Connection Alignment -->
+              <div class="bg-orange-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Connection alignment without tension</h3>
+                <p class="text-gray-700 mb-4">
+                  The cooker is installed so the connection is not under tension, kinked, or forced into position. Tension and kinks increase risk and reduce reliability.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Installation Process -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Gas cooker installation process step by step</h2>
+            
+            <div class="space-y-8">
+              <!-- Step 1 -->
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-blue-600 font-bold">1</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">Confirm the setup and constraints</h3>
+                </div>
+                <p class="text-gray-700">
+                  All relevant information about the cooker, location, and connection point is reviewed before installation to ensure the setup can be completed safely and correctly.
+                </p>
+              </div>
+              
+              <!-- Step 2 -->
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-green-600 font-bold">2</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">Explain what will be done</h3>
+                </div>
+                <p class="text-gray-700">
+                  {serviceData.businessName} explains the connection approach, positioning, and checks that will be carried out, so you know what to expect. After installation, we also provide advice on the safe use and maintenance of your gas cooker.
+                </p>
+              </div>
+              
+              <!-- Step 3 -->
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-orange-600 font-bold">3</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">Connect the cooker correctly</h3>
+                </div>
+                <p class="text-gray-700">
+                  The cooker is connected using the appropriate method for the existing supply arrangement, ensuring the connection is stable, correctly seated, and connected safely in accordance with all safety standards.
+                </p>
+              </div>
+              
+              <!-- Step 4 -->
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-purple-600 font-bold">4</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">Verify safe operation</h3>
+                </div>
+                <p class="text-gray-700">
+                  Once connected, the cooker is checked in use conditions to confirm it is operating as intended. As part of this verification process, the installation is thoroughly tested for gas leaks to ensure safety and compliance with regulations.
+                </p>
+              </div>
+              
+              <!-- Step 5 -->
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-red-600 font-bold">5</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">Final stability and positioning check</h3>
+                </div>
+                <p class="text-gray-700">
+                  The cooker is confirmed to be stable, level where possible, and positioned to avoid strain on the connection.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Safety Checks -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Safety and outcome checks after installation</h2>
+            
+            <p class="text-gray-700 mb-6">
+              After the installation, {serviceData.businessName} confirms:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>No signs of gas leakage at the connection points</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>The cooker operates correctly when in use</span>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>The cooker is positioned safely with a stable connection setup</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Access considerations are sensible for normal operation</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-green-50 rounded-lg">
+              <p class="text-gray-700">
+                We also provide a gas safety certificate to confirm the installation meets all safety requirements. These checks are what turn a "connected" cooker into a properly installed cooker.
+              </p>
+            </div>
+          </div>
+
+          <!-- Common Problems -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Common problems customers want to avoid with installation</h2>
+            
+            <p class="text-gray-700 mb-6">
+              A correct installation is designed to avoid:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Loose or poorly seated connections</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Strained, kinked, or awkward connection routing</span>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Unstable cooker positioning that shifts during use</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Uncertainty about whether the setup is safe to use</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-6 p-6 bg-blue-50 rounded-lg">
+              <p class="text-gray-700">
+                <span class="font-semibold">Separate Service:</span> Keep in mind that while this section focuses on installation, gas cooker repair is a separate service that requires a qualified engineer to diagnose and fix any issues, ensuring ongoing safety and compliance.
+              </p>
+            </div>
+          </div>
+
+          <!-- Image 2: Safety Checks -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+              <Image 
+                src={image3} 
+                alt="Gas safety checks after cooker installation" 
+                width={800}
+                height={450}
+                class="w-full h-auto"
+              />
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Comprehensive safety testing and certification</p>
+          </div>
+
+          <!-- FAQs -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+              <MessageCircle className="w-8 h-8 text-blue-600 mr-3" />
+              Gas cooker installation FAQs
+            </h2>
+            
+            <div class="space-y-6">
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Do I need to have the cooker in place before the installer arrives?</h3>
+                <p class="text-gray-700">Ideally, yes. Having the cooker on-site and near the installation space ahead of time helps ensure the installation is completed efficiently and minimizes disruption in your home. This preparation allows the engineer to start work promptly at the scheduled time and complete the connection and positioning without unnecessary delays.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">What if the cooker doesn't fit the gap properly?</h3>
+                <p class="text-gray-700">The installation starts with a fit and positioning check to ensure your selection of gas cooker is suitable for the available space. If you are unsure about the right cooker for your kitchen, we recommend consulting with the installer before purchase to confirm compatibility and proper fit. If the cooker cannot be positioned safely within the space, that will be identified before any connection work proceeds.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Can you install a cooker if the connection point is difficult to reach?</h3>
+                <p class="text-gray-700">Access is assessed first. A qualified installer will deal with challenging connection points and carry out the necessary adjustments to ensure a safe installation. The cooker must be installable without unsafe strain on the connection and with practical access considerations.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Will the cooker be checked after it's connected?</h3>
+                <p class="text-gray-700">Yes. The installation includes checks to confirm safe operation and a stable, correct setup. After installation, the service may offer additional safety checks or provide documentation to certify compliance. If you need further services or information, you can add your details, enter your postcode, or search online to book follow-up checks or find more about what is offered.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Final CTA Section -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Book gas cooker installation in {serviceData.location}</h2>
+            
+            <div class="bg-gradient-to-r from-blue-50 to-blue-100 border-l-4 border-blue-600 p-6 rounded-r-lg">
+              <p class="text-gray-800 mb-4">
+                For gas cooker installation in {serviceData.location} focused on correct connection, safe operation checks, and a stable finished setup, contact {serviceData.businessName}. Arrange your installation and get your cooker connected properly, with clarity at every step.
+              </p>
+              
+              <p class="text-gray-800 font-semibold">
+                You can find a qualified gas cooker installer in London and may be eligible for a free consultation or quote.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-8">
+          <!-- Quick Contact Card -->
+          <div class="bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-xl p-6 shadow-lg">
+            <h3 class="text-2xl font-bold mb-4">Safe Cooker Installation</h3>
+            <p class="mb-6">Gas Safe registered installation with certification</p>
+            
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center w-full py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors mb-4">
+              <Phone className="w-5 h-5 mr-3" />
+              Call Now: {serviceData.phoneNumber}
+            </a>
+            
+            <a href="/contact" class="inline-flex items-center justify-center w-full py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+              Book Installation
+            </a>
+            
+            <div class="mt-6 pt-6 border-t border-white/20">
+              <div class="flex items-center">
+                <Shield className="w-5 h-5 mr-3" />
+                <div>
+                  <p class="font-semibold">Gas Safe Certificate</p>
+                  <p class="text-sm opacity-90">Provided with every installation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Details -->
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Service Details</h3>
+            
+            <div class="space-y-4">
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Service Type</p>
+                <p class="text-gray-600">Gas Cooker Installation</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Service Time</p>
+                <p class="text-gray-600">1-2 Hours Typically</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Engineer Qualification</p>
+                <p class="text-gray-600">Gas Safe Registered</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Certification</p>
+                <p class="text-gray-600">Gas Safety Certificate</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pricing Breakdown -->
+          <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+              <DollarSign className="w-5 h-5 text-amber-600 mr-2" />
+              Transparent Pricing
+            </h3>
+            
+            <div class="space-y-3">
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Standard Installation</span>
+                <span class="font-bold text-gray-900">£80 - £120</span>
+              </div>
+              
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Complex Installation</span>
+                <span class="font-bold text-gray-900">£120 - £180</span>
+              </div>
+              
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Gas Safety Check</span>
+                <span class="font-bold text-gray-900">Included</span>
+              </div>
+              
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Safety Certificate</span>
+                <span class="font-bold text-gray-900">Included</span>
+              </div>
+              
+              <div class="mt-4 p-3 bg-white rounded-lg">
+                <p class="text-sm text-gray-600">
+                  <span class="font-semibold">Fixed Price:</span> All quotes are fixed price with no hidden fees. Prices include VAT.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Safety Focus -->
+          <div class="bg-red-50 rounded-xl p-6 border border-red-200">
+            <div class="flex items-center mb-4">
+              <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                <Shield className="w-5 h-5 text-red-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-900">Safety First Approach</h3>
+            </div>
+            <p class="text-sm text-gray-700">
+              Every installation includes comprehensive gas leak testing and safety checks. We never compromise on safety standards.
+            </p>
+          </div>
+
+          <!-- Related Services -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Related Services</h3>
+            
+            <div class="space-y-3">
+              <a href="/services/gas-cooker-repairs" class="block p-3 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-blue-200">
+                    <Wrench className="w-4 h-4 text-blue-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-blue-600">Gas Cooker Repairs</span>
+                </div>
+              </a>
+              
+              <a href="/services/gas-hob-installation" class="block p-3 bg-orange-50 hover:bg-orange-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-orange-200">
+                    <Flame className="w-4 h-4 text-orange-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-orange-600">Gas Hob Installation</span>
+                </div>
+              </a>
+              
+              <a href="/services/gas-safety-certificates" class="block p-3 bg-green-50 hover:bg-green-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-green-200">
+                    <Shield className="w-4 h-4 text-green-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-green-600">Gas Safety Certificates</span>
+                </div>
+              </a>
+              
+              <a href="/services/gas-appliance-servicing" class="block p-3 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-purple-200">
+                    <CheckCircle className="w-4 h-4 text-purple-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-purple-600">Gas Appliance Servicing</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-gradient-to-r from-gray-900 to-blue-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Get Your Gas Cooker Installed Safely Today
+      </h2>
+      
+      <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+        Don't risk unsafe connections. Our Gas Safe registered engineers provide professional installation with comprehensive safety checks.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <Phone className="w-6 h-6 mr-3" />
+          Book Installation: {serviceData.phoneNumber}
+        </a>
+        
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg text-lg hover:bg-white/10 transition-all duration-300">
+          Free Quote
+        </a>
+      </div>
+      
+      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+        <div class="text-center">
+          <Shield className="w-8 h-8 text-green-400 mx-auto mb-2" />
+          <p class="text-sm">Gas Safe Registered</p>
+        </div>
+        <div class="text-center">
+          <CheckCircle className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+          <p class="text-sm">Safety Certificate</p>
+        </div>
+        <div class="text-center">
+          <Clock className="w-8 h-8 text-amber-400 mx-auto mb-2" />
+          <p class="text-sm">Same Day Service</p>
+        </div>
+        <div class="text-center">
+          <Flame className="w-8 h-8 text-orange-400 mx-auto mb-2" />
+          <p class="text-sm">Leak Testing Included</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

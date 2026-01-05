@@ -1,0 +1,1043 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { Phone, Shield, CheckCircle, Wrench, Flame, Clock, AlertCircle, DollarSign, MessageCircle, Calendar, Zap, Droplets, Thermometer } from 'lucide-react';
+import image1 from "../assets/image/Boiler-Swap-Upgrade.png"
+import image2 from "../assets/image/Heating-System-Installation.png"
+import image3 from "../assets/image/heaterHero.webp"
+
+// Dynamic data
+const serviceData = {
+  title: "Radiator Repair and Replacement",
+  location: "Your Location",
+  businessName: "Your Business Name",
+  metaDescription: "Professional radiator repair and replacement in [location]. Expert installation of new radiators and repair of existing systems.",
+  phoneNumber: "YOUR-PHONE-NUMBER"
+};
+---
+
+<Layout title={`Radiator Repair and Replacement in ${serviceData.location} | ${serviceData.businessName}`} description={serviceData.metaDescription}>
+  <!-- Hero Section -->
+  <section class="relative py-16 md:py-24 bg-gradient-to-r from-blue-900 to-gray-900 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-20">
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="mb-4">
+            <span class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium border border-white/20">
+              <Thermometer className="w-4 h-4 mr-2" />
+              Heating Experts
+            </span>
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Radiator Repair and Replacement in <span class="text-orange-400">{serviceData.location}</span>
+          </h1>
+          
+          <p class="text-xl text-gray-300 mb-8 max-w-2xl">
+            Expert radiator installation, repair and replacement services. Restore even heating to every room in your home.
+          </p>
+          
+          <div class="flex flex-wrap gap-4">
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+              <Phone className="w-5 h-5 mr-3" />
+              Call Now: {serviceData.phoneNumber}
+            </a>
+            <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/20">
+              Book Service Online
+            </a>
+          </div>
+          
+          <div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Same Day Service</span>
+            </div>
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Correct Sizing</span>
+            </div>
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Professional Installation</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="relative rounded-xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+            <Image 
+              src={image1} 
+              alt="Radiator installation and repair technician at work" 
+              width={600}
+              height={400}
+              class="w-full h-auto"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-white text-gray-900 p-4 rounded-lg shadow-lg max-w-xs">
+            <div class="flex items-center mb-2">
+              <Thermometer className="w-5 h-5 text-blue-500 mr-2" />
+              <span class="font-semibold">Even Heating Guaranteed</span>
+            </div>
+            <p class="text-sm">Proper sizing and installation for consistent warmth</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-12">
+        <!-- Main Content Column -->
+        <div class="lg:col-span-2">
+          <!-- Introduction -->
+          <div class="prose prose-lg max-w-none mb-12">
+            <p class="lead text-xl text-gray-700 mb-8">
+              If you're searching for radiator replacement in {serviceData.location}, you want the right radiator fitted properly so the room heats evenly again.
+            </p>
+            
+            <p>
+              Maybe your radiator is leaking, cold in spots, taking ages to warm up, rusting, or it's the wrong size for the space and never feels comfortable. {serviceData.businessName} replaces radiators by checking the pipework and room requirements first, explaining the options clearly, and only starting once the plan is agreed.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-6 rounded-r-lg">
+              <p class="font-semibold text-blue-800">
+                The result is a correctly sized, securely fitted, and properly installed radiator that heats consistently and performs as it should.
+              </p>
+            </div>
+            
+            <p class="font-semibold text-blue-700">
+              Book radiator replacement in {serviceData.location} with {serviceData.businessName}.
+            </p>
+          </div>
+
+          <!-- Radiator Replacement Overview -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Radiator Replacement in {serviceData.location}</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Radiator replacement is the process of removing an existing radiator and fitting a new one that matches the room's needs and the existing pipework constraints. Done properly, radiator replacement improves heat output, restores reliability, and removes issues like leaks and corrosion that can worsen over time.
+            </p>
+            
+            <div class="p-6 bg-gray-50 rounded-lg border border-gray-200">
+              <p class="text-gray-700">
+                <span class="font-semibold">Our Focus:</span> {serviceData.businessName} focuses on radiator replacement that's measured, compatible, and finished cleanly — so the new radiator works correctly from day one.
+              </p>
+            </div>
+          </div>
+
+          <!-- When Replacement is Needed -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">When Radiator Replacement is the Right Choice</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Radiator replacement is commonly needed when:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>The radiator is leaking or has visible corrosion</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-orange-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>The radiator has cold spots that never fully improve</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>The radiator output is too low for the room size</span>
+                </div>
+              </div>
+              
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-purple-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>The radiator is physically damaged or has failing valves/connections</span>
+                </div>
+                <div class="flex items-start">
+                  <AlertCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>You're changing a room layout and need a different radiator size or position</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 1: Diagnostic Process -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+              <Image 
+                src={image2} 
+                alt="Radiator assessment and compatibility checks" 
+                width={800}
+                height={450}
+                class="w-full h-auto"
+              />
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Professional radiator assessment and compatibility checks</p>
+          </div>
+
+          <!-- What Replacement Includes -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What Radiator Replacement Includes</h2>
+            
+            <p class="text-gray-700 mb-6">
+              A radiator replacement service typically includes:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Assessing the existing radiator size, position, and pipe spacing</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Confirming the replacement radiator's compatibility and suitability for the room</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Isolating and removing the existing radiator safely</span>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Installing the new radiator securely with correct alignment and support</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Reconnecting pipework, valves, and the water supply correctly to ensure proper radiator operation</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Refilling and checking for stable operation at the radiator</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Choosing the Right Radiator -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Choosing the Right Replacement Radiator</h2>
+            
+            <p class="text-gray-700 mb-6">
+              The "right" radiator is not just about appearance. A good replacement matches the room's heating demand and fits your system constraints.
+            </p>
+            
+            <div class="bg-blue-50 p-6 rounded-lg mb-6">
+              <h3 class="font-bold text-gray-900 mb-4">Heat Output Suitability</h3>
+              <p class="text-gray-700 mb-4">
+                Radiator output needs to suit the room. Oversizing and undersizing both create problems:
+              </p>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-4 bg-red-50 rounded-lg">
+                  <h4 class="font-semibold text-gray-900 mb-2">Too Small</h4>
+                  <p class="text-sm text-gray-700">The room never reaches comfort reliably</p>
+                </div>
+                <div class="p-4 bg-orange-50 rounded-lg">
+                  <h4 class="font-semibold text-gray-900 mb-2">Too Large</h4>
+                  <p class="text-sm text-gray-700">Heat can feel uneven and less controllable</p>
+                </div>
+              </div>
+              <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+                <p class="text-sm text-gray-700">
+                  <span class="font-semibold">Important:</span> Adequate hot water flow is essential for the radiator to deliver the intended heat output, ensuring the room is heated efficiently and evenly.
+                </p>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-green-50 rounded-lg border-l-4 border-green-500">
+              <p class="text-gray-700">
+                <span class="font-semibold">Expert Guidance:</span> {serviceData.businessName} helps you choose a radiator that makes sense for real-world use in the space.
+              </p>
+            </div>
+          </div>
+
+          <!-- Size, Shape and Placement -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Size, Shape, and Placement</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Replacement radiators must fit the available wall space while allowing:
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-6">
+              <div class="p-4 bg-gray-50 rounded-lg text-center">
+                <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Shield className="w-5 h-5 text-gray-600" />
+                </div>
+                <p class="font-semibold text-gray-900">Safe clearance around the radiator</p>
+              </div>
+              <div class="p-4 bg-blue-50 rounded-lg text-center">
+                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Wrench className="w-5 h-5 text-blue-600" />
+                </div>
+                <p class="font-semibold text-gray-900">Practical access to valves</p>
+              </div>
+              <div class="p-4 bg-green-50 rounded-lg text-center">
+                <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Thermometer className="w-5 h-5 text-green-600" />
+                </div>
+                <p class="font-semibold text-gray-900">A stable, level installation</p>
+              </div>
+            </div>
+            
+            <div class="bg-amber-50 border border-amber-200 rounded-lg p-6">
+              <p class="text-gray-700">
+                <span class="font-semibold">Relocation Note:</span> If you are relocating a radiator to a new location, additional planning is needed for rerouting or extending pipework and ensuring secure wall fixings.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pipe Spacing and Connection -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Pipe Spacing and Connection Constraints</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Not all radiators match existing pipe centres or connection locations. Replacement planning considers:
+            </p>
+            
+            <div class="space-y-4 mb-6">
+              <div class="flex items-start">
+                <AlertCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Pipe centres (distance between connections)</span>
+              </div>
+              
+              <div class="flex items-start">
+                <AlertCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Valve orientation and access</span>
+              </div>
+              
+              <div class="flex items-start">
+                <AlertCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Whether a change in radiator size affects alignment</span>
+              </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="p-4 bg-gray-50 rounded-lg">
+                <p class="text-sm text-gray-700">
+                  <span class="font-semibold">Connection Tip:</span> It's important to inspect pipe joints for leaks and use a swivel nut to facilitate easier connection and adjustment during installation.
+                </p>
+              </div>
+              <div class="p-4 bg-blue-50 rounded-lg">
+                <p class="text-sm text-gray-700">
+                  <span class="font-semibold">Quality Goal:</span> This avoids forced pipework, awkward stress on joints, and poor finishing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 2: Installation Work -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+              <Image 
+                src={image3} 
+                alt="Professional radiator installation work in progress" 
+                width={800}
+                height={450}
+                class="w-full h-auto"
+              />
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Professional radiator installation with precision alignment</p>
+          </div>
+
+          <!-- Radiator Styles -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Radiator Styles and Practical Differences</h2>
+            
+            <div class="space-y-8">
+              <div class="bg-gray-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Standard Panel Radiators</h3>
+                <p class="text-gray-700">
+                  A common replacement choice where reliability and straightforward fitting are priorities.
+                </p>
+              </div>
+              
+              <div class="bg-blue-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Column-style Radiators</h3>
+                <p class="text-gray-700 mb-4">
+                  Chosen for certain room aesthetics, but requires careful consideration of:
+                </p>
+                <div class="grid md:grid-cols-3 gap-4">
+                  <div class="p-3 bg-white rounded-lg">
+                    <p class="text-sm font-semibold text-gray-900">Wall strength and fixing points</p>
+                  </div>
+                  <div class="p-3 bg-white rounded-lg">
+                    <p class="text-sm font-semibold text-gray-900">Depth and clearance</p>
+                  </div>
+                  <div class="p-3 bg-white rounded-lg">
+                    <p class="text-sm font-semibold text-gray-900">Connection alignment</p>
+                  </div>
+                </div>
+                <div class="mt-4 p-4 bg-blue-100 rounded-lg">
+                  <p class="text-sm text-gray-700">
+                    <span class="font-semibold">Practical Choice:</span> Some column radiators also offer a cost-effective balance between style and performance, making them a practical choice for many homes.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="bg-green-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Vertical Radiators</h3>
+                <p class="text-gray-700 mb-4">
+                  Useful when wall width is limited, but replacement planning must account for:
+                </p>
+                <div class="grid md:grid-cols-3 gap-4">
+                  <div class="p-3 bg-white rounded-lg">
+                    <p class="text-sm font-semibold text-gray-900">Height constraints</p>
+                  </div>
+                  <div class="p-3 bg-white rounded-lg">
+                    <p class="text-sm font-semibold text-gray-900">Pipe entry points</p>
+                  </div>
+                  <div class="p-3 bg-white rounded-lg">
+                    <p class="text-sm font-semibold text-gray-900">Practical valve placement</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Valve Considerations -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Radiator Valve Considerations During Replacement</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Valves affect usability and control. During replacement, {serviceData.businessName} checks whether the existing valve setup is appropriate for the new radiator.
+            </p>
+            
+            <div class="bg-amber-50 p-6 rounded-lg">
+              <h3 class="font-bold text-gray-900 mb-4">Key Considerations Include:</h3>
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-amber-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Valve condition and reliability</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-amber-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Ease of access after the new radiator is fitted</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-amber-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Sensible positioning for day-to-day adjustment</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Replacement Process -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Radiator Replacement Process Step by Step</h2>
+            
+            <div class="space-y-8">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">1</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Assessment and Compatibility Checks</h3>
+                  <p class="text-gray-700">
+                    The existing radiator, pipe spacing, and wall conditions are checked. The room requirements are reviewed so the new radiator choice is practical and suitable.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">2</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Clear Explanation Before Work Begins</h3>
+                  <p class="text-gray-700">
+                    You'll get a clear description of what will be replaced, what needs adjusting, and how the replacement will be completed — with no unclear steps.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">3</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Safe Removal of the Existing Radiator</h3>
+                  <p class="text-gray-700">
+                    The radiator is isolated and removed carefully to prevent mess and avoid strain on existing connections. It is essential to drain all the water from the radiator before removal to prevent leaks and spills. Protect the floor with towels, trays, or buckets to catch any water that may escape during the process.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">4</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Installing the New Radiator Securely</h3>
+                  <p class="text-gray-700">
+                    The new radiator is mounted level and fixed correctly, with secure brackets and stable positioning. It is important to use suitable wall plugs to ensure the radiator brackets are firmly secured to the wall, preventing movement or loosening over time.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">5</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Reconnection and Operational Checks</h3>
+                  <p class="text-gray-700">
+                    Connections are completed correctly, then the radiator is checked for:
+                  </p>
+                  <div class="mt-2 grid md:grid-cols-2 gap-2 text-sm text-gray-600">
+                    <div class="flex items-start">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Secure fitting and alignment. Use PTFE tape on threaded joints and tighten fittings properly to prevent leaks at connections.</span>
+                    </div>
+                    <div class="flex items-start">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Stable operation once refilled. Check the pressure gauge to ensure the system is at the correct pressure after refilling.</span>
+                    </div>
+                    <div class="flex items-start">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>No seepage at joints and valves. Open the bleed valve to release trapped air and avoid leaks caused by air pockets.</span>
+                    </div>
+                    <div class="flex items-start">
+                      <CheckCircle className="w-3 h-3 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Use a dry cloth to check for small drips at joints and valves, ensuring all connections are watertight.</span>
+                    </div>
+                  </div>
+                  <div class="mt-4 p-4 bg-green-50 rounded-lg">
+                    <p class="text-sm text-gray-700">
+                      <span class="font-semibold">Essential Steps:</span> Following these steps is essential to avoid leaks and ensure a reliable radiator installation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cost Information -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Radiator Replacement Cost in {serviceData.location}</h2>
+            
+            <p class="text-gray-700 mb-6">
+              The cost of radiator replacement in {serviceData.location} depends on several key factors, including the type and size of the new radiator, the complexity of the installation, and any adjustments needed to your existing pipework or heating system.
+            </p>
+            
+            <div class="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-lg mb-6">
+              <p class="text-gray-700">
+                <span class="font-semibold">Cost Range:</span> Typically, the total cost for replacing a single radiator—including labour, materials, and basic system flushing—ranges from £150 to £300.
+              </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              <div class="p-6 bg-blue-50 rounded-lg">
+                <h3 class="font-bold text-gray-900 mb-3">Additional Work May Increase Cost</h3>
+                <p class="text-sm text-gray-700">
+                  If your replacement requires more extensive work, such as modifying pipework or a full system flush to remove sludge build up, the price may be higher.
+                </p>
+              </div>
+              
+              <div class="p-6 bg-green-50 rounded-lg">
+                <h3 class="font-bold text-gray-900 mb-3">Get Multiple Quotes</h3>
+                <p class="text-sm text-gray-700">
+                  To ensure you get the best value, it's wise to request detailed quotes from several qualified heating engineers in {serviceData.location}.
+                </p>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-gray-50 rounded-lg">
+              <p class="text-gray-700">
+                <span class="font-semibold">Advice:</span> This way, you can compare the scope of work, the quality of the replacement, and the overall cost before making a decision.
+              </p>
+            </div>
+          </div>
+
+          <!-- Energy Efficiency -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Energy Efficiency Considerations for New Radiators</h2>
+            
+            <p class="text-gray-700 mb-6">
+              When selecting a new radiator, energy efficiency should be a top priority.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-green-50 p-6 rounded-lg">
+                <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+                  <Thermometer className="w-5 h-5 text-green-600 mr-2" />
+                  Modern Radiators
+                </h3>
+                <p class="text-gray-700">
+                  Modern radiators with high BTU ratings are designed to heat your space effectively while using less energy.
+                </p>
+              </div>
+              
+              <div class="bg-blue-50 p-6 rounded-lg">
+                <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+                  <Wrench className="w-5 h-5 text-blue-600 mr-2" />
+                  Thermostatic Valves
+                </h3>
+                <p class="text-gray-700">
+                  Installing thermostatic radiator valves (TRVs) allows you to control the temperature in each room individually, helping to reduce unnecessary heating and lower your energy bills.
+                </p>
+              </div>
+            </div>
+            
+            <div class="mt-6 bg-amber-50 p-6 rounded-lg">
+              <h3 class="font-bold text-gray-900 mb-3">Double Panel Radiators</h3>
+              <p class="text-gray-700">
+                Double panel radiators are another smart choice, as their increased surface area improves heat distribution and overall efficiency compared to single panel models.
+              </p>
+            </div>
+            
+            <div class="mt-6 p-6 bg-green-50 rounded-lg border-l-4 border-green-500">
+              <p class="text-gray-700">
+                <span class="font-semibold">Overall Benefit:</span> By choosing energy-efficient radiators and valves, you not only create a more comfortable home but also save money and reduce your environmental impact over time.
+              </p>
+            </div>
+          </div>
+
+          <!-- Safety Precautions -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Safety Precautions During Radiator Replacement</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Safety is crucial when you replace a radiator.
+            </p>
+            
+            <div class="space-y-4 mb-6">
+              <div class="flex items-start">
+                <Shield className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Always start by turning off your central heating system and allowing it to cool completely before beginning any work.</span>
+              </div>
+              
+              <div class="flex items-start">
+                <Shield className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Carefully isolate the old radiator from the system, and use a radiator bleed key to release any trapped air.</span>
+              </div>
+              
+              <div class="flex items-start">
+                <Shield className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>It's a good idea to use a drain valve to remove water from the system, which helps prevent spills and water damage during removal.</span>
+              </div>
+              
+              <div class="flex items-start">
+                <Shield className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Follow all manufacturer guidelines closely, and double check that all valves are closed before disconnecting pipework.</span>
+              </div>
+            </div>
+            
+            <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+              <p class="text-gray-700">
+                <span class="font-semibold">Professional Recommendation:</span> If you're unsure about any step or lack the right tools, it's best to hire a qualified heating engineer to handle the replacement safely and avoid costly mistakes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Common Scenarios -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Common Replacement Scenarios and Constraints</h2>
+            
+            <div class="space-y-8">
+              <div class="bg-red-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Replacing a Leaking Radiator</h3>
+                <p class="text-gray-700 mb-4">
+                  Leak points often appear at:
+                </p>
+                <div class="space-y-2 mb-4">
+                  <div class="flex items-start">
+                    <AlertCircle className="w-4 h-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>The radiator body (corrosion)</span>
+                  </div>
+                  <div class="flex items-start">
+                    <AlertCircle className="w-4 h-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Connection points (wear or movement)</span>
+                  </div>
+                  <div class="flex items-start">
+                    <AlertCircle className="w-4 h-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Valve areas (age-related degradation)</span>
+                  </div>
+                </div>
+                <div class="p-4 bg-white rounded-lg">
+                  <p class="text-sm text-gray-700">
+                    <span class="font-semibold">Professional Help:</span> For complex leaks or if you are unsure about the repair process, it is recommended to consult a qualified plumber to ensure the job is done safely and correctly.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="bg-blue-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Replacing a Radiator That Never Heats the Room Properly</h3>
+                <p class="text-gray-700 mb-4">
+                  If the radiator is consistently underperforming for the room, replacement prioritises:
+                </p>
+                <div class="space-y-2 mb-4">
+                  <div class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>More suitable output for the space</span>
+                  </div>
+                  <div class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Practical sizing and placement</span>
+                  </div>
+                  <div class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>A setup that supports steady, even warmth</span>
+                  </div>
+                </div>
+                <div class="p-4 bg-blue-100 rounded-lg">
+                  <p class="text-sm text-gray-700">
+                    <span class="font-semibold">Multiple Radiators:</span> In some cases, achieving optimal heating may require installing more radiators or replacing multiple radiators to ensure even heat distribution throughout the property.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="bg-orange-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Replacing Due to Rust and Corrosion</h3>
+                <p class="text-gray-700">
+                  Corrosion is often visible on the outside, but the priority is ensuring the replacement installation:
+                </p>
+                <div class="mt-4 grid md:grid-cols-3 gap-4">
+                  <div class="p-3 bg-white rounded-lg text-center">
+                    <p class="text-sm font-semibold text-gray-900">Sits securely</p>
+                  </div>
+                  <div class="p-3 bg-white rounded-lg text-center">
+                    <p class="text-sm font-semibold text-gray-900">Has sound connections</p>
+                  </div>
+                  <div class="p-3 bg-white rounded-lg text-center">
+                    <p class="text-sm font-semibold text-gray-900">Positioned to avoid future stress on joints</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quality Checks -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Quality Checks After Radiator Replacement</h2>
+            
+            <p class="text-gray-700 mb-6">
+              A radiator replacement should end with confidence that it's fitted correctly. Final checks typically include:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Confirmation the radiator is stable and level</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Connection checks for any sign of seepage</span>
+                </div>
+              </div>
+              
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Verification the radiator warms consistently once operating</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Ensuring valves are accessible and usable</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+              <p class="text-gray-700">
+                <span class="font-semibold">Common Mistakes to Avoid:</span> During these final quality checks include overlooking small leaks, improper valve positioning, and failing to ensure all air has been bled from the system.
+              </p>
+            </div>
+          </div>
+
+          <!-- Warranty and Support -->
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-blue-50 p-6 rounded-lg">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Warranty and Guarantee for New Radiators</h3>
+              <p class="text-gray-700 mb-4">
+                Before finalising your new radiator purchase, check the warranty and guarantee details provided by the manufacturer.
+              </p>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>A reliable warranty should cover both parts and labour for at least five to ten years</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Some manufacturers offer extended warranties for added peace of mind</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Always read the terms and conditions carefully</span>
+                </li>
+              </ul>
+              <div class="mt-4 p-4 bg-blue-100 rounded-lg">
+                <p class="text-sm text-gray-700">
+                  <span class="font-semibold">Protection:</span> A strong warranty protects your investment and ensures that, should any issues arise with your new radiator, you're covered for repairs or replacement.
+                </p>
+              </div>
+            </div>
+            
+            <div class="bg-green-50 p-6 rounded-lg">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Customer Support After Radiator Replacement</h3>
+              <p class="text-gray-700 mb-4">
+                After your radiator installation, having access to responsive customer support can make all the difference.
+              </p>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Choose a supplier who offers clear channels for support—phone, email, or online chat</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Many providers supply a comprehensive guide to radiator installation and maintenance</span>
+                </li>
+                <li class="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Also includes a boiler manual to help you understand your heating system</span>
+                </li>
+              </ul>
+              <div class="mt-4 p-4 bg-green-100 rounded-lg">
+                <p class="text-sm text-gray-700">
+                  <span class="font-semibold">Long-term Support:</span> Good customer support ensures you're never left in the dark, and helps you keep your heating running smoothly long after the replacement is complete.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQs -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+              <MessageCircle className="w-8 h-8 text-blue-600 mr-3" />
+              Radiator Replacement FAQs
+            </h2>
+            
+            <div class="space-y-6">
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">How do I know what size radiator I need?</h3>
+                <p class="text-gray-700">Radiator choice should suit the room's heating demand and the available wall space. {serviceData.businessName} helps match the replacement radiator to the room so it heats comfortably and consistently.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Can you replace a radiator with a different style?</h3>
+                <p class="text-gray-700">Yes, as long as it can be fitted safely and compatibly. Pipe spacing, wall suitability, and valve access are checked first.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Will the new radiator line up with existing pipework?</h3>
+                <p class="text-gray-700">That depends on the radiator and current pipe centres. Compatibility is checked before work starts, and the replacement is planned to avoid strained or forced connections.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">What if the radiator sits in an awkward position in the room?</h3>
+                <p class="text-gray-700">Replacement is a good time to reassess practical placement, but any positioning constraints are checked before proceeding so the final setup makes sense for daily use.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-8">
+          <!-- Quick Contact Card -->
+          <div class="bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-xl p-6 shadow-lg">
+            <h3 class="text-2xl font-bold mb-4">Book Radiator Replacement</h3>
+            <p class="mb-6">Proper sizing and professional installation for even heating</p>
+            
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center w-full py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors mb-4">
+              <Phone className="w-5 h-5 mr-3" />
+              Call {serviceData.phoneNumber}
+            </a>
+            
+            <a href="/contact" class="inline-flex items-center justify-center w-full py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+              Book Online
+            </a>
+            
+            <div class="mt-6 pt-6 border-t border-white/20">
+              <div class="flex items-center">
+                <Thermometer className="w-5 h-5 mr-3" />
+                <div>
+                  <p class="font-semibold">Even Heating Guarantee</p>
+                  <p class="text-sm opacity-90">Correct sizing for every room</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Details -->
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Service Details</h3>
+            
+            <div class="space-y-4">
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Service Type</p>
+                <p class="text-gray-600">Radiator Repair & Replacement</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Response Time</p>
+                <p class="text-gray-600">Same Day Available</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Installation Time</p>
+                <p class="text-gray-600">1-3 Hours per Radiator</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Guarantee</p>
+                <p class="text-gray-600">12 Months on Installation</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cost Range -->
+          <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+              <DollarSign className="w-5 h-5 text-amber-600 mr-2" />
+              Typical Cost Range
+            </h3>
+            
+            <div class="space-y-3">
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Single Radiator Replacement</span>
+                <span class="font-bold text-gray-900">£150 - £300</span>
+              </div>
+              
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Includes Labour & Materials</span>
+                <span class="font-bold text-gray-900">Yes</span>
+              </div>
+              
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Basic System Flush</span>
+                <span class="font-bold text-gray-900">Included</span>
+              </div>
+              
+              <div class="mt-4 p-3 bg-white rounded-lg">
+                <p class="text-sm text-gray-600">
+                  <span class="font-semibold">Note:</span> Prices may vary based on radiator type, complexity, and additional work required.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Energy Efficient Options -->
+          <div class="bg-green-50 rounded-xl p-6 border border-green-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Energy Efficient Options</h3>
+            
+            <div class="space-y-3">
+              <div class="flex items-center">
+                <Thermometer className="w-4 h-4 text-green-500 mr-3" />
+                <span class="text-sm text-gray-700">High BTU Radiators</span>
+              </div>
+              <div class="flex items-center">
+                <Wrench className="w-4 h-4 text-blue-500 mr-3" />
+                <span class="text-sm text-gray-700">Thermostatic Valves (TRVs)</span>
+              </div>
+              <div class="flex items-center">
+                <Flame className="w-4 h-4 text-orange-500 mr-3" />
+                <span class="text-sm text-gray-700">Double Panel Radiators</span>
+              </div>
+              <div class="flex items-center">
+                <Droplets className="w-4 h-4 text-cyan-500 mr-3" />
+                <span class="text-sm text-gray-700">Improved Heat Distribution</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Related Services -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Related Services</h3>
+            
+            <div class="space-y-3">
+              <a href="/services/central-heating-repairs" class="block p-3 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-blue-200">
+                    <Thermometer className="w-4 h-4 text-blue-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-blue-600">Central Heating Repairs</span>
+                </div>
+              </a>
+              
+              <a href="/services/boiler-installations" class="block p-3 bg-orange-50 hover:bg-orange-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-orange-200">
+                    <Flame className="w-4 h-4 text-orange-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-orange-600">Boiler Installations</span>
+                </div>
+              </a>
+              
+              <a href="/services/boiler-repairs" class="block p-3 bg-red-50 hover:bg-red-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-red-200">
+                    <Wrench className="w-4 h-4 text-red-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-red-600">Boiler Repairs</span>
+                </div>
+              </a>
+              
+              <a href="/services/hot-water-cylinder-repairs" class="block p-3 bg-green-50 hover:bg-green-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-green-200">
+                    <Droplets className="w-4 h-4 text-green-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-green-600">Hot Water Cylinder Repairs</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-gradient-to-r from-gray-900 to-blue-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Restore Even Heating to Every Room
+      </h2>
+      
+      <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+        Don't suffer with cold spots or inefficient heating. Our heating experts are ready to install, repair, or replace your radiators for consistent warmth throughout your home.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <Phone className="w-6 h-6 mr-3" />
+          Book Replacement: {serviceData.phoneNumber}
+        </a>
+        
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg text-lg hover:bg-white/10 transition-all duration-300">
+          Get Free Quote
+        </a>
+      </div>
+      
+      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+        <div class="text-center">
+          <Thermometer className="w-8 h-8 text-green-400 mx-auto mb-2" />
+          <p class="text-sm">Correct Sizing</p>
+        </div>
+        <div class="text-center">
+          <Clock className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+          <p class="text-sm">Same Day Service</p>
+        </div>
+        <div class="text-center">
+          <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-2" />
+          <p class="text-sm">12 Month Guarantee</p>
+        </div>
+        <div class="text-center">
+          <Wrench className="w-8 h-8 text-amber-400 mx-auto mb-2" />
+          <p class="text-sm">Professional Installation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,1199 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { Phone, Shield, CheckCircle, Wrench, Flame, Clock, AlertCircle, DollarSign, MessageCircle, Calendar, Zap, Droplets, Thermometer } from 'lucide-react';
+import image1 from "../assets/image/Boiler-Swap-Upgrade.png"
+import image2 from "../assets/image/Heating-System-Installation.png"
+import image3 from "../assets/image/heaterHero.webp"
+
+// Dynamic data
+const serviceData = {
+  title: "Boiler Repairs",
+  location: "Your Location",
+  businessName: "Your Business Name",
+  metaDescription: "Professional boiler repairs in [location]. Gas Safe registered engineers for emergency and scheduled boiler repairs.",
+  phoneNumber: "YOUR-PHONE-NUMBER"
+};
+---
+
+<Layout title={`Boiler Repairs in ${serviceData.location} | ${serviceData.businessName}`} description={serviceData.metaDescription}>
+  <!-- Hero Section -->
+  <section class="relative py-16 md:py-24 bg-gradient-to-r from-blue-900 to-gray-900 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-20">
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="mb-4">
+            <span class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium border border-white/20">
+              <Shield className="w-4 h-4 mr-2" />
+              Gas Safe Registered
+            </span>
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Boiler Repairs in <span class="text-orange-400">{serviceData.location}</span>
+          </h1>
+          
+          <p class="text-xl text-gray-300 mb-8 max-w-2xl">
+            Emergency and scheduled boiler repairs by Gas Safe registered engineers. Restore your heating and hot water today.
+          </p>
+          
+          <div class="flex flex-wrap gap-4">
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+              <Phone className="w-5 h-5 mr-3" />
+              Emergency Call: {serviceData.phoneNumber}
+            </a>
+            <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/20">
+              Book Repair Online
+            </a>
+          </div>
+          
+          <div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">24/7 Emergency</span>
+            </div>
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Gas Safe Registered</span>
+            </div>
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Same Day Service</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="relative rounded-xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+            <Image 
+              src={image1} 
+              alt="Boiler repair technician at work" 
+              width={600}
+              height={400}
+              class="w-full h-auto"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-white text-gray-900 p-4 rounded-lg shadow-lg max-w-xs">
+            <div class="flex items-center mb-2">
+              <Flame className="w-5 h-5 text-blue-500 mr-2" />
+              <span class="font-semibold">All Customers Welcome</span>
+            </div>
+            <p class="text-sm">No need to be a British Gas customer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-12">
+        <!-- Main Content Column -->
+        <div class="lg:col-span-2">
+          <!-- Introduction -->
+          <div class="prose prose-lg max-w-none mb-12">
+            <p class="lead text-xl text-gray-700 mb-8">
+              If you're searching for boiler repairs in {serviceData.location}, you want your heating and hot water working properly again — without guesswork.
+            </p>
+            
+            <p>
+              Whether it's no heating, no hot water, low pressure, repeated shutdowns, strange noises, or a boiler that keeps locking out, {serviceData.businessName} starts with diagnosis, explains the fault clearly, and only repairs once the cause is confirmed.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-6 rounded-r-lg">
+              <p class="font-semibold text-blue-800">
+                The outcome is stable operation you can rely on, with the issue resolved at the source rather than temporarily masked.
+              </p>
+            </div>
+            
+            <p>
+              You do not need to be a British Gas customer or an existing customer to book a repair—our company welcomes all customers. Booking a repair is straightforward and can be done online or by phone.
+            </p>
+            
+            <p class="font-semibold text-blue-700">
+              Book a boiler repair in {serviceData.location} with {serviceData.businessName}. Our company provides services for both domestic and commercial customers, ensuring tailored support for every need. All repairs are performed by Gas Safe registered engineers to ensure safety and reliability.
+            </p>
+          </div>
+
+          <!-- Diagnosis Focus -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Boiler Repairs in {serviceData.location} That Start With Diagnosis</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Boiler repair only works when the fault is identified properly. Many boiler problems share the same symptoms, so replacing parts based on assumptions often leads to repeat breakdowns.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+              <div class="bg-blue-50 p-6 rounded-lg text-center">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 class="font-bold text-gray-900 mb-2">Finding the Fault</h3>
+                <p class="text-sm text-gray-700">Before taking action</p>
+              </div>
+              
+              <div class="bg-green-50 p-6 rounded-lg text-center">
+                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MessageCircle className="w-6 h-6 text-green-600" />
+                </div>
+                <h3 class="font-bold text-gray-900 mb-2">Clear Explanation</h3>
+                <p class="text-sm text-gray-700">What failed and needs fixing</p>
+              </div>
+              
+              <div class="bg-orange-50 p-6 rounded-lg text-center">
+                <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Flame className="w-6 h-6 text-orange-600" />
+                </div>
+                <h3 class="font-bold text-gray-900 mb-2">Restore Function</h3>
+                <p class="text-sm text-gray-700">Safe, consistent heating & hot water</p>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-gray-50 rounded-lg border-l-4 border-gray-500">
+              <p class="text-gray-700">
+                <span class="font-semibold">Spare Parts Available:</span> Our experienced gas engineers carry a range of spare parts, allowing many boiler faults to be fixed immediately if the necessary parts are available.
+              </p>
+            </div>
+          </div>
+
+          <!-- Emergency Repairs -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Emergency Gas Boiler Repairs</h2>
+            
+            <p class="text-gray-700 mb-6">
+              When your boiler breaks down unexpectedly, you need a fast and reliable solution to restore your heating system and hot water.
+            </p>
+            
+            <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg mb-6">
+              <p class="text-gray-700">
+                <span class="font-semibold">24/7 Service:</span> That's why we offer emergency gas boiler repairs 24/7, so you're never left in the cold. Our emergency boiler repair service is delivered by a nationwide network of Gas Safe engineers, ensuring a qualified local engineer is always available when you need them most.
+              </p>
+            </div>
+            
+            <div class="space-y-4 mb-6">
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Whether you have an existing British Gas cover or not, our team can quickly diagnose and fix any issue with your gas boiler.</span>
+              </div>
+              
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>We understand how disruptive a broken boiler can be, so our aim is to get your boiler working again as soon as possible.</span>
+              </div>
+              
+              <div class="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>From minor faults to major breakdowns, we provide a complete repair service to keep your heating and hot water running smoothly.</span>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-blue-50 rounded-lg">
+              <p class="text-gray-700">
+                <span class="font-semibold">Easy Booking:</span> Book online or call for immediate assistance and relax knowing your boiler is in safe hands.
+              </p>
+            </div>
+          </div>
+
+          <!-- Image 1: Diagnostic Process -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+              <Image 
+                src={image2} 
+                alt="Boiler diagnostic testing and repair process" 
+                width={800}
+                height={450}
+                class="w-full h-auto"
+              />
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Comprehensive boiler diagnostic testing</p>
+          </div>
+
+          <!-- What Repair Includes -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What Boiler Repair Includes</h2>
+            
+            <p class="text-gray-700 mb-6">
+              A boiler repair visit is built around fault isolation and targeted correction. Depending on the issue, boiler repair can include:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Investigating the reported symptom and operating conditions</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Checking boiler status, fault history, and shutdown behaviour</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Testing key controls and safety responses</span>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Repairing the specific failed component or connection causing the fault</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Verifying stable operation after the repair</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="p-6 bg-green-50 rounded-lg">
+                <h3 class="font-bold text-gray-900 mb-3">Guarantee & Report</h3>
+                <p class="text-gray-700">
+                  All boiler repairs include parts and labour, come with a 12-month guarantee, and homeowners receive a report detailing the work completed, faults found, and safety test results.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fault-First Repair -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Fault-First Boiler Repair: How the Diagnosis is Done</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Repair begins by separating what you're experiencing (symptoms) from what's actually failing (cause). Diagnosis may involve:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Checking whether the fault is constant or intermittent</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Testing the boiler under demand (heating, hot water, and combined load)</span>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Confirming whether the boiler is failing to start, failing to stay running, or stopping for protection</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Identifying whether the issue is driven by pressure, flow, ignition, sensors, or control logic</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-6 p-6 bg-blue-50 rounded-lg">
+              <p class="text-gray-700">
+                <span class="font-semibold">Precise Repair:</span> This prevents "chasing symptoms" and keeps the repair precise.
+              </p>
+            </div>
+          </div>
+
+          <!-- Common Repair Types -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Common Boiler Repair Scenarios</h2>
+            
+            <div class="space-y-8">
+              <!-- No Heating -->
+              <div class="bg-red-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">No Heating Boiler Repairs</h3>
+                <p class="text-gray-700 mb-4">
+                  "No heating" can mean several different failure states. Boiler repair for no heating focuses on what the boiler is doing when heating is requested.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 class="font-bold text-gray-900 mb-3">Common Scenarios:</h4>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Boiler powers on but radiators stay cold</span>
+                      </li>
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Heating runs briefly then stops</span>
+                      </li>
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Boiler appears to run but heat doesn't circulate</span>
+                      </li>
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Heating works intermittently</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 class="font-bold text-gray-900 mb-3">Repair Focus:</h4>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                      <li class="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Whether the boiler is firing correctly</span>
+                      </li>
+                      <li class="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Whether heat is being produced but not moving</span>
+                      </li>
+                      <li class="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Whether the boiler is shutting down due to protection</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- No Hot Water -->
+              <div class="bg-blue-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">No Hot Water Boiler Repairs</h3>
+                <p class="text-gray-700 mb-4">
+                  "No hot water" can be caused by different faults than "no heating," so it must be diagnosed on its own.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 class="font-bold text-gray-900 mb-3">Common Scenarios:</h4>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Hot water turns cold during use</span>
+                      </li>
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Hot water is intermittent</span>
+                      </li>
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Hot water only works at low flow</span>
+                      </li>
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Long delays before hot water arrives</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 class="font-bold text-gray-900 mb-3">Diagnosis Priority:</h4>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                      <li class="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Whether the boiler responds correctly to hot water demand</span>
+                      </li>
+                      <li class="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Whether the boiler can maintain output under steady use</span>
+                      </li>
+                      <li class="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Whether the issue appears only under higher demand</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Pressure Problems -->
+              <div class="bg-green-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Boiler Pressure Problems</h3>
+                <p class="text-gray-700 mb-4">
+                  Pressure issues are often a symptom, not the fault itself. A proper repair focuses on why pressure is changing, not just topping it up.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 class="font-bold text-gray-900 mb-3">Common Issues:</h4>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Pressure drops repeatedly after refilling</span>
+                      </li>
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Boiler locks out due to low pressure</span>
+                      </li>
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Pressure rises unexpectedly during operation</span>
+                      </li>
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Pressure fluctuates between uses</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 class="font-bold text-gray-900 mb-3">Repair Focus:</h4>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                      <li class="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Identifying why pressure won't remain stable</span>
+                      </li>
+                      <li class="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Correcting the underlying cause</span>
+                      </li>
+                      <li class="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Preventing repeat issues</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 2: Repair Work -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+              <Image 
+                src={image3} 
+                alt="Professional boiler repair work in progress" 
+                width={800}
+                height={450}
+                class="w-full h-auto"
+              />
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Expert boiler repair and component replacement</p>
+          </div>
+
+          <!-- More Repair Scenarios -->
+          <div class="mb-12">
+            <div class="space-y-8">
+              <!-- Switching Off -->
+              <div class="bg-orange-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Boiler Keeps Switching Off or Cutting Out</h3>
+                <p class="text-gray-700 mb-4">
+                  A boiler that keeps turning itself off is usually reacting to instability, incorrect readings, or protective shutdown behaviour.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 class="font-bold text-gray-900 mb-3">Common Patterns:</h4>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-orange-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Runs briefly then stops (short cycling)</span>
+                      </li>
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-orange-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Stops randomly during heating</span>
+                      </li>
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-orange-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Stops when hot water is used</span>
+                      </li>
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-orange-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Stops when both heating and hot water are demanded</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 class="font-bold text-gray-900 mb-3">Repair Focus:</h4>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                      <li class="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Reproducing the cut-out condition</span>
+                      </li>
+                      <li class="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Identifying the trigger for shutdown</span>
+                      </li>
+                      <li class="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Fixing the cause for consistent operation</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Lockout Issues -->
+              <div class="bg-purple-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Boiler Locking Out and Error States</h3>
+                <p class="text-gray-700 mb-4">
+                  Lockouts are the boiler refusing to run until the issue is addressed. Resetting may restore operation briefly, but the fault often returns.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 class="font-bold text-gray-900 mb-3">Common Situations:</h4>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-purple-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Lockout occurs repeatedly within a short time</span>
+                      </li>
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-purple-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Lockout happens after a reset</span>
+                      </li>
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-purple-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Lockout only happens under higher demand</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 class="font-bold text-gray-900 mb-3">Repair Targets:</h4>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                      <li class="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>The specific fault condition triggering lockout</span>
+                      </li>
+                      <li class="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Stable operation without repeated resets</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Ignition Repairs -->
+              <div class="bg-red-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Ignition-Related Boiler Repairs</h3>
+                <p class="text-gray-700 mb-4">
+                  Ignition faults are common and can appear in ways that feel "random" from the user's perspective.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 class="font-bold text-gray-900 mb-3">Typical Symptoms:</h4>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Boiler won't start</span>
+                      </li>
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Repeated clicking without firing</span>
+                      </li>
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Starts sometimes, fails other times</span>
+                      </li>
+                      <li class="flex items-start">
+                        <AlertCircle className="w-4 h-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Starts then stops shortly after</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 class="font-bold text-gray-900 mb-3">Repair Focus:</h4>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                      <li class="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Confirming if ignition is failing, delayed, or unstable</span>
+                      </li>
+                      <li class="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Correcting the exact ignition-related cause</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Repair Types -->
+          <div class="mb-12">
+            <div class="grid md:grid-cols-2 gap-8">
+              <!-- Flow and Circulation -->
+              <div class="bg-blue-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Flow and Circulation Fault Repairs</h3>
+                <p class="text-gray-700 mb-4">
+                  Sometimes the boiler is producing heat but it isn't moving properly, or the boiler shuts down because flow conditions are wrong.
+                </p>
+                
+                <h4 class="font-bold text-gray-900 mb-3">Common Symptoms:</h4>
+                <ul class="space-y-2 mb-4 text-sm text-gray-700">
+                  <li class="flex items-start">
+                    <AlertCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Boiler runs but heating doesn't respond</span>
+                  </li>
+                  <li class="flex items-start">
+                    <AlertCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Overheating behaviour followed by shutdown</span>
+                  </li>
+                  <li class="flex items-start">
+                    <AlertCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Heating performance inconsistent across system</span>
+                  </li>
+                </ul>
+                
+                <h4 class="font-bold text-gray-900 mb-3">Repair Aims:</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Whether fault is caused by restricted flow or weak circulation</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Correcting to restore consistent heat delivery</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <!-- Sensor and Control -->
+              <div class="bg-green-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Sensor and Control-Related Repairs</h3>
+                <p class="text-gray-700 mb-4">
+                  Modern boilers rely on sensors and controls to operate safely. When readings are wrong, the boiler may cut out, lock out, or behave inconsistently.
+                </p>
+                
+                <h4 class="font-bold text-gray-900 mb-3">Common Symptoms:</h4>
+                <ul class="space-y-2 mb-4 text-sm text-gray-700">
+                  <li class="flex items-start">
+                    <AlertCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Boiler stops without a clear reason</span>
+                  </li>
+                  <li class="flex items-start">
+                    <AlertCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Performance changes day to day</span>
+                  </li>
+                  <li class="flex items-start">
+                    <AlertCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Boiler responds incorrectly to demand</span>
+                  </li>
+                </ul>
+                
+                <h4 class="font-bold text-gray-900 mb-3">Repair Focus:</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Confirming if boiler receives accurate operating information</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Correcting component causing incorrect behaviour</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Noise Issues -->
+          <div class="mb-12">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Boiler Noise Issues That Indicate a Repair Need</h3>
+              
+              <p class="text-gray-700 mb-6">
+                Noise isn't the repair — it's a signal. The key is identifying what the noise is telling you.
+              </p>
+              
+              <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h4 class="font-bold text-gray-900 mb-3">Common Noise Descriptions:</h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start">
+                      <AlertCircle className="w-4 h-4 text-gray-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Banging</span>
+                    </li>
+                    <li class="flex items-start">
+                      <AlertCircle className="w-4 h-4 text-gray-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Whistling</span>
+                    </li>
+                    <li class="flex items-start">
+                      <AlertCircle className="w-4 h-4 text-gray-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Humming</span>
+                    </li>
+                    <li class="flex items-start">
+                      <AlertCircle className="w-4 h-4 text-gray-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Vibrating</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 class="font-bold text-gray-900 mb-3">Repair Diagnosis Considers:</h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>When noise occurs (start-up, during use, under load)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Whether linked to flow, ignition, or internal changes</span>
+                    </li>
+                    <li class="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>What correction removes cause of noise</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repair Process -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What Happens During the Repair Visit</h2>
+            
+            <p class="text-gray-700 mb-6">
+              {serviceData.businessName} keeps the repair clear and structured:
+            </p>
+            
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                  <span class="text-blue-600 font-bold">1</span>
+                </div>
+                <span>Confirm the symptoms and when they occur</span>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                  <span class="text-blue-600 font-bold">2</span>
+                </div>
+                <span>Run diagnostic checks to isolate the cause</span>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                  <span class="text-blue-600 font-bold">3</span>
+                </div>
+                <span>Explain what's failed and what the repair involves</span>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                  <span class="text-blue-600 font-bold">4</span>
+                </div>
+                <span>Complete the repair once the cause is confirmed</span>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                  <span class="text-blue-600 font-bold">5</span>
+                </div>
+                <span>Test the boiler to ensure stable heating and hot water operation</span>
+              </div>
+            </div>
+            
+            <div class="mt-6 grid md:grid-cols-2 gap-6">
+              <div class="p-6 bg-blue-50 rounded-lg">
+                <p class="text-sm text-gray-700">
+                  <span class="font-semibold">Time Estimate:</span> Minor repairs typically take 30 minutes to 2 hours, while more complex repairs may require multiple visits.
+                </p>
+              </div>
+              
+              <div class="p-6 bg-green-50 rounded-lg">
+                <p class="text-sm text-gray-700">
+                  <span class="font-semibold">Transparent Pricing:</span> If the repair cannot be completed immediately, you will receive a fixed-price quote for the necessary parts and follow-up work, ensuring transparent pricing throughout the process.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Safety -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Safety During Boiler Repairs</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Your safety is our top priority during every boiler repair.
+            </p>
+            
+            <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg mb-6">
+              <p class="text-gray-700">
+                All our repairs are carried out by Gas Safe registered engineers who follow strict safety protocols to protect your home and family. We know how important a safe and reliable heating system is, especially during colder months when you depend on your boiler the most.
+              </p>
+            </div>
+            
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <Shield className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Our engineers are fully trained to handle all types of boiler issues, from gas leaks to faulty components</span>
+              </div>
+              
+              <div class="flex items-start">
+                <Shield className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>We use only approved parts and methods</span>
+              </div>
+              
+              <div class="flex items-start">
+                <Shield className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <span>Every repair comes with a guarantee for your complete peace of mind</span>
+              </div>
+            </div>
+            
+            <div class="mt-6 p-6 bg-blue-50 rounded-lg">
+              <p class="text-gray-700">
+                <span class="font-semibold">Expert Assurance:</span> With our Gas Safe registered team, you can trust that your boiler and heating system are in expert hands.
+              </p>
+            </div>
+          </div>
+
+          <!-- Post-Repair Checks -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Post-Repair Checks: Confirming the Boiler is Stable</h2>
+            
+            <p class="text-gray-700 mb-6">
+              A repair isn't finished when the boiler starts — it's finished when it runs consistently.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Heating output stability</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Hot water consistency under normal use</span>
+                </div>
+              </div>
+              
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Pressure stability (where relevant)</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>No repeat shutdowns or lockouts during testing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Maintenance Tips -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Boiler Maintenance Tips to Prevent Future Issues</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Keeping your boiler in top condition not only helps you avoid unexpected breakdowns but also saves money in the long run.
+            </p>
+            
+            <div class="bg-green-50 p-6 rounded-lg">
+              <h3 class="font-bold text-gray-900 mb-4">Essential Maintenance Tips:</h3>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Schedule an annual boiler service with a certified engineer to catch potential problems early and keep your boiler working at peak efficiency.</span>
+                </div>
+                
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Regularly check your boiler's pressure and top it up if needed, following the manufacturer's guidelines.</span>
+                </div>
+                
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Bleed your radiators to remove trapped air, ensuring even heating throughout your home.</span>
+                </div>
+                
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Inspect pipes and radiators for leaks or signs of wear, and address any issues promptly to prevent bigger problems.</span>
+                </div>
+                
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Keep the area around your boiler clear and free from clutter to allow proper ventilation and easy access for servicing.</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-6 p-6 bg-blue-50 rounded-lg">
+              <p class="text-gray-700">
+                <span class="font-semibold">Long-term Benefits:</span> By following these simple steps, you can extend the life of your boiler, improve your heating system's efficiency, and save money on future repairs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cost Explanation -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Boiler Repair Costs Explained</h2>
+            
+            <p class="text-gray-700 mb-6">
+              We believe in transparent pricing, so you always know what to expect when booking a boiler repair.
+            </p>
+            
+            <div class="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-lg mb-6">
+              <p class="text-gray-700">
+                Our costs are straightforward, with no hidden fees, and every repair is backed by our guarantee for your peace of mind.
+              </p>
+            </div>
+            
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Our Boiler Repair Pricing:</h3>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div class="p-4 bg-white rounded-lg border border-gray-200">
+                  <h4 class="font-bold text-gray-900 mb-2">Initial Repair Visit</h4>
+                  <p class="text-gray-700">£150</p>
+                  <p class="text-sm text-gray-600">Includes first 45 minutes of labour and full diagnosis</p>
+                </div>
+                
+                <div class="p-4 bg-white rounded-lg border border-gray-200">
+                  <h4 class="font-bold text-gray-900 mb-2">Additional Labour</h4>
+                  <p class="text-gray-700">£40 per 15 minutes</p>
+                  <p class="text-sm text-gray-600">If repair takes longer than initial period</p>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="p-4 bg-white rounded-lg border border-gray-200">
+                  <h4 class="font-bold text-gray-900 mb-2">Parts and Materials</h4>
+                  <p class="text-gray-700">Priced separately</p>
+                  <p class="text-sm text-gray-600">Only pay for what's needed to fix your boiler</p>
+                </div>
+                
+                <div class="p-4 bg-white rounded-lg border border-gray-200">
+                  <h4 class="font-bold text-gray-900 mb-2">Annual Boiler Service</h4>
+                  <p class="text-gray-700">£100 (optional)</p>
+                  <p class="text-sm text-gray-600">Keep your boiler running efficiently</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-6 p-6 bg-green-50 rounded-lg">
+              <p class="text-gray-700">
+                <span class="font-semibold">Service Plans:</span> We also offer a range of service plans and packages to help you manage costs and keep your heating system in top condition year round. Our dedicated team is always available to provide more info, answer your questions, and help you choose the best option for your needs.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQs -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+              <MessageCircle className="w-8 h-8 text-blue-600 mr-3" />
+              Boiler Repair FAQs
+            </h2>
+            
+            <div class="space-y-6">
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">How do I know if my boiler needs a repair?</h3>
+                <p class="text-gray-700">If you have no heating, no hot water, recurring pressure drops, repeated shutdowns, lockouts, or unusual noises, a repair is usually needed to correct the underlying fault.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">My boiler works sometimes — is that still a repair issue?</h3>
+                <p class="text-gray-700">Yes. Intermittent faults are common and still require diagnosis so the root cause can be fixed rather than waiting for a full breakdown.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Will you repair the cause or just get it running again?</h3>
+                <p class="text-gray-700">{serviceData.businessName} repairs the cause. The process is diagnosis first, then a targeted repair based on what's actually failing.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Do you test the boiler after the repair?</h3>
+                <p class="text-gray-700">Yes. The boiler is tested to confirm stable operation and to reduce the chance of the same fault returning immediately.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-8">
+          <!-- Quick Contact Card -->
+          <div class="bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-xl p-6 shadow-lg">
+            <h3 class="text-2xl font-bold mb-4">Emergency Boiler Repairs</h3>
+            <p class="mb-6">24/7 emergency service for all boiler makes and models</p>
+            
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center w-full py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors mb-4">
+              <Phone className="w-5 h-5 mr-3" />
+              Emergency Call: {serviceData.phoneNumber}
+            </a>
+            
+            <a href="/contact" class="inline-flex items-center justify-center w-full py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+              Book Online
+            </a>
+            
+            <div class="mt-6 pt-6 border-t border-white/20">
+              <div class="flex items-center">
+                <Clock className="w-5 h-5 mr-3" />
+                <div>
+                  <p class="font-semibold">24/7 Emergency Service</p>
+                  <p class="text-sm opacity-90">Available for urgent breakdowns</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Details -->
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Service Details</h3>
+            
+            <div class="space-y-4">
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Service Type</p>
+                <p class="text-gray-600">Boiler Repairs</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Response Time</p>
+                <p class="text-gray-600">Same Day / 24/7 Emergency</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Engineer Qualification</p>
+                <p class="text-gray-600">Gas Safe Registered</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Guarantee</p>
+                <p class="text-gray-600">12 Months on Parts & Labour</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pricing Breakdown -->
+          <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+              <DollarSign className="w-5 h-5 text-amber-600 mr-2" />
+              Transparent Pricing
+            </h3>
+            
+            <div class="space-y-3">
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Initial Visit</span>
+                <span class="font-bold text-gray-900">£150</span>
+              </div>
+              
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">First 45 Minutes</span>
+                <span class="font-bold text-gray-900">Included</span>
+              </div>
+              
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Additional 15 Mins</span>
+                <span class="font-bold text-gray-900">£40</span>
+              </div>
+              
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Parts & Materials</span>
+                <span class="font-bold text-gray-900">Separate</span>
+              </div>
+              
+              <div class="mt-4 p-3 bg-white rounded-lg">
+                <p class="text-sm text-gray-600">
+                  <span class="font-semibold">No Hidden Fees:</span> All prices include VAT. Fixed-price quotes provided for complex repairs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- All Customers Welcome -->
+          <div class="bg-green-50 rounded-xl p-6 border border-green-200">
+            <div class="flex items-center mb-4">
+              <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                <CheckCircle className="w-5 h-5 text-green-600" />
+              </div>
+              <h3 class="text-lg font-bold text-gray-900">All Customers Welcome</h3>
+            </div>
+            <p class="text-sm text-gray-700">
+              You do not need to be a British Gas customer or an existing customer to book a repair. We welcome all customers for both domestic and commercial boiler repairs.
+            </p>
+          </div>
+
+          <!-- Related Services -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Related Services</h3>
+            
+            <div class="space-y-3">
+              <a href="/services/boiler-servicing" class="block p-3 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-blue-200">
+                    <Flame className="w-4 h-4 text-blue-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-blue-600">Boiler Servicing</span>
+                </div>
+              </a>
+              
+              <a href="/services/boiler-installations" class="block p-3 bg-orange-50 hover:bg-orange-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-orange-200">
+                    <Wrench className="w-4 h-4 text-orange-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-orange-600">Boiler Installations</span>
+                </div>
+              </a>
+              
+              <a href="/services/central-heating-repairs" class="block p-3 bg-green-50 hover:bg-green-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-green-200">
+                    <Thermometer className="w-4 h-4 text-green-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-green-600">Central Heating Repairs</span>
+                </div>
+              </a>
+              
+              <a href="/services/gas-safety-certificates" class="block p-3 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-purple-200">
+                    <Shield className="w-4 h-4 text-purple-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-purple-600">Gas Safety Certificates</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-gradient-to-r from-gray-900 to-blue-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Restore Your Heating and Hot Water Today
+      </h2>
+      
+      <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+        Don't suffer with a broken boiler. Our Gas Safe registered engineers are ready to diagnose and repair your boiler quickly and professionally.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <Phone className="w-6 h-6 mr-3" />
+          24/7 Emergency: {serviceData.phoneNumber}
+        </a>
+        
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg text-lg hover:bg-white/10 transition-all duration-300">
+          Schedule Repair
+        </a>
+      </div>
+      
+      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+        <div class="text-center">
+          <Shield className="w-8 h-8 text-green-400 mx-auto mb-2" />
+          <p class="text-sm">Gas Safe Registered</p>
+        </div>
+        <div class="text-center">
+          <Clock className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+          <p class="text-sm">24/7 Emergency</p>
+        </div>
+        <div class="text-center">
+          <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-2" />
+          <p class="text-sm">12 Month Guarantee</p>
+        </div>
+        <div class="text-center">
+          <Flame className="w-8 h-8 text-amber-400 mx-auto mb-2" />
+          <p class="text-sm">All Makes & Models</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

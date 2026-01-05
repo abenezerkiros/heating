@@ -1,0 +1,783 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { Phone, Shield, CheckCircle, Wrench, Flame, Clock, AlertCircle, DollarSign, MessageCircle, Calendar, Zap, Droplets, Thermometer } from 'lucide-react';
+import image1 from "../assets/image/Boiler-Swap-Upgrade.png"
+import image2 from "../assets/image/Heating-System-Installation.png"
+import image3 from "../assets/image/heaterHero.webp"
+
+// Dynamic data
+const serviceData = {
+  title: "Hot Water Cylinder Repairs",
+  location: "Your Location",
+  businessName: "Your Business Name",
+  metaDescription: "Professional hot water cylinder repairs in [location]. G3-certified technicians for unvented cylinder repairs and maintenance.",
+  phoneNumber: "YOUR-PHONE-NUMBER"
+};
+---
+
+<Layout title={`Hot Water Cylinder Repairs in ${serviceData.location} | ${serviceData.businessName}`} description={serviceData.metaDescription}>
+  <!-- Hero Section -->
+  <section class="relative py-16 md:py-24 bg-gradient-to-r from-blue-900 to-gray-900 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-20">
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="mb-4">
+            <span class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium border border-white/20">
+              <Shield className="w-4 h-4 mr-2" />
+              G3 Certified
+            </span>
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Hot Water Cylinder Repairs in <span class="text-orange-400">{serviceData.location}</span>
+          </h1>
+          
+          <p class="text-xl text-gray-300 mb-8 max-w-2xl">
+            Expert diagnosis and repair of hot water cylinders by G3-qualified technicians. Restore reliable hot water to your home.
+          </p>
+          
+          <div class="flex flex-wrap gap-4">
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+              <Phone className="w-5 h-5 mr-3" />
+              Call Now: {serviceData.phoneNumber}
+            </a>
+            <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/20">
+              Book Repair Online
+            </a>
+          </div>
+          
+          <div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">G3 Certified</span>
+            </div>
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">Same Day Service</span>
+            </div>
+            <div class="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span class="text-sm">12 Month Guarantee</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="relative rounded-xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+            <Image 
+              src={image1} 
+              alt="Hot water cylinder repair technician at work" 
+              width={600}
+              height={400}
+              class="w-full h-auto"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-white text-gray-900 p-4 rounded-lg shadow-lg max-w-xs">
+            <div class="flex items-center mb-2">
+              <Shield className="w-5 h-5 text-blue-500 mr-2" />
+              <span class="font-semibold">G3 Certification Required</span>
+            </div>
+            <p class="text-sm">For unvented cylinder repairs by law</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-12">
+        <!-- Main Content Column -->
+        <div class="lg:col-span-2">
+          <!-- Introduction -->
+          <div class="prose prose-lg max-w-none mb-12">
+            <p class="lead text-xl text-gray-700 mb-8">
+              If you need hot water cylinder repairs in {serviceData.location}, {serviceData.businessName} will diagnose the fault and carry out the right repair to restore reliable hot water.
+            </p>
+            
+            <p>
+              Unvented hot water cylinder repairs must be carried out by a G3-certified technician due to UK safety regulations. If you've got no hot water, water going lukewarm, leaks or damp patches, a dripping tundish/overflow, strange noises from the cylinder, or hot water running out faster than normal, we'll check what's happening first and explain it clearly.
+            </p>
+            
+            <p>
+              Unvented hot water cylinders are fed directly from the mains water supply, ensuring a consistent flow of water, and require safety features like pressure relief valves and expansion vessels to prevent overpressure. Common issues with unvented cylinders include pressure problems, overheating, and leaks.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-6 rounded-r-lg">
+              <p class="font-semibold text-blue-800">
+                We don't start work until the cause and the fix are understood, so the problem is resolved properly rather than masked. You'll be left with stable temperature, dependable hot water, and a system that behaves normally again, thanks to our professional service ensuring the system is safely installed and maintained.
+              </p>
+            </div>
+            
+            <p class="font-semibold text-blue-700">
+              Call {serviceData.businessName} to book hot water cylinder repairs in {serviceData.location}.
+            </p>
+            
+            <p class="mt-6">
+              Hot water cylinder issues often show up as the same symptoms—no hot water, inconsistent temperature, or unexpected dripping—but the cause can be very different. {serviceData.businessName} focuses on pinpointing the actual fault first, then repairing what's needed so the issue doesn't return in a different form.
+            </p>
+            
+            <div class="bg-amber-50 border border-amber-200 rounded-lg p-6 mt-6">
+              <p class="text-gray-700">
+                <span class="font-semibold">Important:</span> All hot water cylinder installation, servicing, and repairs should be performed by professional, fully qualified engineers, and unvented cylinders can only be installed by a qualified engineer. Unvented cylinders were made legal to install in the UK in 1986, which led to their widespread adoption.
+              </p>
+            </div>
+          </div>
+
+          <!-- What Repairs Cover -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What Hot Water Cylinder Repairs Cover</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Hot water cylinder repairs are focused on restoring safe, normal hot water operation and stopping faults such as leaks, overheating, inconsistent temperature, or pressure-related discharge. A repair visit with {serviceData.businessName} typically includes:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              <div class="bg-blue-50 p-6 rounded-lg">
+                <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+                  <Wrench className="w-5 h-5 text-blue-600 mr-2" />
+                  Diagnosis & Repair
+                </h3>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Fault diagnosis based on your symptoms and how the cylinder behaves under demand</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Checks on temperature control and hot water delivery stability</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Identifying the source of leaks, dampness, or discharge</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Repairing or correcting the component(s) causing the problem</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="bg-green-50 p-6 rounded-lg">
+                <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+                  <Shield className="w-5 h-5 text-green-600 mr-2" />
+                  Safety & Verification
+                </h3>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Checking all safety devices, such as pressure relief valves and expansion vessels, to ensure the unvented cylinder operates safely</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Post-repair verification to confirm the cylinder heats, holds, and delivers hot water normally</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6 mt-6">
+              <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                <p class="text-sm text-gray-700">
+                  <span class="font-semibold">Replacement parts</span> may be required to complete the job, and using genuine parts ensures long-term reliability.
+                </p>
+              </div>
+              <div class="p-4 bg-blue-50 rounded-lg border border-blue-200">
+                <p class="text-sm text-gray-700">
+                  <span class="font-semibold">Regular maintenance</span> is essential for the safe operation and optimal performance of your hot water cylinder.
+                </p>
+              </div>
+            </div>
+            
+            <div class="mt-6 p-6 bg-green-50 rounded-lg border-l-4 border-green-500">
+              <p class="text-gray-700">
+                <span class="font-semibold">Guarantee:</span> All work carried out by our team of qualified engineers is fully guaranteed.
+              </p>
+            </div>
+          </div>
+
+          <!-- Image 1: Diagnostic Process -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+              <Image 
+                src={image2} 
+                alt="Hot water cylinder diagnostic and inspection process" 
+                width={800}
+                height={450}
+                class="w-full h-auto"
+              />
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Thorough diagnostic checks on hot water cylinder systems</p>
+          </div>
+
+          <!-- Cylinder Types We Repair -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Hot Water Cylinder Types We Repair</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="bg-blue-50 p-6 rounded-lg">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                    <Zap className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-900">Unvented Hot Water Cylinders</h3>
+                </div>
+                <p class="text-gray-700 mb-4">
+                  Unvented hot water cylinders are installed by fully qualified, G3-qualified engineers and must include essential safety devices such as pressure relief valves and an expansion vessel to prevent overpressure.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Operate at high pressure for multiple simultaneous outlets</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Minimize heat loss for better efficiency</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Flexible installation locations</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Lifespan: 10-20 years with proper maintenance</span>
+                  </li>
+                </ul>
+                <div class="mt-4 p-4 bg-blue-100 rounded-lg">
+                  <p class="text-sm text-gray-700">
+                    <span class="font-semibold">Annual Service Required:</span> Regular annual service by a qualified professional is essential to check all safety devices, pressure levels, and maintain warranty validity.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="bg-green-50 p-6 rounded-lg">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                    <Droplets className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-900">Vented Hot Water Cylinders</h3>
+                </div>
+                <p class="text-gray-700 mb-4">
+                  These systems are typically found in older homes and work with a cold water tank located in the loft. The vented cylinder is fed from this cold water tank, and the system relies on gravity for water pressure.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Typically found in older homes</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Gravity-fed system with cold water tank in loft</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Generally cheaper to buy and install</span>
+                  </li>
+                  <li class="flex items-start">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Can result in low pressure in taller buildings</span>
+                  </li>
+                </ul>
+                <div class="mt-4 p-4 bg-green-100 rounded-lg">
+                  <p class="text-sm text-gray-700">
+                    <span class="font-semibold">Repair Focus:</span> Restoring consistent hot water delivery, resolving leaks, and correcting control problems.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- How We Approach Repairs -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">
+              How {serviceData.businessName} Approaches Hot Water Cylinder Repairs
+            </h2>
+            
+            <div class="space-y-8">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">1</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Symptom Mapping</h3>
+                  <p class="text-gray-700">
+                    We start with what you're experiencing: when hot water fails, whether it's intermittent, whether there's visible leaking/discharge, and what changes you've noticed. This prevents guesswork and speeds up accurate diagnosis.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">2</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Diagnosis Before Any Repair Work</h3>
+                  <p class="text-gray-700">
+                    We check the cylinder's behaviour and the parts most likely to cause your specific symptom pattern. The goal is to confirm the cause—not just the most obvious sign.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">3</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Clear Explanation of Fault and Repair Path</h3>
+                  <p class="text-gray-700">
+                    You'll be told what's wrong in plain language, what the repair involves, and what outcome to expect. No work starts until it's clear.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-blue-600 font-bold text-xl">4</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">Repair, Then Verify Performance</h3>
+                  <p class="text-gray-700">
+                    After the repair, we confirm the cylinder heats properly, delivers stable hot water, and stops the unwanted symptom (leak/discharge/temperature swing).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 2: Service Work -->
+          <div class="mb-12">
+            <div class="rounded-xl overflow-hidden shadow-lg mb-6">
+              <Image 
+                src={image3} 
+                alt="Professional hot water cylinder repair work in progress" 
+                width={800}
+                height={450}
+                class="w-full h-auto"
+              />
+            </div>
+            <p class="text-sm text-gray-500 text-center italic">Detailed repair work on hot water cylinder components</p>
+          </div>
+
+          <!-- Common Problems -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Common Hot Water Cylinder Problems We Repair</h2>
+            
+            <div class="space-y-6">
+              <div class="border-l-4 border-red-500 pl-4 py-3 bg-red-50 rounded-r-lg">
+                <h3 class="font-bold text-gray-900 text-lg mb-2">No Hot Water At All</h3>
+                <p class="text-gray-700">
+                  This can be caused by a control fault, a heating element issue (where the cylinder uses an immersion heater), or a system problem that prevents the cylinder reaching temperature. Issues with the hot water supply can also be due to problems with the heating system, thermostat, or boiler, especially in indirect systems. Diagnosis confirms what's failing and why it's not recovering. Low hot water pressure may be caused by a blocked inlet filter or a failed pressure reducing valve cartridge.
+                </p>
+              </div>
+              
+              <div class="border-l-4 border-orange-500 pl-4 py-3 bg-orange-50 rounded-r-lg">
+                <h3 class="font-bold text-gray-900 text-lg mb-2">Hot Water Goes Lukewarm or Runs Out Quickly</h3>
+                <p class="text-gray-700">
+                  If hot water performance has changed, the issue is often linked to temperature control, heat-up behaviour, or a component not operating as it should. Excessive heat loss or limescale build up—especially in hard water areas—can reduce the efficiency of the cylinder and cause hot water to run out quickly or become lukewarm. We identify whether the cylinder is failing to heat properly, failing to hold heat, or failing to deliver as expected.
+                </p>
+              </div>
+              
+              <div class="border-l-4 border-blue-500 pl-4 py-3 bg-blue-50 rounded-r-lg">
+                <h3 class="font-bold text-gray-900 text-lg mb-2">Water Leaking or Dampness Around the Cylinder</h3>
+                <p class="text-gray-700">
+                  Leaks can come from connections, valves, or components attached to the cylinder. In unvented hot water cylinders, leaks often occur due to wear and tear on their parts, which may require replacement parts to restore proper function. The important part is locating the exact source and confirming it's not a symptom of a wider fault, then repairing it properly.
+                </p>
+              </div>
+              
+              <div class="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 rounded-r-lg">
+                <h3 class="font-bold text-gray-900 text-lg mb-2">Dripping from a Tundish or Overflow Pipe</h3>
+                <p class="text-gray-700">
+                  A drip can be a sign the system is releasing pressure or temperature-related expansion. Dripping from a tundish or overflow may indicate a problem with safety devices such as the pressure relief valve or the expansion vessel, both of which are essential for preventing overpressure in unvented hot water cylinders. The repair depends on the pattern (constant, only when heating, or occasional), and we confirm the cause before correcting the fault.
+                </p>
+              </div>
+              
+              <div class="border-l-4 border-amber-500 pl-4 py-3 bg-amber-50 rounded-r-lg">
+                <h3 class="font-bold text-gray-900 text-lg mb-2">Cylinder Overheating or Water Too Hot</h3>
+                <p class="text-gray-700">
+                  Overheating is typically linked to temperature control not limiting correctly. A faulty thermostat or malfunctioning safety devices, such as pressure relief valves or expansion vessels, can cause the cylinder to overheat, and professional service is required to address these issues. The priority is identifying what's allowing temperature to rise beyond normal and repairing the control issue so the cylinder returns to stable operation.
+                </p>
+              </div>
+              
+              <div class="border-l-4 border-gray-500 pl-4 py-3 bg-gray-50 rounded-r-lg">
+                <h3 class="font-bold text-gray-900 text-lg mb-2">Noisy Cylinder or "Banging" Sounds</h3>
+                <p class="text-gray-700">
+                  Noises can point to instability during heat-up, trapped air in the system, or components working under strain. We trace the noise back to its cause and repair what's driving it.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- What We Look For -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What We Look For During Diagnosis</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Diagnosis varies by cylinder type and symptom, but {serviceData.businessName} typically checks:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Whether the cylinder is reaching temperature and holding it</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Whether temperature control is behaving normally</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Whether any visible components show signs of failure, seepage, or abnormal operation</span>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Whether discharge/leak patterns match expansion behaviour or a fault condition</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Whether the cylinder returns to stable, predictable operation after demand cycles</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>All safety devices, pressure levels, and electrical components to ensure safe operation</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-6 grid md:grid-cols-2 gap-6">
+              <div class="p-6 bg-blue-50 rounded-lg">
+                <p class="text-sm text-gray-700">
+                  <span class="font-semibold">Water Quality Impact:</span> Water quality can impact the lifespan and performance of your hot water cylinder, so it is important to consider this during diagnosis.
+                </p>
+              </div>
+              <div class="p-6 bg-green-50 rounded-lg">
+                <p class="text-sm text-gray-700">
+                  <span class="font-semibold">Annual Service Required:</span> Unvented cylinders should be serviced once a year to check all safety devices, pressure levels, and electrical components.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Real-World Scenarios -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Real-World Scenarios and Edge Cases We Handle</h2>
+            
+            <div class="space-y-6">
+              <div class="p-6 bg-gray-50 rounded-lg border border-gray-200">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">The Problem Only Happens at Certain Times</h3>
+                <p class="text-gray-700">
+                  Intermittent faults often depend on heat-up cycles or peak usage. We look at the timing pattern so the repair targets what's failing under those conditions.
+                </p>
+              </div>
+              
+              <div class="p-6 bg-blue-50 rounded-lg border border-blue-200">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Dripping That "Comes and Goes"</h3>
+                <p class="text-gray-700">
+                  Occasional dripping can have a different cause than constant discharge. We determine what triggers it—heat-up, high demand, or general operation—then correct the underlying issue.
+                </p>
+              </div>
+              
+              <div class="p-6 bg-orange-50 rounded-lg border border-orange-200">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">A Repair That "Worked for a Bit" But the Symptom Returned</h3>
+                <p class="text-gray-700">
+                  Recurring symptoms usually mean the original cause wasn't fully addressed, or there's a secondary factor driving the fault. We focus on the cause-chain so the repair is stable, not temporary.
+                </p>
+              </div>
+              
+              <div class="p-6 bg-green-50 rounded-lg border border-green-200">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Access Constraints Around the Cylinder</h3>
+                <p class="text-gray-700">
+                  If the cylinder is boxed in or in a tight cupboard, we work to a plan that keeps access safe and sensible. If anything needs to be made accessible to diagnose or repair properly, we explain that before proceeding.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post-Repair Checks -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Post-Repair Checks and Outcome Confirmation</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Before we finish, {serviceData.businessName} confirms the repair has achieved the practical outcome you called for:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Hot water heats up and delivers consistently</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Temperature behaves normally (no unexpected overheating or rapid cooling)</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Leaks or dampness are resolved at the source</span>
+                </div>
+              </div>
+              
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Discharge/dripping stops where it shouldn't be occurring</span>
+                </div>
+                <div class="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>The cylinder runs through normal operation without returning to the original symptom</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-6 p-6 bg-green-50 rounded-lg border-l-4 border-green-500">
+              <p class="text-gray-700">
+                <span class="font-semibold">Quality Assurance:</span> Our team ensures every job is completed to the highest standard, with all checks performed for your peace of mind.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQs -->
+          <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+              <MessageCircle className="w-8 h-8 text-blue-600 mr-3" />
+              Hot Water Cylinder Repairs FAQs
+            </h2>
+            
+            <div class="space-y-6">
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Do you diagnose the fault before starting repairs?</h3>
+                <p class="text-gray-700">Yes. {serviceData.businessName} diagnoses first, explains the cause and the repair approach clearly, and only proceeds once everything is understood.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Why is my tundish or overflow dripping?</h3>
+                <p class="text-gray-700">Dripping can happen for different reasons, and the pattern matters. Sometimes, dripping is caused by issues with safety devices such as pressure relief valves or the expansion vessel, which are designed to protect the system from overpressure. We'll confirm whether it's normal expansion-related behaviour or a fault condition, then repair the cause.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">My hot water is hot sometimes and lukewarm other times—what does that mean?</h3>
+                <p class="text-gray-700">Inconsistent temperature is usually caused by a control or heat-up stability issue. Diagnosis confirms whether the cylinder is failing to heat properly, failing to limit temperature correctly, or failing under demand. A faulty thermostat or problems with the heating system can also lead to inconsistent hot water temperature.</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">How do I prepare for the appointment?</h3>
+                <p class="text-gray-700">Make sure the cylinder cupboard/area is clear and accessible. If you can, note when the problem happens (only mornings, after heavy use, only when heating, etc.).</p>
+              </div>
+              
+              <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors">
+                <h3 class="font-bold text-gray-900 text-lg mb-3">Will you test the cylinder before you leave?</h3>
+                <p class="text-gray-700">Yes. After the repair, we verify performance so you're not left hoping it's fixed.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-8">
+          <!-- Quick Contact Card -->
+          <div class="bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-xl p-6 shadow-lg">
+            <h3 class="text-2xl font-bold mb-4">Need Cylinder Repairs Now?</h3>
+            <p class="mb-6">G3-certified technicians available for emergency repairs</p>
+            
+            <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center w-full py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors mb-4">
+              <Phone className="w-5 h-5 mr-3" />
+              Call {serviceData.phoneNumber}
+            </a>
+            
+            <a href="/contact" class="inline-flex items-center justify-center w-full py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+              Book Online
+            </a>
+            
+            <div class="mt-6 pt-6 border-t border-white/20">
+              <div class="flex items-center">
+                <Shield className="w-5 h-5 mr-3" />
+                <div>
+                  <p class="font-semibold">G3 Certified Required</p>
+                  <p class="text-sm opacity-90">For unvented cylinder repairs by law</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Details -->
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Service Details</h3>
+            
+            <div class="space-y-4">
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Service Type</p>
+                <p class="text-gray-600">Hot Water Cylinder Repairs</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Certification Required</p>
+                <p class="text-gray-600">G3 for Unvented Cylinders</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Response Time</p>
+                <p class="text-gray-600">Same Day Available</p>
+              </div>
+              
+              <div>
+                <p class="font-semibold text-gray-700 mb-1">Guarantee</p>
+                <p class="text-gray-600">12 Months on Work & Parts</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cost Information -->
+          <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+              <DollarSign className="w-5 h-5 text-amber-600 mr-2" />
+              Cost Information
+            </h3>
+            
+            <div class="space-y-3">
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Average Repair Cost</span>
+                <span class="font-bold text-gray-900">£101 - £232</span>
+              </div>
+              
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Typical Average</span>
+                <span class="font-bold text-gray-900">£154</span>
+              </div>
+              
+              <div class="flex justify-between items-center py-2 border-b border-amber-200">
+                <span class="text-gray-700">Annual Service Plans</span>
+                <span class="font-bold text-gray-900">Available</span>
+              </div>
+              
+              <div class="mt-4 p-3 bg-white rounded-lg">
+                <p class="text-sm text-gray-600">
+                  <span class="font-semibold">Note:</span> Annual service packages are available from many engineers, and annual servicing may be required to maintain warranty validity for unvented cylinders.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- What Affects Cost -->
+          <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">What Affects the Cost</h3>
+            
+            <div class="space-y-3">
+              <div class="flex items-start">
+                <AlertCircle className="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-sm text-gray-700">Cylinder type (unvented vs vented) and complexity</span>
+              </div>
+              <div class="flex items-start">
+                <AlertCircle className="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-sm text-gray-700">Symptom pattern (straightforward vs intermittent)</span>
+              </div>
+              <div class="flex items-start">
+                <AlertCircle className="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-sm text-gray-700">Accessibility (tight cupboards, restricted space)</span>
+              </div>
+              <div class="flex items-start">
+                <AlertCircle className="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span class="text-sm text-gray-700">Replacement parts or full cylinder replacement</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Related Services -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Related Services</h3>
+            
+            <div class="space-y-3">
+              <a href="/services/hot-water-cylinder-installation" class="block p-3 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-blue-200">
+                    <Droplets className="w-4 h-4 text-blue-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-blue-600">Hot Water Cylinder Installation</span>
+                </div>
+              </a>
+              
+              <a href="/services/immersion-heater-repairs" class="block p-3 bg-green-50 hover:bg-green-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-green-200">
+                    <Zap className="w-4 h-4 text-green-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-green-600">Immersion Heater Repairs</span>
+                </div>
+              </a>
+              
+              <a href="/services/boiler-repairs" class="block p-3 bg-orange-50 hover:bg-orange-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-orange-200">
+                    <Flame className="w-4 h-4 text-orange-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-orange-600">Boiler Repairs</span>
+                </div>
+              </a>
+              
+              <a href="/services/central-heating-repairs" class="block p-3 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors group">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-purple-200">
+                    <Thermometer className="w-4 h-4 text-purple-600" />
+                  </div>
+                  <span class="font-medium text-gray-900 group-hover:text-purple-600">Central Heating Repairs</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-gradient-to-r from-gray-900 to-blue-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Restore Reliable Hot Water Today
+      </h2>
+      
+      <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+        Don't suffer with cold showers or lukewarm water. Our G3-certified technicians are ready to diagnose and repair your hot water cylinder quickly and professionally.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href={`tel:${serviceData.phoneNumber}`} class="inline-flex items-center justify-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <Phone className="w-6 h-6 mr-3" />
+          Emergency Call: {serviceData.phoneNumber}
+        </a>
+        
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg text-lg hover:bg-white/10 transition-all duration-300">
+          Get a Free Quote
+        </a>
+      </div>
+      
+      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+        <div class="text-center">
+          <Shield className="w-8 h-8 text-green-400 mx-auto mb-2" />
+          <p class="text-sm">G3 Certified</p>
+        </div>
+        <div class="text-center">
+          <Clock className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+          <p class="text-sm">Same Day Service</p>
+        </div>
+        <div class="text-center">
+          <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-2" />
+          <p class="text-sm">12 Month Guarantee</p>
+        </div>
+        <div class="text-center">
+          <Droplets className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+          <p class="text-sm">All Cylinder Types</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
